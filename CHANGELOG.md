@@ -14,6 +14,15 @@ versioning follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
   diagram, sequence diagram, state machine diagram, data flow diagram
   (DFD). Total drawio templates: 15 (4 specific architectures + 11
   general patterns and classic types).
+- **2 new prompts**: `translate-en-to-zh-word.md` (English → Chinese Word
+  translation, Word-ready plain-text output), `write-broader-impact.md`
+  (broader impact / ethical considerations statement, 4-dimension
+  coverage, venue-specific word budgets). Total prompts: 24.
+- **DPI upgrade**: plotting templates now output PNG at 600 dpi minimum,
+  with a 3-tier venue-adaptive selection guide (600 / 800 / 1000 dpi).
+- **Plotting templates hardening**: all 19 chart templates now include
+  explicit `fig.savefig(..., dpi=600)` for PNG output, preventing
+  matplotlib's default-100-dpi fallback.
 - **Orthogonal edge routing** as the default edge style in all new
   templates. Drawio's built-in `edgeStyle=orthogonalEdgeStyle` with
   `rounded=1;orthogonalLoop=1;jettySize=auto` eliminates most waypoint

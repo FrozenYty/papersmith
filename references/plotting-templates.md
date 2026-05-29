@@ -76,7 +76,8 @@ ax.set_ylim(60, 95)   # zoom in to where the action is
 ax.legend(frameon=False, loc="upper left", ncol=3, columnspacing=1.0,
           handletextpad=0.4)
 ax.spines[["top", "right"]].set_visible(False)
-fig.savefig("fig_compare.pdf"); fig.savefig("fig_compare.png")
+fig.savefig("fig_compare.pdf")
+fig.savefig("fig_compare.png", dpi=600)
 ```
 
 **Conventions:** Ours always last (rightmost bar of each group) and in the
@@ -108,6 +109,7 @@ for i, v in enumerate(scores):
     ax.text(v + 0.2, i, f"{v:.1f}", va="center", fontsize=9)
 ax.spines[["top", "right"]].set_visible(False)
 fig.savefig("fig_horizontal.pdf")
+fig.savefig("fig_horizontal.png", dpi=600)
 ```
 
 **Conventions:** Always sort (ascending bottom→top puts the best at the
@@ -144,6 +146,7 @@ ax.set_ylabel("Accuracy (%)")
 ax.legend(frameon=False, loc="lower right")
 ax.grid(True, which="major", linewidth=0.4, alpha=0.4)
 fig.savefig("fig_pareto.pdf")
+fig.savefig("fig_pareto.png", dpi=600)
 ```
 
 **Conventions:** X is the cost dimension (log scale common), Y is the
@@ -175,6 +178,7 @@ ax.set_ylim(0, 1)
 ax.set_rgrids([0.25, 0.5, 0.75], angle=0, fontsize=8)
 ax.legend(frameon=False, loc="upper right", bbox_to_anchor=(1.30, 1.10))
 fig.savefig("fig_radar.pdf")
+fig.savefig("fig_radar.png", dpi=600)
 ```
 
 **Conventions:** Normalize all axes to [0, 1] (or all to %). Two methods
@@ -208,6 +212,7 @@ ax.legend(frameon=False, loc="upper right", ncol=3,
           bbox_to_anchor=(1.0, 1.18))
 ax.spines[["top", "right"]].set_visible(False)
 fig.savefig("fig_stacked.pdf")
+fig.savefig("fig_stacked.png", dpi=600)
 ```
 
 **Conventions:** Component order from bottom up should be largest at the
@@ -240,6 +245,7 @@ ax.set_xlim(1, 50)
 ax.legend(frameon=False, loc="lower right")
 ax.grid(True, linewidth=0.4, alpha=0.4)
 fig.savefig("fig_curve.pdf")
+fig.savefig("fig_curve.png", dpi=600)
 ```
 
 **Conventions:** Caption MUST disclose what the band is: "Shaded region
@@ -275,6 +281,7 @@ axins.tick_params(labelsize=7)
 axins.grid(True, linewidth=0.3, alpha=0.4)
 mark_inset(ax, axins, loc1=2, loc2=4, fc="none", ec="0.5", linewidth=0.6)
 fig.savefig("fig_inset.pdf")
+fig.savefig("fig_inset.png", dpi=600)
 ```
 
 **Conventions:** Inset placement avoids the data; tick fontsize smaller
@@ -305,6 +312,7 @@ ax.set_xlabel("Batch size"); ax.set_ylabel("Accuracy")
 ax.legend(frameon=False, loc="lower right")
 ax.grid(True, which="both", linewidth=0.4, alpha=0.4)
 fig.savefig("fig_scatter_fit.pdf")
+fig.savefig("fig_scatter_fit.png", dpi=600)
 ```
 
 **Conventions:** State the fit form (in the legend or caption). Don't
@@ -343,6 +351,7 @@ ax.set_aspect("equal")
 ax.legend(frameon=False, loc="lower right", fontsize=9)
 ax.grid(True, linewidth=0.4, alpha=0.4)
 fig.savefig("fig_roc.pdf")
+fig.savefig("fig_roc.png", dpi=600)
 ```
 
 **Conventions:** Square aspect ratio. Diagonal y=x as the random baseline.
@@ -378,6 +387,7 @@ ax.set_aspect("equal")
 ax.legend(frameon=False, loc="lower left", fontsize=9)
 ax.grid(True, linewidth=0.4, alpha=0.4)
 fig.savefig("fig_pr.pdf")
+fig.savefig("fig_pr.png", dpi=600)
 ```
 
 **Conventions:** Random baseline = positive prevalence (NOT y=x). Average
@@ -412,6 +422,7 @@ for i in range(cm_norm.shape[0]):
                 color=c, fontsize=8)
 fig.colorbar(im, ax=ax, fraction=0.046, pad=0.04)
 fig.savefig("fig_cm.pdf")
+fig.savefig("fig_cm.png", dpi=600)
 ```
 
 **Conventions:** For confusion matrices, normalize by row (true-class
@@ -444,6 +455,7 @@ ax.set_xlim(lo, hi); ax.set_ylim(lo, hi)
 ax.legend(frameon=False, loc="lower right")
 ax.grid(True, linewidth=0.4, alpha=0.4)
 fig.savefig("fig_pred_true.pdf")
+fig.savefig("fig_pred_true.png", dpi=600)
 ```
 
 **Conventions:** Square axes, y=x reference line dashed gray. R² in
@@ -480,6 +492,7 @@ for size_val in [10, 50, 200]:
 ax.legend(title="Params", frameon=False, loc="lower right",
           labelspacing=1.2, fontsize=8, title_fontsize=9)
 fig.savefig("fig_bubble.pdf")
+fig.savefig("fig_bubble.png", dpi=600)
 ```
 
 **Conventions:** Bubble area (not radius) encodes the value — use
@@ -513,6 +526,7 @@ ax.set_xticks(range(len(groups))); ax.set_xticklabels(groups)
 ax.set_ylabel("Accuracy")
 ax.spines[["top", "right"]].set_visible(False)
 fig.savefig("fig_violin.pdf")
+fig.savefig("fig_violin.png", dpi=600)
 ```
 
 **Conventions:** Show median as a horizontal line; don't show means
@@ -539,6 +553,7 @@ for patch, c in zip(bp["boxes"], palette):
 ax.set_ylabel("Accuracy")
 ax.spines[["top", "right"]].set_visible(False)
 fig.savefig("fig_box.pdf")
+fig.savefig("fig_box.png", dpi=600)
 ```
 
 **Conventions:** Box = Q1-Q3, whiskers = 1.5×IQR by default. Outliers as
@@ -566,6 +581,7 @@ ax.text(0, 0, "Total\n245 ms", ha="center", va="center",
         fontsize=11, fontweight="bold")
 ax.set_aspect("equal")
 fig.savefig("fig_donut.pdf")
+fig.savefig("fig_donut.png", dpi=600)
 ```
 
 **Conventions:** ≤6 slices; with more, switch to a horizontal bar chart.
@@ -599,6 +615,7 @@ ax2.tick_params(axis="y", labelcolor=c2)
 
 ax1.legend(handles=[l1, l2], frameon=False, loc="center right")
 fig.savefig("fig_dualy.pdf")
+fig.savefig("fig_dualy.png", dpi=600)
 ```
 
 **Conventions:** Color-code the y-axis labels and ticks to match each
@@ -634,6 +651,7 @@ h1, l1 = ax1.get_legend_handles_labels()
 h2, l2 = ax2.get_legend_handles_labels()
 ax1.legend(h1+h2, l1+l2, frameon=False, loc="upper right", fontsize=9)
 fig.savefig("fig_barline.pdf")
+fig.savefig("fig_barline.png", dpi=600)
 ```
 
 **Conventions:** Bars in muted color (background role), line in saturated
@@ -669,6 +687,7 @@ g.set_titles("{col_name}")
 g.set_axis_labels("", "Accuracy (%)")
 g.tight_layout()
 g.savefig("fig_facets.pdf")
+fig.savefig("fig_facets.png", dpi=600)
 ```
 
 **Conventions:** Share y-axis across facets so readers can compare

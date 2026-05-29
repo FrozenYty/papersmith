@@ -25,6 +25,7 @@ Do not deviate from the prompt template unless the user explicitly asks.
 |---|---|---|
 | Translate Chinese draft to English LaTeX | Chinese text + LaTeX needed | `prompts/translate-zh-to-en-latex.md` |
 | Translate English LaTeX to plain Chinese | English LaTeX snippet | `prompts/translate-en-to-zh-latex.md` |
+| Translate English to Chinese for Word | English text (for Word) | `prompts/translate-en-to-zh-word.md` |
 | Translate Chinese draft to English for Word | Chinese text (for Word) | `prompts/translate-zh-to-en-word.md` |
 
 ### Rewriting & Polishing
@@ -74,6 +75,7 @@ Do not deviate from the prompt template unless the user explicitly asks.
 | Simulate a peer review for a paper draft | Paper PDF + target conference name | `prompts/simulate-peer-review.md` |
 | Draft a point-by-point response to reviewers | Reviewer comments + optional list of changes | `prompts/respond-to-reviewers.md` |
 | Draft a 250-400 word cover letter for submission | Title + venue + manuscript summary | `prompts/draft-cover-letter.md` |
+| Write broader impact / ethical considerations statement | Title + abstract + method description + optional venue | `prompts/write-broader-impact.md` |
 
 ## Chinese Typography Rules (CRITICAL)
 
