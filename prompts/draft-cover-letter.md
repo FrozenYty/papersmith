@@ -75,3 +75,7 @@ before or after.
 If the manuscript is in Chinese-language submission (e.g., Chinese journal),
 write the letter in Chinese using full-width punctuation per SKILL.md rules.
 Otherwise default to English.
+
+## See also
+- prompts/polish-abstract.md — Cover letter 的核心依据是摘要，两者应口径一致
+- prompts/respond-to-reviewers.md — 投稿后下一阶段的 rebuttal 写作

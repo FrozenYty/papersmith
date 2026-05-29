@@ -37,3 +37,7 @@ Slightly expand the provided English LaTeX snippet.
 
 ## Input
 {{ENGLISH_LATEX}}
+
+## See also
+- prompts/shorten-en.md — 反向操作，压缩冗余文本
+- prompts/polish-en.md — 扩展后可能需要做整体润色统一风格

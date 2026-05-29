@@ -92,3 +92,7 @@ Output nothing else.
 
 If the abstract is in Chinese, output Part 1 in Chinese with full-width
 punctuation per SKILL.md. Other parts may stay in Chinese or English.
+
+## See also
+- prompts/polish-title.md — 标题是摘要的浓缩，两者在修辞和关键词上应一致
+- prompts/draft-cover-letter.md — Cover letter 的核心卖点直接来自摘要

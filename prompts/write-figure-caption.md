@@ -30,3 +30,6 @@ Convert the provided Chinese description into an English figure caption that mee
 2. Did I strip redundant openings ("The figure shows", "This diagram illustrates")?
 3. Did I avoid obscure vocabulary — is the wording plain and precise?
 4. Are all special characters correctly escaped?
+
+## See also
+- prompts/write-table-caption.md — 表格题注，格式规范相同但措辞习惯不同

@@ -23,6 +23,16 @@ versioning follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 - **Plotting templates hardening**: all 19 chart templates now include
   explicit `fig.savefig(..., dpi=600)` for PNG output, preventing
   matplotlib's default-100-dpi fallback.
+- **Iron Rules**: 7 non-negotiable hard constraints added to SKILL.md
+  (no fabricated content, pdf.fonttype=42, flow direction before drawing,
+  error bars disclosed, no Markdown in Word, full-width Chinese
+  punctuation, prompt before template).
+- **Writing anti-patterns reference**: `references/writing-anti-patterns.md`
+  — 12 common Chinese academic writing mistakes with Bad → Why → Rewritten
+  examples and self-audit checklist.
+- **Cross-prompt See also links**: all 24 prompts now include a `## See
+  also` section linking to 1-3 semantically related prompts.
+- **SKILL.md frontmatter**: added `author: Tianyu Yao`.
 - **Orthogonal edge routing** as the default edge style in all new
   templates. Drawio's built-in `edgeStyle=orthogonalEdgeStyle` with
   `rounded=1;orthogonalLoop=1;jettySize=auto` eliminates most waypoint

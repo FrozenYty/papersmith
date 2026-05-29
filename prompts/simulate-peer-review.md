@@ -45,3 +45,7 @@ Output nothing else beyond these two parts.
 
 ## Input
 Paper PDF + target venue: {{TARGET_CONFERENCE}}
+
+## See also
+- prompts/respond-to-reviewers.md — 模拟评审发现问题后，用此生成正式的 rebuttal 回复
+- prompts/check-logic.md — 模拟评审中发现的逻辑问题可用逻辑检查补充验证

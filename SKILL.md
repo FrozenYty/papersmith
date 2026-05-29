@@ -9,6 +9,7 @@ description: >
   and publication-ready Python plots (matplotlib, Type-42 fonts). Trigger on
   requests like "draw a diagram of X", "polish this abstract", "plot this
   experiment", or "write a rebuttal".
+author: Tianyu Yao
 ---
 
 # Academic Writing Toolkit
@@ -52,6 +53,7 @@ Do not deviate from the prompt template unless the user explicitly asks.
 | Final consistency and logic check before submission | English LaTeX (near-final) | `prompts/check-logic.md` |
 | Remove AI-generated writing patterns from English LaTeX | English LaTeX snippet | `prompts/humanize-en.md` |
 | Remove machine-translation tone from Chinese text | Chinese paragraph | `prompts/humanize-zh.md` |
+| Chinese academic writing anti-patterns (12 patterns, Bad→Rewritten) | — (loaded on demand) | `references/writing-anti-patterns.md` |
 
 ### Figures & Charts
 
@@ -106,6 +108,46 @@ Chinese text you generate while assisting the user.
    order (translate first, then polish, then check).
 4. **No match**: If no scenario fits, state that clearly and ask what the user
    intended.
+
+## Iron Rules
+
+These are non-negotiable. Every prompt template in this toolkit inherits
+them. When a rule fires, it takes precedence over anything a prompt says.
+
+1. **IRON RULE — No fabricated content.** Never invent citations, author
+   names, benchmark scores, dataset statistics, or experimental results.
+   If the user hasn't provided a number, don't make one up. Use
+   `{{PLACEHOLDER}}` or ask.
+
+2. **IRON RULE — `pdf.fonttype = 42` always.** Every Python plotting script
+   must set `pdf.fonttype = 42` and `ps.fonttype = 42` in its rcParams.
+   Type-3 fonts fail ACM/IEEE submission. This is the single most common
+   paper rejection at the PDF-check stage.
+
+3. **IRON RULE — Flow direction before drawing.** Every drawio diagram
+   must declare its flow direction before any coordinate is written. ML
+   stacks bottom-to-top (`source.y > target.y`). Pipelines left-to-right
+   (`source.x < target.x`). Inverted stacks are the most common diagram
+   bug.
+
+4. **IRON RULE — Error bars disclosed.** If a chart shows error bars,
+   confidence bands, or significance markers, the caption or figure text
+   must state what they represent (±1 SD, 95% CI, etc.) and over how many
+   runs/seeds. Never show error bars silently.
+
+5. **IRON RULE — No Markdown in Word output.** Any prompt producing
+   Word-bound output must strip all Markdown syntax (`**`, `*`, `###`,
+   backticks). The result must paste cleanly into Word with zero
+   formatting artifacts.
+
+6. **IRON RULE — Full-width Chinese punctuation.** Any Chinese text
+   output must use `""` (U+201C/U+201D) for quotation marks and `，。；：`
+   for punctuation. ASCII `"` adjacent to Chinese text is a hard error.
+
+7. **IRON RULE — Prompt before template.** When a request matches a known
+   diagram or chart type, read the template file from `references/` first.
+   Don't draw from scratch when a canonical layout already exists. Adapt
+   the template; don't guess the coordinates.
 
 ## Figure Routing: Diagram vs. Plot (READ FIRST)
 

@@ -135,3 +135,7 @@ Output nothing else.
 8. Does the figure have no title (unless the user asked for one), since the caption lives in LaTeX?
 9. Are the axis labels human-readable, with units in parentheses (e.g., "Accuracy (%)")?
 10. Does the script output both `.pdf` and `.png` files?
+
+## See also
+- prompts/recommend-chart.md — 在生成图表前根据数据特征确定图表类型
+- prompts/draw-diagram.md — 概念图（drawio）与数据图（matplotlib）的互补边界

@@ -31,3 +31,6 @@ Translate the provided English LaTeX snippet into fluent, readable Chinese plain
 2. Did I maintain strict one-to-one sentence correspondence with the source?
 3. Are all Chinese quotation marks full-width (U+201C / U+201D)?
 4. Is the output plain Chinese with zero LaTeX artifacts?
+
+## See also
+- prompts/translate-en-to-zh-word.md — Word 场景的英译中，增加去 AI 味和排版适配

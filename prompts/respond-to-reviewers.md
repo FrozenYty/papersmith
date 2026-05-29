@@ -94,3 +94,7 @@ from SKILL.md if outputting Chinese.
 ## Reviewer 2
 ...
 ```
+
+## See also
+- prompts/simulate-peer-review.md — 正式回复前先模拟评审，预判 reviewer 可能提出的问题
+- prompts/draft-cover-letter.md — 投稿前阶段，Cover letter 中的卖点为 rebuttal 提供素材

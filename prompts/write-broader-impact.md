@@ -62,3 +62,7 @@ Your statement must address the following four dimensions. Do not skip any.
 1. **Honesty check**: Does the statement avoid overclaiming? Are uncertain impacts qualified with "may" rather than "will"? Are speculative applications clearly marked as such?
 2. **Completeness check**: Are all four dimensions (positive impact, risks, mitigations, honesty) covered? Are the risks specific to this work, or are they generic boilerplate that could apply to any ML paper?
 3. **Specificity check**: Does each risk have a concrete mitigation strategy attached to it? Are the mitigations actionable, or merely aspirational ("we hope that...")?
+
+## See also
+- prompts/draft-cover-letter.md — 投稿信和研究伦理声明同属投稿前的把关环节
+- prompts/simulate-peer-review.md — 模拟评审时 reviewer 可能特别关注 broader impact 的可信度

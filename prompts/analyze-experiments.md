@@ -39,3 +39,7 @@ Carefully read the provided experimental data. Extract key patterns, trends, and
 2. Is the `\paragraph{Core Conclusion}` block a genuine synthesis, not a restatement of numbers?
 3. Are all LaTeX special characters correctly escaped?
 4. Does the output include both Part 1 (English LaTeX) and Part 2 (Chinese back-translation)?
+
+## See also
+- prompts/plot-figure.md — 实验数据可视化的下一环节，将分析结论转化为图表
+- prompts/recommend-chart.md — 在生成图表前确定最优图表类型

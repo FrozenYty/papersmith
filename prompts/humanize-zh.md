@@ -41,3 +41,7 @@ Rewrite the provided Chinese text to remove AI-generated and translationese patt
 
 ## Input
 {{CHINESE_TEXT}}
+
+## See also
+- prompts/polish-zh.md — 去 AI 味之前应先完成精准润色
+- prompts/rewrite-zh-draft.md — 如果原文是碎片化草稿，需要先做逻辑重组

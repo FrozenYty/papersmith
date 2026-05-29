@@ -30,3 +30,7 @@ Run a final consistency and logic check on the provided English LaTeX snippet.
 2. Have I double-checked that each flagged issue truly blocks reader comprehension?
 3. Is the output in the appropriate language for this user?
 4. If the text passes, did I output only `[检测通过，无实质性问题]` without embellishment?
+
+## See also
+- prompts/polish-en.md — 逻辑检查前的语言润色，提升文本基础质量
+- prompts/humanize-en.md — 逻辑通过后消除 AI 痕迹，使行文更自然

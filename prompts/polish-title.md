@@ -88,3 +88,6 @@ Output nothing else.
 
 If the paper is in Chinese, output candidates in Chinese with full-width
 punctuation per SKILL.md.
+
+## See also
+- prompts/polish-abstract.md — 标题与摘要共享核心关键词和定位，应协同打磨

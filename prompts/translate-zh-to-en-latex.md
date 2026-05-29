@@ -36,3 +36,7 @@ Translate the provided Chinese draft into a polished English academic LaTeX pass
 
 ## Input
 {{CHINESE_DRAFT}}
+
+## See also
+- prompts/translate-zh-to-en-word.md — Word 场景的中译英，不需 LaTeX 转义
+- prompts/polish-en.md — 翻译后可进一步深度润色

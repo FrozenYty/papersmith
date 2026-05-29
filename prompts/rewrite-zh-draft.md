@@ -38,3 +38,7 @@ Read the provided Chinese draft (which may contain colloquial language, scattere
 
 ## Input
 {{CHINESE_DRAFT}}
+
+## See also
+- prompts/polish-zh.md — 逻辑重组后做精准文字润色
+- prompts/humanize-zh.md — 润色后进一步消除 AI 味道和翻译腔

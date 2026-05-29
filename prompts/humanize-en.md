@@ -47,3 +47,7 @@ The following words appear disproportionately in AI-generated text. Consider rep
 
 ## Input
 {{ENGLISH_LATEX}}
+
+## See also
+- prompts/polish-en.md — 去 AI 味之前应先完成基础润色
+- prompts/check-logic.md — 去 AI 味之后应检查逻辑一致性

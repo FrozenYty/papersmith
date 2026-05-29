@@ -49,3 +49,6 @@ Translate the provided English text (which may contain LaTeX formatting) into fl
 3. Are all Chinese quotation marks full-width `""` (U+201C / U+201D) and all punctuation Chinese-style (`，。；：`)?
 4. Does the text read naturally, without AI-generated mechanical patterns or inflated cliches?
 5. Does the back-translation confirm that no meaning was added, dropped, or distorted?
+
+## See also
+- prompts/translate-en-to-zh-latex.md — LaTeX 场景的英译中，更轻量、不涉及去 AI 味

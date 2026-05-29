@@ -68,3 +68,6 @@ Follow this exact structure:
 2. Did I check for statistical elements (error bars, significance) and recommend them when applicable?
 3. Is my recommendation specific enough — chart type + axis strategy + color rationale, not just a name?
 4. Did I mention the relevant template index (§I-§VI) from `plotting-templates.md`?
+
+## See also
+- prompts/plot-figure.md — 图表类型确定后，用此生成完整的 Python 绘图代码

@@ -19,9 +19,10 @@ academic-writing-toolkit/
 │   └── ...
 ├── references/          # loaded on demand: long-form rules + templates
 │   ├── drawio-reference.md     (rules for architecture diagrams)
-│   ├── drawio-templates.md     (15 templates: §1-§4 arch, §5-§15 layouts/classic)
-│   ├── plotting-reference.md   (rules for Python plots, rcParams, palettes)
-│   └── plotting-templates.md   (19 chart templates: §I-§VI)
+│   ├── drawio-templates.md          (15 templates: §1-§4 arch, §5-§15 layouts/classic)
+│   ├── plotting-reference.md        (rules for Python plots, rcParams, palettes)
+│   ├── plotting-templates.md        (19 chart templates: §I-§VI)
+│   └── writing-anti-patterns.md     (12 Chinese writing anti-patterns)
 ├── examples/            # verified end-to-end outputs
 │   ├── transformer.drawio       (generated from drawio-templates §1)
 │   ├── diffusion.drawio         (generated from drawio-templates §2)
