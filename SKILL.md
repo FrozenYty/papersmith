@@ -65,7 +65,7 @@ Do not deviate from the prompt template unless the user explicitly asks.
 |---|---|---|
 | Generate a paper diagram (architecture, pipeline, training stages, GNN, diffusion, RAG, etc.) | Methodology description + target conference | `prompts/draw-diagram.md` |
 | Draw.io XML syntax reference | — (loaded on demand) | `references/drawio-reference.md` |
-| Canonical templates (13 layout patterns + 6 classic diagram types — 19 total) | — (loaded on demand) | `references/drawio-templates.md` |
+| Canonical templates (15 total: 4 architecture + 11 layout/classic types) | — (loaded on demand) | `references/drawio-templates.md` |
 | Recommend the best chart type for given data | Experiment data (table/CSV) + conclusion to emphasize | `prompts/recommend-chart.md` |
 | Generate Python plotting code (publication-ready) | Chart type + data + optional target venue | `prompts/plot-figure.md` |
 | Python plotting style reference (rcParams, palettes, conventions) | — (loaded on demand) | `references/plotting-reference.md` |

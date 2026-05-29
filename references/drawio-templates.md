@@ -10,9 +10,9 @@ template are available:
   template fits, pick the closest layout pattern and adapt it.
 
 All templates follow the Flow Direction and No-Overlap rules from
-`drawio-reference.md`. For specific architectures (§1–§8), the convention
+`drawio-reference.md`. For specific architectures (§1–§4), the convention
 is bottom-to-top TB flow (`source.y > target.y`). For general layouts
-(§9–§13), the flow direction is stated per pattern.
+(§5–§9), the flow direction is stated per pattern.
 
 ## Index
 
@@ -21,34 +21,30 @@ is bottom-to-top TB flow (`source.y > target.y`). For general layouts
 | Architecture | When to use | Section |
 |---|---|---|
 | Transformer encoder-decoder | Translation, summarization, encoder-decoder LLM | §1 |
-| Transformer decoder-only | GPT-style autoregressive LM | §2 |
-| Seq2Seq with Bahdanau attention | Classic NMT, RNN baselines | §3 |
-| CNN classifier | Image classification (VGG/ResNet-style) | §4 |
-| Diffusion forward/reverse | DDPM/DDIM, score-based, flow-matching | §5 |
-| RAG pipeline | Retrieval-augmented LLM systems | §6 |
-| Multi-stage training | Pretrain → SFT → RLHF, foundation-model recipes | §7 |
-| GNN message-passing | Graph models, molecular/network papers | §8 |
+| Diffusion forward/reverse | DDPM/DDIM, score-based, flow-matching | §2 |
+| RAG pipeline | Retrieval-augmented LLM systems | §3 |
+| Multi-stage training | Pretrain → SFT → RLHF, foundation-model recipes | §4 |
 
 ### General layout patterns
 
 | Pattern | When to use | Section |
 |---|---|---|
-| Vertical stack (TB) | Protocol stacks, layered architectures, dependency chains | §9 |
-| Horizontal pipeline (LR) | Data processing pipelines, CI/CD, multi-stage workflows | §10 |
-| Center hub + satellites | CPU/system overviews, IoT gateways, star-topology networks | §11 |
-| Side-by-side comparison | Before/after, method A vs B, paired-element comparison | §12 |
-| Grid / table layout | Feature matrices, parameter tables, ablation grids | §13 |
+| Vertical stack (TB) | Protocol stacks, layered architectures, dependency chains | §2 |
+| Horizontal pipeline (LR) | Data processing pipelines, CI/CD, multi-stage workflows | §3 |
+| Center hub + satellites | CPU/system overviews, IoT gateways, star-topology networks | §4 |
+| Side-by-side comparison | Before/after, method A vs B, paired-element comparison | §8 |
+| Grid / table layout | Feature matrices, parameter tables, ablation grids | §2 |
 
 ### Classic diagram types
 
 | Type | When to use | Section |
 |---|---|---|
-| Flowchart | Decision trees, process flows, algorithm logic | §14 |
-| Entity-Relationship Diagram (ERD) | Database schemas, data models, table relationships | §15 |
-| UML Class Diagram | OOP design, architecture modeling, inheritance hierarchies | §16 |
-| Sequence Diagram | Protocol interactions, API call flows, message passing | §17 |
-| State Machine Diagram | State transitions, formal methods, protocol specifications | §18 |
-| Data Flow Diagram (DFD) | Software engineering, system data flows, process modeling | §19 |
+| Flowchart | Decision trees, process flows, algorithm logic | §3 |
+| Entity-Relationship Diagram (ERD) | Database schemas, data models, table relationships | §4 |
+| UML Class Diagram | OOP design, architecture modeling, inheritance hierarchies | §8 |
+| Sequence Diagram | Protocol interactions, API call flows, message passing | §2 |
+| State Machine Diagram | State transitions, formal methods, protocol specifications | §3 |
+| Data Flow Diagram (DFD) | Software engineering, system data flows, process modeling | §4 |
 
 If the user's request doesn't match any of these, fall back to the general
 workflow in `draw-diagram.md` and apply the Flow Direction rule
@@ -62,6 +58,11 @@ manually. Don't force-fit a non-matching architecture onto a template.
 output stack above the decoder, source input below the encoder, target input
 below the decoder.
 
+**Edge convention:** All edges use the orthogonal routing base from
+`drawio-reference.md` — `edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=classic`.
+Residuals add `dashed=1;dashPattern=6 3;strokeColor=#666666;strokeWidth=1`.
+K,V cross-attention adds `exitX=1;entryX=0;strokeColor=#9673A6`.
+
 **Layout choices that prevent overlap:**
 
 1. Output stack and input groups (3 modules each) have NO dashed container —
@@ -74,6 +75,13 @@ below the decoder.
    Vaswani's actual layout choice.
 4. ≥30px clear gap between every section: linear → decoder (32), encoder →
    source-input (30), decoder → target-input (30).
+
+**Self-check** (before writing):
+1. All forward edges: `source.y > target.y` ✓
+2. enc_an2 center y (435) == dec_ca center y (435) → K,V straight horizontal ✓
+3. Encoder modules inside enc_sec with ≥10px padding. Same for decoder ✓
+4. Section gaps: linear→dec(32), enc→src(30), dec→tgt(30) — all ≥30 ✓
+5. All coords x/y/w multiples of 10; heights use 30/32/38/42/50 ✓
 
 **Node table** (data-flow order; y decreases as you go up the stack):
 
@@ -285,115 +293,11 @@ inside container right edge). One residual per (sub-layer → its Add&Norm).
 </mxfile>
 ```
 
----
 
-## §2 Transformer decoder-only (GPT-style)
-
-**Canvas:** 600×800. Single stack centered. Output above, target tokens below.
-
-**Node table** (data-flow order; y decreases up the stack):
-
-```
-SECTION  | id        | label                         | x   | y   | w   | h
-output   | outp      | Output Probabilities          | 100 | 20  | 400 | 42
-output   | softmax   | Softmax                       | 160 | 80  | 280 | 38
-output   | linear    | Linear                        | 160 | 140 | 280 | 38
-DECODER  | dec_an2   | Add & Norm                    | 100 | 200 | 400 | 30
-DECODER  | dec_ff    | Feed Forward                  | 100 | 250 | 400 | 50
-DECODER  | dec_an1   | Add & Norm                    | 100 | 320 | 400 | 30
-DECODER  | dec_mmha  | Masked Multi-Head Self-Attn   | 100 | 370 | 400 | 50
-input    | tgt_pos   | Positional Encoding           | 100 | 460 | 400 | 32
-input    | tgt_emb   | Token Embedding               | 100 | 512 | 400 | 38
-input    | tgt_tk    | Tokens (shifted right)        | 100 | 570 | 400 | 42
-```
-
-Edges: chained `tgt_tk → tgt_emb → tgt_pos → dec_mmha → dec_an1 → dec_ff →
-dec_an2 → linear → softmax → outp`. All vertical. Add 2 left-side residuals
-across each Add & Norm. No cross-attention block — this is decoder-only.
-
-For repeated blocks (×N), draw one block and add a `× N` annotation in the
-section label, just like §1. Don't draw all N copies.
 
 ---
 
-## §3 Seq2Seq with Bahdanau attention
-
-**Canvas:** 920×740. Encoder (Bi-LSTM) on the left, decoder (LSTM + attention)
-on the right. The encoder hidden states feed the decoder attention via a
-horizontal arrow. Encoder final state initializes the decoder.
-
-**Node table** (data-flow order; y decreases up each stack):
-
-```
-SECTION   | id          | label                         | x   | y   | w   | h
-output    | dec_out     | Decoder Output (y₁ … y_m)     | 540 | 30  | 340 | 48
-output    | softmax     | Softmax                       | 600 | 100 | 220 | 38
-DECODER   | dec_lstm2   | LSTM Layer 2                  | 540 | 170 | 340 | 50
-DECODER   | dec_lstm1   | LSTM Layer 1                  | 540 | 240 | 340 | 50
-DECODER   | dec_attn    | Attention (Bahdanau)          | 540 | 310 | 340 | 50  ← center y=335
-DECODER   | dec_state   | Decoder Hidden s_{t-1}        | 540 | 380 | 340 | 40
-input_t   | tgt_emb     | Output Embedding              | 540 | 460 | 340 | 38
-input_t   | tgt_tk      | Target Tokens (shifted right) | 540 | 520 | 340 | 42
-ENCODER   | enc_hn      | Hidden States h_1 … h_n       | 60  | 320 | 280 | 50  ← center y=345 ≈ dec_attn 335
-ENCODER   | enc_h2      | Bi-LSTM Layer 2               | 60  | 390 | 280 | 50
-ENCODER   | enc_h1      | Bi-LSTM Layer 1               | 60  | 460 | 280 | 50
-input_s   | src_emb     | Input Embedding               | 60  | 540 | 280 | 38
-input_s   | src_tk      | Source Tokens                 | 60  | 600 | 280 | 42
-```
-
-**Cross-attention arrow:** `enc_hn → dec_attn` with `exitX=1;exitY=0.5;
-entryX=0;entryY=0.5`. Y centers (345 vs 335) are within 10px so the line
-appears horizontal.
-
-**Initial state arrow** (encoder final → decoder LSTM): dashed orange,
-`enc_h2 → dec_lstm1` (or `dec_lstm2`). Goes diagonally up-right; that's OK
-because it's a special initialization edge, semantically distinct from the
-main flow. Use a single waypoint at the gap if needed.
-
-**Decoder hidden state feedback** (`s_{t-1}` → attention): dashed loop on
-the LEFT of the decoder, exits dec_state at the left side and re-enters
-dec_attn from the left. Two waypoints in the gap.
-
-Edges for the main vertical chains follow the same source.y > target.y
-pattern as §1.
-
----
-
-## §4 CNN classifier (VGG/ResNet block)
-
-**Canvas:** 500×900, portrait. Single vertical stack. For ResNet-style,
-add residual side-arrows; for VGG-style, omit them.
-
-**Node table** (data-flow order; y decreases up the stack):
-
-```
-id         | label                         | x   | y   | w   | h
-outp       | Class Probabilities           | 100 | 20  | 300 | 42
-softmax    | Softmax                       | 140 | 80  | 220 | 38
-fc         | FC (num_classes)              | 140 | 140 | 220 | 38
-gap        | Global Avg Pool               | 140 | 200 | 220 | 38
-block_n    | Conv Block × N (3×3, BN, ReLU)| 100 | 270 | 300 | 50
-pool2      | Max Pool 2×2                  | 140 | 350 | 220 | 38
-block_2    | Conv Block (3×3, BN, ReLU)    | 100 | 410 | 300 | 50
-pool1      | Max Pool 2×2                  | 140 | 490 | 220 | 38
-block_1    | Conv Block (3×3, BN, ReLU)    | 100 | 550 | 300 | 50
-input_img  | Input Image (H × W × 3)       | 100 | 640 | 300 | 50
-```
-
-Edges: chained input_img → block_1 → pool1 → block_2 → pool2 → block_n →
-gap → fc → softmax → outp. All vertical, source.y > target.y.
-
-**ResNet variant:** for each `block_k`, add a dashed residual arc on the
-LEFT side from block input to block output (skip the inner 3×3 conv path).
-Keep waypoints close to the block (~30px to the left).
-
-**Color mapping:** Conv blocks `#DAE8FC`/`#6C8EBF` (Convolution palette
-from `drawio-reference.md`), pooling `#D5E8D4`/`#82B366`, FC `#FFE6CC`/
-`#D79B00`, softmax/output `#FFF2CC`/`#D6B656`, input `#F8CECC`/`#B85450`.
-
----
-
-## §5 Diffusion (forward + reverse process)
+## §2 Diffusion (forward + reverse process)
 
 **When to use:** DDPM/DDIM/score-based/flow-matching figures showing the
 two-direction Markov chain. Canonical Ho et al. 2020 Figure 2 layout.
@@ -401,6 +305,9 @@ two-direction Markov chain. Canonical Ho et al. 2020 Figure 2 layout.
 **Canvas:** 1100×440. Two parallel chains stacked vertically — forward on
 top (q, →), reverse on bottom (p_θ, ←). Nodes are square placeholders for
 sample images (h=80, w=100-120).
+
+**Edge convention:** All edges use the orthogonal routing base from
+`drawio-reference.md`. Forward edges (blue): `endArrow=classic;strokeColor=#1976D2`. Reverse edges (orange): `endArrow=classic;strokeColor=#E65100` (these have `source.x > target.x` because the reverse process flows right-to-left — this is a documented exception per-chain per `drawio-reference.md`). Dashed edges across the "…" gaps: `dashed=1;dashPattern=6 3`.
 
 **Layout choices:**
 - The reverse chain renders edges with `source.x > target.x` because the
@@ -458,12 +365,22 @@ If you want to embed actual sample images, replace each square's `value=""`
 with `<img src="data:image/png;base64,...">` HTML or use drawio's image
 shape (`shape=image;image=...`).
 
+**Self-check:**
+1. Forward chain: all edges `source.x < target.x`
+2. Reverse chain: all edges `source.x > target.x` (documented exception)
+3. Row gap: forward bottom (160) to reverse top (290) = 130px, no overlap
+4. Canvas 1100x440: all nodes within bounds
+
 ---
 
-## §6 RAG pipeline
+## §3 RAG pipeline
 
 **When to use:** Retrieval-augmented LLM system figures. Common in 2024+
 LLM application papers.
+
+**Edge convention:** All edges use the orthogonal routing base from `drawio-reference.md`.
+LR pipeline edges: `endArrow=classic;strokeColor=#333333;strokeWidth=1.5;exitX=1;entryX=0`.
+Vertical edges (DB→retriever, LLM→answer): `exitX=0.5` with bend waypoints.
 
 **Canvas:** 1180×360. Single LR pipeline. The vector DB hangs below the
 retriever as a cylinder (the canonical "external knowledge" symbol).
@@ -514,13 +431,19 @@ e_kb_r  | kb     | retr   | ↑ dashed gray, label "embeddings + index"
 - Add a "Citation extractor" between llm and ans for citation-grounded
   RAG.
 
+
+
 ---
 
-## §7 Multi-stage training pipeline
+## §4 Multi-stage training pipeline
 
 **When to use:** Foundation-model recipe figures: Pretrain → SFT → RLHF
 → Eval, or analogous multi-stage workflows. Common in LLM/VLM/codegen
 papers since 2023.
+
+**Edge convention:** All edges use the orthogonal routing base from `drawio-reference.md`.
+Stage→stage edges: `strokeWidth=2.5` (bold, parameter inheritance).
+Data source→stage edges: `strokeWidth=1;strokeColor=#999` (↑ thin gray).
 
 **Canvas:** 1180×360. LR pipeline of 4-5 stage boxes; below each stage,
 a small "data" box names the dataset / objective / size.
@@ -572,81 +495,11 @@ e_d4_s4 | d4     | s4     | ↑ thin gray, "evaluates"
 - For continual pretraining, add a feedback loop from Stage 4 back to
   Stage 1 with a dashed curve.
 
----
 
-## §8 GNN message-passing
-
-**When to use:** Graph neural network figures showing how a node aggregates
-information from its neighbors. Common in graph papers, molecular property
-prediction, recommender systems.
-
-**Canvas:** 800×620. Two parts: a small graph showing structure (left),
-and a "zoomed in" view of one node's update equation (right).
-
-**Node table:**
-
-```
-SECTION    | id      | label                    | x   | y   | w   | h
-graph      | n1      | v_1                      | 100 | 80  | 60  | 60   ← circle
-graph      | n2      | v_2                      | 240 | 60  | 60  | 60
-graph      | n3      | v_3                      | 240 | 200 | 60  | 60
-graph      | nv      | v (target)               | 60  | 220 | 60  | 60   ← highlighted
-graph      | n4      | v_4                      | 200 | 360 | 60  | 60
-update     | agg     | Aggregate(·)             | 460 | 100 | 220 | 60
-update     | upd     | Update: h_v^t = σ(W·m + B·h_v^{t-1}) | 460 | 200 | 280 | 80
-update     | hnew    | h_v^t                    | 540 | 320 | 120 | 60
-formula    | eq_lbl  | m = AGG({h_u : u ∈ N(v)})| 460 | 30  | 280 | 50
-```
-
-All graph nodes use `ellipse;fillColor=#FFFFFF;strokeColor=#333` except
-the target `nv`, which is highlighted: `fillColor=#FFE6CC;strokeColor=
-#D79B00;strokeWidth=2.5`.
-
-**Edge table:**
-
-```
-GRAPH EDGES (undirected, no arrowheads):
-id     | source | target | style
-g_12   | n1     | n2     | endArrow=none, strokeWidth=1.5
-g_13   | n1     | n3     | endArrow=none
-g_23   | n2     | n3     | endArrow=none
-g_v1   | nv     | n1     | endArrow=none, bold (target's edge)
-g_v3   | nv     | n3     | endArrow=none, bold
-g_v4   | nv     | n4     | endArrow=none, bold
-
-MESSAGE-PASSING EDGES (directed, dashed colored):
-m_1v   | n1     | agg    | →, dashed, blue, "h_1"
-m_3v   | n3     | agg    | →, dashed, blue, "h_3"
-m_4v   | n4     | agg    | →, dashed, blue, "h_4"
-
-UPDATE EDGES (solid black):
-u_a_u  | agg    | upd    | ↓, "m"
-u_v_u  | nv     | upd    | →, "h_v^{t-1}"
-u_u_h  | upd    | hnew   | ↓
-```
-
-**Layout choices:**
-- The graph zone (x=30..340, y=30..440) shows topology — nodes laid out
-  to suggest a 4-neighbor structure with the target on the left.
-- The update zone (x=440..760, y=30..400) shows the math: aggregate first,
-  then update, then the new hidden state.
-- Message arrows from neighbors → aggregator are dashed colored (one
-  hue), to visually separate from graph edges (which are solid undirected).
-- The target node's graph edges are bold to draw the eye to the
-  neighborhood being aggregated.
-- The textual formula "m = AGG({h_u : u ∈ N(v)})" sits above the
-  aggregator as a caption.
-
-**Variants:**
-- For GAT: replace `Aggregate(·)` with `Σ_u α_{vu} W h_u` and add an
-  attention coefficient label `α_{vu}` on each message arrow.
-- For GraphSAGE / GIN: change the aggregator label (mean/max/sum/MLP).
-- For multi-hop: stack two layers vertically with a transition arrow
-  between hidden states.
 
 ---
 
-## §9 Vertical stack (TB)
+## §5 Vertical stack (TB)
 
 **When to use:** Protocol stacks, layered architectures, dependency chains,
 hierarchies — any figure where nodes are logically stacked top-to-bottom
@@ -684,9 +537,11 @@ waypoints. Every edge satisfies `source.y > target.y` (arrows go UP).
 **To adapt:** change node count, labels, and the flow direction comment.
 Shift all `y` values by the same offset to move the stack up or down.
 
+
+
 ---
 
-## §10 Horizontal pipeline (LR)
+## §6 Horizontal pipeline (LR)
 
 **When to use:** Data processing pipelines, CI/CD, multi-stage workflows
 — anything where stages are sequential and flow left to right.
@@ -721,9 +576,11 @@ Data-source → stage edges: d1 → s1 (↑), d3 → s3 (↑), d5 → s5 (↑).
 labels to match your pipeline's artifacts. Keep `x` spacing uniform:
 `gap = (pageWidth - n * w) / (n + 1)` for n equally-spaced stages.
 
+
+
 ---
 
-## §11 Center hub + satellites
+## §7 Center hub + satellites
 
 **When to use:** System overviews, CPU/SoC block diagrams, IoT gateway
 topologies, any star-topology or hub-and-spoke figure.
@@ -764,9 +621,11 @@ No waypoints needed because satellites are axis-aligned with the hub.
 **To adapt:** change hub and satellite labels, add corner satellites
 at (40, 60), (560, 60), (560, 460), (40, 460) for an 8-node star.
 
+
+
 ---
 
-## §12 Side-by-side comparison
+## §8 Side-by-side comparison
 
 **When to use:** Before/after comparisons, Method A vs Method B, paired
 element mapping between two systems.
@@ -808,9 +667,11 @@ Separator: a vertical edge at x=450 from y=90 to y=540, `endArrow=none`,
 Y shifts), rename labels, optionally use different fill colors for
 column A vs column B.
 
+
+
 ---
 
-## §13 Grid / table layout
+## §9 Grid / table layout
 
 **When to use:** Feature comparison matrices, parameter tables,
 ablation-configuration matrices — anything that's essentially a labeled
@@ -864,9 +725,11 @@ highlight the winning entry.
 replace labels and values. The header row and body cell styles stay
 constant.
 
+
+
 ---
 
-## §14 Flowchart
+## §10 Flowchart
 
 **When to use:** Decision trees, algorithm logic, process flows, approval
 workflows — any step-by-step branching logic.
@@ -917,9 +780,11 @@ end    | End               | 275 | 810 | 100 | 50  | ellipse green
 dec→p3 ("No", exitX=1;exitY=0.5). p2→out (exitX=1;exitY=0.5, bends
 back center). p3→out (exitX=0;exitY=0.5, bends back center). out→end.
 
+
+
 ---
 
-## §15 Entity-Relationship Diagram (ERD)
+## §11 Entity-Relationship Diagram (ERD)
 
 **When to use:** Database schemas, data models, table relationships,
 SQL schema documentation.
@@ -950,9 +815,11 @@ relationship lines between them.
 edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=ERmandOne;startArrow=ERmandOne;strokeColor=#333333;strokeWidth=1.5
 ```
 
+
+
 ---
 
-## §16 UML Class Diagram
+## §12 UML Class Diagram
 
 **When to use:** Object-oriented design papers, architecture
 modeling, inheritance/interface hierarchies.
@@ -985,9 +852,11 @@ compartments (name / attributes / methods).
 edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#333333;strokeWidth=1.5
 ```
 
+
+
 ---
 
-## §17 Sequence Diagram
+## §13 Sequence Diagram
 
 **When to use:** Protocol handshakes, API call chains, message-passing
 between actors/objects — any interaction where time flows top-to-bottom
@@ -1036,9 +905,11 @@ Service      | 440  | 60  | 40
 DB           | 640  | 60  | 40
 ```
 
+
+
 ---
 
-## §18 State Machine Diagram
+## §14 State Machine Diagram
 
 **When to use:** State transition specifications, protocol state
 machines, embedded system modes, formal-method visualizations.
@@ -1079,9 +950,11 @@ edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;e
 edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=classic;strokeColor=#333333;strokeWidth=1.5;curved=1;exitX=0;exitY=0.5;entryX=0;entryY=0.2
 ```
 
+
+
 ---
 
-## §19 Data Flow Diagram (DFD)
+## §15 Data Flow Diagram (DFD)
 
 **When to use:** Software engineering papers, system analysis — showing
 how data moves through processes and stores. Distinct from a flowchart:
