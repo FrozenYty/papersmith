@@ -36,3 +36,9 @@ Deeply polish and rewrite the provided English LaTeX snippet. Your goal is not m
 
 ## Input
 {{ENGLISH_LATEX}}
+
+## Self-Audit (before delivering)
+1. Did I preserve the original meaning and not introduce factual drift?
+2. Did I remove possessives with inanimate subjects (e.g., "METHOD's performance")?
+3. Are all LaTeX special characters correctly escaped?
+4. Is the output in the required Part 1/Part 2/Part 3 format?

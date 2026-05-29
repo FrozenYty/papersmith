@@ -1,21 +1,14 @@
 ---
 name: academic-writing-toolkit
 description: >
-  General-purpose academic research writing and diagramming toolkit. Use
-  this skill proactively whenever the user is working on a research paper,
-  thesis, or scholarly document — drafting, translating, polishing,
-  humanizing, shortening, expanding, logic checking, abstract polishing,
-  title generation, cover letters, response-to-reviewers, peer-review
-  simulation, experiment analysis, and figure/table captions. Use it also
-  whenever the user needs any academic figure: model architectures
-  (Transformer, CNN, Seq2Seq, Diffusion, GNN), system diagrams (RAG
-  pipelines, training pipelines), flowcharts, comparison charts, OR
-  publication-ready Python plots (bar, line, ROC, heatmap, violin, Pareto,
-  etc.) generated as draw.io XML or matplotlib code with proper academic
-  styling (Times New Roman, semantic colors, no overlap, correct flow
-  direction, Type-42 font embedding for paper submission). Even if the
-  user just says "draw a diagram of X", "polish this abstract", "write a
-  rebuttal", or "plot this experiment", use this skill.
+  Academic research writing, diagramming, and plotting toolkit. Use whenever
+  the user is working on a paper, thesis, or scholarly document — translation
+  (zh↔en), polishing, abstract/title drafting, cover letters, rebuttals,
+  peer-review simulation, experiment analysis, and figure/table captions.
+  Also use for academic figures: model architecture diagrams (draw.io XML)
+  and publication-ready Python plots (matplotlib, Type-42 fonts). Trigger on
+  requests like "draw a diagram of X", "polish this abstract", "plot this
+  experiment", or "write a rebuttal".
 ---
 
 # Academic Writing Toolkit
@@ -198,7 +191,7 @@ to "Python plot."
    types, indexed by recommend-chart's numbering).
 3. **Generate code** — follow `prompts/plot-figure.md`. Output one
    self-contained `.py` file that produces both `.pdf` (vector) and `.png`
-   (300 dpi) versions of the figure.
+   (600 dpi minimum, venue-adaptive) versions of the figure.
 4. **Self-check** — output the 10-item checklist from
    `plotting-reference.md` § Self-check, especially `pdf.fonttype = 42`
    (Type-3 fonts fail ACM/IEEE submission).

@@ -86,7 +86,7 @@ template to your spec, and writes a `.drawio` file ready to open in
 Claude reads `references/plotting-templates.md` §I-1, applies the
 publication style block (Type-42 fonts, IEEE palette), and writes a
 self-contained Python script that produces both `.pdf` (vector) and
-`.png` (300 dpi).
+`.png` (600 dpi).
 
 **Polishing an abstract:**
 > Polish this abstract for ICML, 250 words max: <abstract text>

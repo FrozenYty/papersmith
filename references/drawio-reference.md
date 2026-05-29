@@ -273,9 +273,10 @@ layout is identical to the absolute-coordinate approach, but moving the
 container to a different canvas position only requires changing the
 container's `x`/`y`.
 
-**When to use parent-child:** all new templates (§14–§19) use this.
-Existing templates (§1–§13) use absolute coordinates — both are valid;
-parent-child is recommended for new diagrams.
+**When to use parent-child:** the general layout and classic diagram
+templates (§5–§15) use this. The specific architecture templates (§1–§4)
+use absolute coordinates — both are valid; parent-child is recommended
+for new diagrams.
 
 ## XML Escapes
 

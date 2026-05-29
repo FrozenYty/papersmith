@@ -30,13 +30,18 @@ supports image generation.
 - Common Pitfalls (5 specific failures observed in past generations)
 - Self-check checklist
 
-**If the user's request matches a common architecture, also read
+**If the user's request matches a common diagram type, also read
 `references/drawio-templates.md`.** It contains canonical templates with
-correct Y coordinates already worked out for:
+correct coordinates already worked out for:
+
+Specific architectures (§1–§4):
 - §1 Transformer encoder-decoder (Vaswani 2017)
-- §2 Transformer decoder-only (GPT-style)
-- §3 Seq2Seq + Bahdanau attention
-- §4 CNN classifier (VGG/ResNet block)
+- §2 Diffusion forward/reverse process (DDPM/DDIM)
+- §3 RAG pipeline (retrieval-augmented LLM systems)
+- §4 Multi-stage training (Pretrain → SFT → RLHF)
+
+General layout patterns (§5–§9) and classic diagram types (§10–§15) are
+also available — see the index in `drawio-templates.md` for the full list.
 
 Adapt template names/counts to the user's spec; keep the layout math and
 edge directions as-is.
@@ -169,3 +174,10 @@ Highlight the core novelty. Ensure the connection logic makes sense.
 Mode A (primary) uses this directly to plan and generate the diagram.
 Mode B also needs this plus the paper abstract — prompt the user for
 `{{ABSTRACT}}` if they opt into Mode B.
+
+## Self-Audit (before delivering)
+1. Did I check templates first — if the request matches §1–§4 or §5–§15 in `drawio-templates.md`, did I adapt the matching template?
+2. Did I enforce flow direction consistently (TB for ML stacks, LR for pipelines)?
+3. Are all coordinates multiples of 10, with no out-of-page elements?
+4. Did I run the 13-item XML self-check from `drawio-reference.md`?
+5. For Mode B: did I verify the diagram matches the abstract's described contribution?

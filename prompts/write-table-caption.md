@@ -24,3 +24,9 @@ Convert the provided Chinese description into an English table caption that meet
 
 ## Input
 {{CHINESE_DESCRIPTION}}
+
+## Self-Audit (before delivering)
+1. Did I use Title Case for noun phrases, Sentence case for complete sentences?
+2. Did I use standard academic phrasing ("Comparison with", "Ablation study on", "Results on")?
+3. Did I avoid AI-isms ("showcase", "depict") — using "show", "compare", "present" instead?
+4. Are all special characters correctly escaped?

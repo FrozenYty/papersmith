@@ -10,7 +10,7 @@
     {
       "id": 2,
       "prompt": "I'm writing a DDPM paper and need a figure showing the forward (data → noise) and reverse (noise → data) processes as a Markov chain. Make it for IEEE single-column.",
-      "expected_output": "A .drawio file using the §5 Diffusion template. Two parallel chains, forward arrows blue going right, reverse arrows orange going left. x_0 in light green (data), x_T in light red (noise). Math captions below each chain.",
+      "expected_output": "A .drawio file using the §2 Diffusion template. Two parallel chains, forward arrows blue going right, reverse arrows orange going left. x_0 in light green (data), x_T in light red (noise). Math captions below each chain.",
       "files": []
     },
     {

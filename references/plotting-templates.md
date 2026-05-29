@@ -328,7 +328,7 @@ models = {
     "Strong":    ("#82B366", "-.", y_score_b),
     "Ours":      ("#9673A6", "-",  y_score_c),
 }
-fig, ax = plt.subplots(figsize=(3.5, 3.0))
+fig, ax = plt.subplots(figsize=(3.5, 3.5))
 for name, (color, ls, scores) in models.items():
     fpr, tpr, _ = roc_curve(y_true, scores)
     a = auc(fpr, tpr)
@@ -362,7 +362,7 @@ models = {
     "Strong":   ("#82B366", "-.", y_score_b),
     "Ours":     ("#9673A6", "-",  y_score_c),
 }
-fig, ax = plt.subplots(figsize=(3.5, 3.0))
+fig, ax = plt.subplots(figsize=(3.5, 3.5))
 for name, (color, ls, scores) in models.items():
     p, r, _ = precision_recall_curve(y_true, scores)
     ap = average_precision_score(y_true, scores)

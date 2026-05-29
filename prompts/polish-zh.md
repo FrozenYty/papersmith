@@ -23,7 +23,7 @@ Review and polish the provided Chinese paper paragraph. The core mission is to f
 
 ### Format Adaptation (Word-friendly)
 - Clean text: the output must be plain text. Strictly no Markdown bold or italic.
-- Punctuation: strictly use Chinese full-width marks (， 。 ； ： “ “). Quote marks must be full-width (U+201C / U+201D), never ASCII.
+- Punctuation: strictly use Chinese full-width marks (， 。 ； ： “ ”). Quote marks must be full-width (U+201C / U+201D), never ASCII.
 
 ### Output Format (Conditional)
 - **Part 1 [Refined Text]**:
@@ -35,7 +35,7 @@ Review and polish the provided Chinese paper paragraph. The core mission is to f
 - Output nothing else beyond these two parts.
 
 ### Self-Audit (Internal)
-1. Did I change a perfectly fluent sentence just to ”do something"? (If so, revert it.)
+1. Did I change a perfectly fluent sentence just to "do something"? (If so, revert it.)
 2. If no changes were made, did Part 1 faithfully reproduce the full original? Did Part 2 provide positive confirmation?
 3. Is the output entirely free of formatting markup?
 4. Are all the changes I made genuinely necessary — addressing clear, demonstrable problems?

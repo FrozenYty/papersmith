@@ -24,3 +24,9 @@ Convert the provided Chinese description into an English figure caption that mee
 
 ## Input
 {{CHINESE_DESCRIPTION}}
+
+## Self-Audit (before delivering)
+1. Did I use Title Case for noun phrases, Sentence case for complete sentences?
+2. Did I strip redundant openings ("The figure shows", "This diagram illustrates")?
+3. Did I avoid obscure vocabulary — is the wording plain and precise?
+4. Are all special characters correctly escaped?

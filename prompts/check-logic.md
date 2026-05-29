@@ -19,8 +19,14 @@ Run a final consistency and logic check on the provided English LaTeX snippet.
 - **Severe language errors**: Are there any Chinglish constructions or grammatical errors that render a sentence unintelligible?
 
 ### Output Format
-- If none of the above "must-fix" issues exist, output only: `[检测通过，无实质性问题]`
+- If none of the above “must-fix” issues exist, output only: `[检测通过，无实质性问题]`
 - If issues exist, list them concisely in Chinese. No lengthy exposition.
 
 ## Input
 {{ENGLISH_LATEX}}
+
+## Self-Audit (before delivering)
+1. Am I reporting only fatal errors, not style preferences?
+2. Have I double-checked that each flagged issue truly blocks reader comprehension?
+3. Is the output in the appropriate language for this user?
+4. If the text passes, did I output only `[检测通过，无实质性问题]` without embellishment?

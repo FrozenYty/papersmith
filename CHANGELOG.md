@@ -8,11 +8,12 @@ versioning follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ### Added
 
-- **11 new drawio layout pattern templates** (§9–§19): vertical stack,
-  horizontal pipeline, center hub + satellites, side-by-side comparison,
-  grid/table layout, flowchart, ERD, UML class diagram, sequence
-  diagram, state machine diagram, data flow diagram (DFD). Total drawio
-  templates: 19 (8 specific architectures + 11 general patterns).
+- **11 new drawio layout and classic diagram templates** (§5–§15):
+  vertical stack, horizontal pipeline, center hub + satellites,
+  side-by-side comparison, grid/table layout, flowchart, ERD, UML class
+  diagram, sequence diagram, state machine diagram, data flow diagram
+  (DFD). Total drawio templates: 15 (4 specific architectures + 11
+  general patterns and classic types).
 - **Orthogonal edge routing** as the default edge style in all new
   templates. Drawio's built-in `edgeStyle=orthogonalEdgeStyle` with
   `rounded=1;orthogonalLoop=1;jettySize=auto` eliminates most waypoint
@@ -63,11 +64,9 @@ which the prompt templates are adapted from.
 - `drawio-reference.md` — Hard rules, Flow Direction rule, No-Overlap
   rule, Cross-Stack Y-Alignment, Section Container Layout, 7 Common
   Pitfalls, Self-check
-- `drawio-templates.md` — 8 canonical architecture templates: Transformer
-  encoder-decoder (Vaswani 2017), Transformer decoder-only (GPT-style),
-  Seq2Seq with Bahdanau attention, CNN classifier, Diffusion
-  forward/reverse process, RAG pipeline, Multi-stage training (Pretrain
-  → SFT → RLHF), GNN message-passing
+- `drawio-templates.md` — 4 canonical architecture templates: Transformer
+  encoder-decoder (Vaswani 2017), Diffusion forward/reverse process, RAG
+  pipeline, Multi-stage training (Pretrain → SFT → RLHF)
 - `plotting-reference.md` — Publication rcParams, IEEE / Nature / Science
   / Cell color palettes, figure sizing per venue, statistical
   conventions, broken axis / log scale snippets, 10-item self-check

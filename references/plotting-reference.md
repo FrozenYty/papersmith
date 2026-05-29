@@ -16,7 +16,7 @@ When the user asks for a chart, do this in order:
    color palette + sizing).
 4. **Adapt to the user's data** — change variable names, axis labels,
    legend, but KEEP the style invariants from this file.
-5. **Save in two formats**: `.pdf` (vector, for paper) and `.png` (300 dpi,
+5. **Save in two formats**: `.pdf` (vector, for paper) and `.png` (600 dpi,
    for slides/preview). Both with `bbox_inches='tight'`.
 
 ## Publication Style Block (paste-ready)
@@ -63,7 +63,7 @@ mpl.rcParams.update({
     # PDF font embedding (CRITICAL for paper submission)
     "pdf.fonttype": 42,   # TrueType, not Type-3 (Type-3 fails ACM/IEEE checkers)
     "ps.fonttype": 42,
-    "savefig.dpi": 300,
+    "savefig.dpi": 600,
     "savefig.bbox": "tight",
     "savefig.pad_inches": 0.05,
     # Figure size (single-column paper figure default)
@@ -211,11 +211,27 @@ linthresh=1)`. Linthresh is the cutoff below which the scale is linear.
 ```python
 out = "fig_results"
 fig.savefig(f"{out}.pdf")           # vector, for paper
-fig.savefig(f"{out}.png", dpi=300)  # raster, for slides / preview
+fig.savefig(f"{out}.png", dpi=600)  # raster, for slides / preview
 ```
 
 **Don't:** save as `.jpg` (lossy compression on text), `.eps` (deprecated;
-modern paper systems prefer PDF), or low-dpi PNG (300 dpi minimum).
+modern paper systems prefer PDF), or low-dpi PNG (600 dpi minimum).
+
+### DPI Selection Guide
+
+Choose PNG DPI based on the figure type and intended use. The default is 600;
+scale up when the figure demands it. Always match the DPI to what the user
+specified; when unspecified, use the following defaults:
+
+| DPI | When to use |
+|-----|-------------|
+| 600 | Standard figures: bar charts, line plots, ROC/PR curves, box/violin plots, donut/pie charts, radar charts — clean lines and solid fills don't benefit from higher DPI |
+| 800 | Detailed figures: scatter plots (many points), heatmaps, multi-panel faceted grids, bar+line combos, dual-axis plots, Pareto fronts — finer pixel grid needed when data density is higher |
+| 1000 | Maximum fidelity: camera-ready final submission, images with fine text or thin lines, plots intended for poster printing (A0), high-detail visualizations, or when the user explicitly asks for "highest quality" |
+
+The `savefig.dpi` rcParam is a floor (600). Override it per `fig.savefig(..., dpi=N)` when the figure needs >600.
+
+**Self-check:** Did the user mention a specific DPI or a venue known to require higher raster quality (e.g., Nature Methods, Cell)? If yes, match it. If not, apply the table above.
 
 **Don't:** use `plt.show()` in a script intended for batch generation; it
 blocks. Use `plt.close(fig)` after saving.

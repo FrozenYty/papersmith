@@ -25,3 +25,9 @@ Translate the provided English LaTeX snippet into fluent, readable Chinese plain
 
 ## Input
 {{ENGLISH_LATEX}}
+
+## Self-Audit (before delivering)
+1. Did I strip all LaTeX commands (`\cite{}`, `\ref{}`, `\textbf{}`) and convert math to natural language?
+2. Did I maintain strict one-to-one sentence correspondence with the source?
+3. Are all Chinese quotation marks full-width (U+201C / U+201D)?
+4. Is the output plain Chinese with zero LaTeX artifacts?

@@ -10,7 +10,8 @@ and conveys the experimental claim faithfully.
 ## Task
 Given experimental data and a chosen chart type, produce a self-contained
 Python script that generates a publication-ready figure as both `.pdf`
-(vector) and `.png` (300 dpi).
+(vector) and `.png` (600 dpi minimum; see `plotting-reference.md` for
+   venue-adaptive DPI selection: 600 / 800 / 1000).
 
 ## Workflow
 
@@ -54,7 +55,7 @@ fig, ax = plt.subplots(figsize=(3.5, 2.6))
 
 # --- Save ---
 fig.savefig("fig_<name>.pdf")
-fig.savefig("fig_<name>.png", dpi=300)
+fig.savefig("fig_<name>.png", dpi=600)
 plt.close(fig)
 ```
 
@@ -130,5 +131,7 @@ Output nothing else.
 4. Are the palette colors from the reference, not matplotlib defaults?
 5. Did I disclose the meaning of error bars / bands in the caption?
 6. Did I avoid inventing numbers the user didn't provide?
-7. Does the script run as a single file (top-down execution, no missing
-   imports)?
+7. Does the script run as a single file (top-down execution, no missing imports)?
+8. Does the figure have no title (unless the user asked for one), since the caption lives in LaTeX?
+9. Are the axis labels human-readable, with units in parentheses (e.g., "Accuracy (%)")?
+10. Does the script output both `.pdf` and `.png` files?

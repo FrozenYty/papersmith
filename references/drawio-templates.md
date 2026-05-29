@@ -3,16 +3,18 @@
 Read this file when the user requests any conceptual diagram. Two kinds of
 template are available:
 
-- **§1–§8** are specific architectures (Transformer, Diffusion, RAG, etc.).
-  If the request matches one of these, copy the template directly.
-- **§9–§13** are general layout patterns (vertical stack, horizontal
-  pipeline, center hub, side-by-side comparison, grid). If no specific
-  template fits, pick the closest layout pattern and adapt it.
+- **§1–§4** are specific architectures (Transformer, Diffusion, RAG,
+  Multi-stage training). If the request matches one of these, copy the
+  template directly.
+- **§5–§15** are general layout patterns and classic diagram types
+  (vertical stack, horizontal pipeline, flowchart, ERD, UML, etc.). If no
+  specific architecture template fits, pick the closest pattern from
+  §5–§15 and adapt it.
 
 All templates follow the Flow Direction and No-Overlap rules from
 `drawio-reference.md`. For specific architectures (§1–§4), the convention
 is bottom-to-top TB flow (`source.y > target.y`). For general layouts
-(§5–§9), the flow direction is stated per pattern.
+(§5–§15), the flow direction is stated per pattern.
 
 ## Index
 
@@ -29,22 +31,22 @@ is bottom-to-top TB flow (`source.y > target.y`). For general layouts
 
 | Pattern | When to use | Section |
 |---|---|---|
-| Vertical stack (TB) | Protocol stacks, layered architectures, dependency chains | §2 |
-| Horizontal pipeline (LR) | Data processing pipelines, CI/CD, multi-stage workflows | §3 |
-| Center hub + satellites | CPU/system overviews, IoT gateways, star-topology networks | §4 |
+| Vertical stack (TB) | Protocol stacks, layered architectures, dependency chains | §5 |
+| Horizontal pipeline (LR) | Data processing pipelines, CI/CD, multi-stage workflows | §6 |
+| Center hub + satellites | CPU/system overviews, IoT gateways, star-topology networks | §7 |
 | Side-by-side comparison | Before/after, method A vs B, paired-element comparison | §8 |
-| Grid / table layout | Feature matrices, parameter tables, ablation grids | §2 |
+| Grid / table layout | Feature matrices, parameter tables, ablation grids | §9 |
 
 ### Classic diagram types
 
 | Type | When to use | Section |
 |---|---|---|
-| Flowchart | Decision trees, process flows, algorithm logic | §3 |
-| Entity-Relationship Diagram (ERD) | Database schemas, data models, table relationships | §4 |
-| UML Class Diagram | OOP design, architecture modeling, inheritance hierarchies | §8 |
-| Sequence Diagram | Protocol interactions, API call flows, message passing | §2 |
-| State Machine Diagram | State transitions, formal methods, protocol specifications | §3 |
-| Data Flow Diagram (DFD) | Software engineering, system data flows, process modeling | §4 |
+| Flowchart | Decision trees, process flows, algorithm logic | §10 |
+| Entity-Relationship Diagram (ERD) | Database schemas, data models, table relationships | §11 |
+| UML Class Diagram | OOP design, architecture modeling, inheritance hierarchies | §12 |
+| Sequence Diagram | Protocol interactions, API call flows, message passing | §13 |
+| State Machine Diagram | State transitions, formal methods, protocol specifications | §14 |
+| Data Flow Diagram (DFD) | Software engineering, system data flows, process modeling | §15 |
 
 If the user's request doesn't match any of these, fall back to the general
 workflow in `draw-diagram.md` and apply the Flow Direction rule

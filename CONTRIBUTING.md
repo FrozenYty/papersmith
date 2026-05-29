@@ -28,7 +28,7 @@ academic-writing-toolkit/
 
 <optional body — why, not what>
 
-Author: Tianyu Yao
+Author: {{YOUR_GITHUB_USERNAME_OR_GIT_NAME}}
 ```
 
 **Types:** `feat` (new feature/template/prompt), `fix` (bug fix), `docs`
@@ -189,7 +189,7 @@ in recommend-chart yet, add it there first.
   Nature/Science/Cell palettes otherwise.
 - Don't use `jet` / `rainbow` colormaps.
 - Disclose error bars / bands meaning (caption note).
-- Save as both `.pdf` (vector) and `.png` (300 dpi).
+- Save as both `.pdf` (vector) and `.png` (600 dpi minimum).
 
 **Register in plotting-templates.md index** at the top, and verify the
 numbering matches `prompts/recommend-chart.md`.

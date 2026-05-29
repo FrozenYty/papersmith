@@ -62,3 +62,9 @@ Follow this exact structure:
 
 ## Input
 {{EXPERIMENT_DATA_AND_CONCLUSION}}
+
+## Self-Audit (before delivering)
+1. Did I pick the chart type based on the data structure and the conclusion the user wants to emphasize?
+2. Did I check for statistical elements (error bars, significance) and recommend them when applicable?
+3. Is my recommendation specific enough — chart type + axis strategy + color rationale, not just a name?
+4. Did I mention the relevant template index (§I-§VI) from `plotting-templates.md`?
