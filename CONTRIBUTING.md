@@ -9,15 +9,37 @@ unrelated files.
 ```
 academic-writing-toolkit/
 ├── SKILL.md             # routing index — register new prompts here
-├── prompts/             # one .md per task (Role/Task/Constraints/Output)
+├── prompts/             # one .md per task (Role/Task/Constraints/Output/Self-Audit)
+│   ├── translate-*.md   # translation prompts (zh↔en, LaTeX or Word)
+│   ├── polish-*.md      # polishing prompts (en, zh, abstract, title)
+│   ├── humanize-*.md    # de-AI / de-translationese prompts
+│   ├── write-*.md       # generation prompts (captions, broader impact)
+│   ├── draw-diagram.md  # draw.io diagram generation
+│   ├── plot-figure.md   # Python plotting code generation
+│   └── ...
 ├── references/          # loaded on demand: long-form rules + templates
 │   ├── drawio-reference.md     (rules for architecture diagrams)
-│   ├── drawio-templates.md     (15 templates)
-│   ├── plotting-reference.md   (rules for Python plots)
-│   └── plotting-templates.md   (19 chart templates)
+│   ├── drawio-templates.md     (15 templates: §1-§4 arch, §5-§15 layouts/classic)
+│   ├── plotting-reference.md   (rules for Python plots, rcParams, palettes)
+│   └── plotting-templates.md   (19 chart templates: §I-§VI)
 ├── examples/            # verified end-to-end outputs
-└── evals/evals.json     # representative test prompts
+│   ├── transformer.drawio       (generated from drawio-templates §1)
+│   ├── diffusion.drawio         (generated from drawio-templates §2)
+│   └── sota-comparison.py       (generated from plotting-templates §I-1)
+├── evals/evals.json     # representative test prompts (15 cases)
+├── CHANGELOG.md
+├── CONTRIBUTING.md      # you are here
+└── README.md
 ```
+
+**Naming conventions:**
+
+| What | Pattern | Example |
+|------|---------|---------|
+| Prompt file | `<verb>-<target>-<optional-modifier>.md` | `translate-zh-to-en-latex.md` |
+| Reference file | `<topic>-reference.md` or `<topic>-templates.md` | `drawio-reference.md` |
+| Example drawio | `<descriptive-name>.drawio` | `transformer.drawio` |
+| Example Python | `<descriptive-name>.py` | `sota-comparison.py` |
 
 ## Commit Rules
 
@@ -28,7 +50,7 @@ academic-writing-toolkit/
 
 <optional body — why, not what>
 
-Author: {{YOUR_GITHUB_USERNAME_OR_GIT_NAME}}
+Author: <Your English Name>
 ```
 
 **Types:** `feat` (new feature/template/prompt), `fix` (bug fix), `docs`
@@ -47,6 +69,19 @@ git commit -m "..."
 
 This keeps diffs auditable and prevents accidentally committing temp files,
 editor artifacts, or unrelated changes.
+
+### What to commit
+
+| Commit These | Never Commit These |
+|-------------|-------------------|
+| `prompts/*.md` | `.pyc`, `__pycache__/` |
+| `references/*.md` | `.DS_Store`, `Thumbs.db` |
+| `SKILL.md`, `README.md` | Editor temp files (`*~`, `*.swp`) |
+| `CHANGELOG.md`, `CONTRIBUTING.md` | `.vscode/`, `.idea/` (unless `settings.json`) |
+| `evals/evals.json` | `Claude_Code_Files/` |
+| `examples/*.drawio` | `*.egg-info/`, `dist/` |
+| `examples/*.py` | `*.lock` (unless `pip freeze` is the intent) |
+| `examples/*.pdf`, `examples/*.png` (generated outputs, keep in sync) | |
 
 ### Batch size
 
