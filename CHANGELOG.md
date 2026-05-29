@@ -4,6 +4,40 @@ All notable changes to the Academic Writing Toolkit are recorded here. The
 format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and
 versioning follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.2.0] — 2026-05-29
+
+### Added
+
+- **11 new drawio layout pattern templates** (§9–§19): vertical stack,
+  horizontal pipeline, center hub + satellites, side-by-side comparison,
+  grid/table layout, flowchart, ERD, UML class diagram, sequence
+  diagram, state machine diagram, data flow diagram (DFD). Total drawio
+  templates: 19 (8 specific architectures + 11 general patterns).
+- **Orthogonal edge routing** as the default edge style in all new
+  templates. Drawio's built-in `edgeStyle=orthogonalEdgeStyle` with
+  `rounded=1;orthogonalLoop=1;jettySize=auto` eliminates most waypoint
+  hand-coding.
+- **Parent-child containment** as an alternative to absolute coordinates.
+  Children use coordinates relative to their container; moving the
+  container automatically moves all children. Implements drawio's native
+  `container=1;pointerEvents=0;` pattern.
+- **Spacing-by-complexity table** in `drawio-reference.md` — 200/280/350px
+  gap recommendations based on node count (≤5 / 6-10 / >10).
+
+### Changed
+
+- File renames: `draw-architecture-diagram.md` → `draw-diagram.md`,
+  `cover-letter.md` → `draft-cover-letter.md`,
+  `plot-academic.md` → `plot-figure.md`.
+- `drawio-reference.md` now has a Table of Contents for fast navigation.
+- Prompt index references updated for renamed files.
+
+### Design
+
+- Figure Routing section added to `SKILL.md` — explicit drawio-vs-Python
+  decision tree with "ambiguous → ask" fallback.
+- Renamed prompts now follow verb-object kebab-case convention throughout.
+
 ## [0.1.0] — 2026-05-29
 
 Initial release. **No license** — mirrors the upstream

@@ -73,6 +73,26 @@ Run the checklist and report each item `pass/fail`.
 </mxfile>
 ```
 
+**Orthogonal edge routing (new default, applies to all edges):**
+
+Use `edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;`
+as the base style for ALL edges. These four keywords enable drawio's
+built-in smart routing: automatic 90° bends that avoid shape overlaps.
+Combined with the No-Overlap rule, this eliminates most waypoint
+hand-coding.
+
+```xml
+<!-- Standard edge with orthogonal routing -->
+<mxCell id="e1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=classic;strokeColor=#333333;strokeWidth=1.5" edge="1" parent="1" source="node_a" target="node_b">
+  <mxGeometry relative="1" as="geometry"/>
+</mxCell>
+```
+
+Add explicit `exitX`/`exitY`/`entryX`/`entryY` only when a node has 2+
+connections on the same side — distribute them across the shape
+perimeter. Add `dashed=1` for skip/residual connections. Add `curved=1`
+for feedback loops.
+
 ## Flow Direction (READ FIRST — most common failure mode)
 
 **ML architecture diagrams flow BOTTOM-TO-TOP by convention.** This is the
@@ -206,6 +226,57 @@ role. This eliminates a whole class of overlap bugs.
 and decoder ×N benefit from containers because the `× N` annotation lives
 in the section label. Single-use groups don't.
 
+## Parent-Child Containment (alternative to absolute coordinates)
+
+For diagrams where modules are logically INSIDE a container (encoder
+modules inside the encoder section, services inside a swimlane, etc.),
+use drawio's native parent-child nesting. This is cleaner than absolute
+coordinates because:
+
+- Children use coordinates **relative to the container's top-left corner**
+  (e.g., `x="20" y="40"` means "20px inside from the container's left,
+  40px down from its top").
+- Moving the container automatically moves all children.
+- Overlap is structurally impossible — the parent IS the bounding box.
+- Section labels can sit inside at `parent="containerId"` with
+  `x="10" y="6"`.
+
+**Required attributes for the container:**
+
+```
+container=1;pointerEvents=0;
+```
+
+`container=1` makes the shape accept children. `pointerEvents=0`
+prevents the container from intercepting clicks/connections meant for
+child nodes.
+
+```xml
+<!-- Container (parent="1" — top-level) -->
+<mxCell id="enc_sec" value="" style="rounded=1;arcSize=6;container=1;pointerEvents=0;fillColor=#F5F5F5;strokeColor=#BDBDBD;strokeWidth=1.5;html=1;dashed=1;dashPattern=10 4" vertex="1" parent="1">
+  <mxGeometry x="40" y="390" width="320" height="260" as="geometry"/>
+</mxCell>
+
+<!-- Label INSIDE the container (parent="enc_sec", relative coords) -->
+<mxCell id="enc_lbl" value="Encoder  × N" style="text;html=1;strokeColor=none;fontSize=11;fontFamily=Times New Roman;fontStyle=2;fontColor=#666666;align=left;verticalAlign=top" vertex="1" parent="enc_sec">
+  <mxGeometry x="10" y="6" width="200" height="16" as="geometry"/>
+</mxCell>
+
+<!-- Module INSIDE the container (parent="enc_sec", relative coords) -->
+<mxCell id="enc_mha" value="Multi-Head Self-Attention" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#E1D5E7;strokeColor=#9673A6;strokeWidth=1.5;fontFamily=Times New Roman;fontStyle=1;fontSize=12;fontColor=#333333;align=center;verticalAlign=middle" vertex="1" parent="enc_sec">
+  <mxGeometry x="20" y="200" width="280" height="50" as="geometry"/>
+</mxCell>
+```
+
+**Conversion rule:** relative_x = absolute_x - container.x. The resulting
+layout is identical to the absolute-coordinate approach, but moving the
+container to a different canvas position only requires changing the
+container's `x`/`y`.
+
+**When to use parent-child:** all new templates (§14–§19) use this.
+Existing templates (§1–§13) use absolute coordinates — both are valid;
+parent-child is recommended for new diagrams.
+
 ## XML Escapes
 
 | Char | Write as |
@@ -221,12 +292,25 @@ HTML tags in `value` supported with `html=1`, must be XML-escaped:
 
 ## Layout Rules
 
+**Spacing scales with diagram complexity.** Don't use the same gap for a
+5-node stack and a 30-node pipeline.
+
+| Nodes | X gap (LR) | Y gap (TB) | Notes |
+|---|---|---|---|
+| ≤5 | 200px | 150px | Tight stacks, adjacent arrows are short |
+| 6–10 | 280px | 200px | Standard paper figure |
+| >10 | 350px | 250px | Needs routing corridors between rows |
+
+**Routing corridors:** between densely-packed rows, leave ~80px of clear
+vertical/horizontal space where edges can route without crossing shapes.
+Don't place small nodes in corridors.
+
 - Content 65-80% of canvas, 20-35% whitespace
 - External margin ≥40px, zone gap 40-80px
 - **Vertical gap between stacked modules: 24-30px** — shorter than 20px makes arrow shafts invisible
 - Same-tier nodes share Y (LR flow) or X (TB flow), equal size
 - Main flow direction consistent — don't mix LR and TB in one figure
-- No arrow passes through a shape
+- No arrow passes through a shape (orthogonal routing helps with this)
 - Max 2 line crossings
 - 3 lines max per node, 25 chars/line English
 

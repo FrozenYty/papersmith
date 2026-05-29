@@ -128,7 +128,7 @@ academic-writing-toolkit/
 ├── prompts/             # 22 task-specific prompts
 ├── references/          # 4 long-form references
 │   ├── drawio-reference.md      # rules for architecture diagrams
-│   ├── drawio-templates.md      # 8 canonical architecture templates
+│   ├── drawio-templates.md      # 19 templates (13 layouts + 6 classic diagram types)
 │   ├── plotting-reference.md    # rules for Python plots
 │   └── plotting-templates.md    # 19 chart templates
 ├── examples/            # verified end-to-end outputs
@@ -142,10 +142,12 @@ English, abstract, title), shorten/expand, humanize, logic-check,
 analyze experiments, simulate peer review, respond to reviewers, draft
 cover letter.
 
-**Architecture diagrams** (drawio XML) — Transformer encoder-decoder,
-Transformer decoder-only (GPT), Seq2Seq + Bahdanau, CNN classifier,
-Diffusion forward/reverse, RAG pipeline, multi-stage training, GNN
-message-passing.
+**Architecture diagrams** (drawio XML, 19 templates) — Transformer
+encoder-decoder, Transformer decoder-only (GPT), Seq2Seq + Bahdanau,
+CNN classifier, Diffusion, RAG pipeline, multi-stage training, GNN
+message-passing, plus 11 layout patterns: vertical stack, horizontal
+pipeline, center hub, side-by-side comparison, grid/table, flowchart,
+ERD, UML class, sequence, state machine, data flow diagram (DFD).
 
 **Charts** (Python / matplotlib) — grouped bar, horizontal bar, Pareto
 front, radar, stacked bar, line + CI band, line + zoomed inset, scatter
@@ -172,7 +174,7 @@ and [`references/plotting-reference.md`](references/plotting-reference.md).
 
 ## Versioning
 
-Semver. See [`CHANGELOG.md`](CHANGELOG.md). Current: **v0.1.0**.
+Semver. See [`CHANGELOG.md`](CHANGELOG.md). Current: **v0.2.0**.
 
 ## Contributing
 
