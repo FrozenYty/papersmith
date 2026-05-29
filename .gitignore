@@ -1,0 +1,35 @@
+# Python
+__pycache__/
+*.pyc
+*.py[cod]
+*.pyo
+*.pyd
+*.egg-info/
+.pytest_cache/
+.ipynb_checkpoints/
+
+# Virtual envs
+.venv/
+venv/
+env/
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Build artifacts
+build/
+dist/
+*.skill
+
+# Local outputs that aren't checked-in examples
+*.png.local
+*.pdf.local
+scratch/

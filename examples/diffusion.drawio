@@ -1,0 +1,89 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Diffusion" id="diffusion">
+    <mxGraphModel dx="1200" dy="500" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="440" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+
+        <!-- ===== Forward process title (blue) ===== -->
+        <mxCell id="t_fwd" value="Forward Process: q(x&lt;sub&gt;t&lt;/sub&gt; | x&lt;sub&gt;t-1&lt;/sub&gt;)" style="text;html=1;strokeColor=none;fontSize=14;fontFamily=Times New Roman;fontStyle=3;fontColor=#1976D2;align=center" vertex="1" parent="1">
+          <mxGeometry x="280" y="30" width="540" height="24" as="geometry"/>
+        </mxCell>
+
+        <!-- ===== Forward chain (top row, y=80..160) ===== -->
+        <mxCell id="f_x0" value="x&lt;sub&gt;0&lt;/sub&gt;&lt;br&gt;&lt;font style=&quot;font-size: 9px&quot; color=&quot;#2E7D32&quot;&gt;(data)&lt;/font&gt;" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#C8E6C9;strokeColor=#2E7D32;strokeWidth=2;fontSize=16;fontFamily=Times New Roman;fontStyle=2;fontColor=#1B5E20;align=center;verticalAlign=middle" vertex="1" parent="1">
+          <mxGeometry x="80" y="80" width="100" height="80" as="geometry"/>
+        </mxCell>
+        <mxCell id="f_x1" value="x&lt;sub&gt;1&lt;/sub&gt;" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#666666;strokeWidth=1.5;fontSize=16;fontFamily=Times New Roman;fontStyle=2;fontColor=#333333;align=center;verticalAlign=middle" vertex="1" parent="1">
+          <mxGeometry x="240" y="80" width="100" height="80" as="geometry"/>
+        </mxCell>
+        <mxCell id="f_dots1" value="…" style="text;html=1;strokeColor=none;fontSize=22;fontFamily=Times New Roman;fontColor=#999999;align=center;verticalAlign=middle" vertex="1" parent="1">
+          <mxGeometry x="380" y="110" width="80" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="f_xtm1" value="x&lt;sub&gt;t-1&lt;/sub&gt;" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#666666;strokeWidth=1.5;fontSize=16;fontFamily=Times New Roman;fontStyle=2;fontColor=#333333;align=center;verticalAlign=middle" vertex="1" parent="1">
+          <mxGeometry x="480" y="80" width="120" height="80" as="geometry"/>
+        </mxCell>
+        <mxCell id="f_xt" value="x&lt;sub&gt;t&lt;/sub&gt;" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#666666;strokeWidth=1.5;fontSize=16;fontFamily=Times New Roman;fontStyle=2;fontColor=#333333;align=center;verticalAlign=middle" vertex="1" parent="1">
+          <mxGeometry x="640" y="80" width="120" height="80" as="geometry"/>
+        </mxCell>
+        <mxCell id="f_dots2" value="…" style="text;html=1;strokeColor=none;fontSize=22;fontFamily=Times New Roman;fontColor=#999999;align=center;verticalAlign=middle" vertex="1" parent="1">
+          <mxGeometry x="800" y="110" width="80" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="f_xT" value="x&lt;sub&gt;T&lt;/sub&gt;&lt;br&gt;&lt;font style=&quot;font-size: 9px&quot; color=&quot;#C62828&quot;&gt;(noise)&lt;/font&gt;" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#FFCDD2;strokeColor=#C62828;strokeWidth=2;fontSize=16;fontFamily=Times New Roman;fontStyle=2;fontColor=#B71C1C;align=center;verticalAlign=middle" vertex="1" parent="1">
+          <mxGeometry x="900" y="80" width="100" height="80" as="geometry"/>
+        </mxCell>
+
+        <!-- Forward edges: → blue, dashed across the dots, labels on key transitions -->
+        <mxCell id="e_f01" style="endArrow=classic;html=1;strokeColor=#1976D2;strokeWidth=1.5;exitX=1;exitY=0.5;entryX=0;entryY=0.5" edge="1" parent="1" source="f_x0" target="f_x1"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e_f1t" style="endArrow=classic;html=1;strokeColor=#1976D2;strokeWidth=1.5;dashed=1;dashPattern=6 3;exitX=1;exitY=0.5;entryX=0;entryY=0.5" edge="1" parent="1" source="f_x1" target="f_xtm1"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e_ftt" style="endArrow=classic;html=1;strokeColor=#1976D2;strokeWidth=1.5;exitX=1;exitY=0.5;entryX=0;entryY=0.5" edge="1" parent="1" source="f_xtm1" target="f_xt"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e_ftT" style="endArrow=classic;html=1;strokeColor=#1976D2;strokeWidth=1.5;dashed=1;dashPattern=6 3;exitX=1;exitY=0.5;entryX=0;entryY=0.5" edge="1" parent="1" source="f_xt" target="f_xT"><mxGeometry relative="1" as="geometry"/></mxCell>
+
+        <!-- Forward arrow caption above the x_{t-1} → x_t arrow -->
+        <mxCell id="f_q_lbl" value="q(x&lt;sub&gt;t&lt;/sub&gt; | x&lt;sub&gt;t-1&lt;/sub&gt;) = N(√(1−β&lt;sub&gt;t&lt;/sub&gt;)·x&lt;sub&gt;t-1&lt;/sub&gt;, β&lt;sub&gt;t&lt;/sub&gt;I)" style="text;html=1;strokeColor=none;fontSize=10;fontFamily=Times New Roman;fontColor=#1976D2;fontStyle=2;align=center" vertex="1" parent="1">
+          <mxGeometry x="430" y="170" width="380" height="18" as="geometry"/>
+        </mxCell>
+
+        <!-- ===== Reverse process title (orange) ===== -->
+        <mxCell id="t_rev" value="Reverse Process: p&lt;sub&gt;θ&lt;/sub&gt;(x&lt;sub&gt;t-1&lt;/sub&gt; | x&lt;sub&gt;t&lt;/sub&gt;)" style="text;html=1;strokeColor=none;fontSize=14;fontFamily=Times New Roman;fontStyle=3;fontColor=#E65100;align=center" vertex="1" parent="1">
+          <mxGeometry x="280" y="240" width="540" height="24" as="geometry"/>
+        </mxCell>
+
+        <!-- ===== Reverse chain (bottom row, y=290..370) — same nodes shown again, arrows go RIGHT-TO-LEFT ===== -->
+        <mxCell id="r_xT" value="x&lt;sub&gt;T&lt;/sub&gt;&lt;br&gt;&lt;font style=&quot;font-size: 9px&quot; color=&quot;#C62828&quot;&gt;(noise)&lt;/font&gt;" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#FFCDD2;strokeColor=#C62828;strokeWidth=2;fontSize=16;fontFamily=Times New Roman;fontStyle=2;fontColor=#B71C1C;align=center;verticalAlign=middle" vertex="1" parent="1">
+          <mxGeometry x="900" y="290" width="100" height="80" as="geometry"/>
+        </mxCell>
+        <mxCell id="r_dots2" value="…" style="text;html=1;strokeColor=none;fontSize=22;fontFamily=Times New Roman;fontColor=#999999;align=center;verticalAlign=middle" vertex="1" parent="1">
+          <mxGeometry x="800" y="320" width="80" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="r_xt" value="x&lt;sub&gt;t&lt;/sub&gt;" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#666666;strokeWidth=1.5;fontSize=16;fontFamily=Times New Roman;fontStyle=2;fontColor=#333333;align=center;verticalAlign=middle" vertex="1" parent="1">
+          <mxGeometry x="640" y="290" width="120" height="80" as="geometry"/>
+        </mxCell>
+        <mxCell id="r_xtm1" value="x&lt;sub&gt;t-1&lt;/sub&gt;" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#666666;strokeWidth=1.5;fontSize=16;fontFamily=Times New Roman;fontStyle=2;fontColor=#333333;align=center;verticalAlign=middle" vertex="1" parent="1">
+          <mxGeometry x="480" y="290" width="120" height="80" as="geometry"/>
+        </mxCell>
+        <mxCell id="r_dots1" value="…" style="text;html=1;strokeColor=none;fontSize=22;fontFamily=Times New Roman;fontColor=#999999;align=center;verticalAlign=middle" vertex="1" parent="1">
+          <mxGeometry x="380" y="320" width="80" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="r_x1" value="x&lt;sub&gt;1&lt;/sub&gt;" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#666666;strokeWidth=1.5;fontSize=16;fontFamily=Times New Roman;fontStyle=2;fontColor=#333333;align=center;verticalAlign=middle" vertex="1" parent="1">
+          <mxGeometry x="240" y="290" width="100" height="80" as="geometry"/>
+        </mxCell>
+        <mxCell id="r_x0" value="x&lt;sub&gt;0&lt;/sub&gt;&lt;br&gt;&lt;font style=&quot;font-size: 9px&quot; color=&quot;#2E7D32&quot;&gt;(sample)&lt;/font&gt;" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#C8E6C9;strokeColor=#2E7D32;strokeWidth=2;fontSize=16;fontFamily=Times New Roman;fontStyle=2;fontColor=#1B5E20;align=center;verticalAlign=middle" vertex="1" parent="1">
+          <mxGeometry x="80" y="290" width="100" height="80" as="geometry"/>
+        </mxCell>
+
+        <!-- Reverse edges: ← orange, dashed across the dots -->
+        <mxCell id="e_rT3" style="endArrow=classic;html=1;strokeColor=#E65100;strokeWidth=1.5;dashed=1;dashPattern=6 3;exitX=0;exitY=0.5;entryX=1;entryY=0.5" edge="1" parent="1" source="r_xT" target="r_xt"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e_r3t" style="endArrow=classic;html=1;strokeColor=#E65100;strokeWidth=1.5;exitX=0;exitY=0.5;entryX=1;entryY=0.5" edge="1" parent="1" source="r_xt" target="r_xtm1"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e_rt1" style="endArrow=classic;html=1;strokeColor=#E65100;strokeWidth=1.5;dashed=1;dashPattern=6 3;exitX=0;exitY=0.5;entryX=1;entryY=0.5" edge="1" parent="1" source="r_xtm1" target="r_x1"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e_r10" style="endArrow=classic;html=1;strokeColor=#E65100;strokeWidth=1.5;exitX=0;exitY=0.5;entryX=1;entryY=0.5" edge="1" parent="1" source="r_x1" target="r_x0"><mxGeometry relative="1" as="geometry"/></mxCell>
+
+        <!-- Reverse arrow caption below the x_t → x_{t-1} arrow -->
+        <mxCell id="r_p_lbl" value="p&lt;sub&gt;θ&lt;/sub&gt;(x&lt;sub&gt;t-1&lt;/sub&gt; | x&lt;sub&gt;t&lt;/sub&gt;) = N(μ&lt;sub&gt;θ&lt;/sub&gt;(x&lt;sub&gt;t&lt;/sub&gt;,t), Σ&lt;sub&gt;θ&lt;/sub&gt;(x&lt;sub&gt;t&lt;/sub&gt;,t))" style="text;html=1;strokeColor=none;fontSize=10;fontFamily=Times New Roman;fontColor=#E65100;fontStyle=2;align=center" vertex="1" parent="1">
+          <mxGeometry x="430" y="380" width="380" height="18" as="geometry"/>
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

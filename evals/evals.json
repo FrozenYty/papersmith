@@ -1,0 +1,53 @@
+{
+  "skill_name": "academic-writing-toolkit",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Draw a Transformer encoder-decoder architecture diagram for our machine translation paper. Encoder has 6 layers, decoder has 6 layers, source and target both English/German. Output the drawio file.",
+      "expected_output": "A .drawio file using the §1 template from references/drawio-templates.md. Encoder section labeled 'Encoder × 6', decoder labeled 'Decoder × 6'. Source token labels reflect English/German. K,V cross-attention is a clean horizontal line. Forward edges all satisfy source.y > target.y.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "I'm writing a DDPM paper and need a figure showing the forward (data → noise) and reverse (noise → data) processes as a Markov chain. Make it for IEEE single-column.",
+      "expected_output": "A .drawio file using the §5 Diffusion template. Two parallel chains, forward arrows blue going right, reverse arrows orange going left. x_0 in light green (data), x_T in light red (noise). Math captions below each chain.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "Plot this benchmark comparison: Method A: MMLU 78.2±0.5, GSM8K 75.1±0.6, HumanEval 82.0±0.4, BBH 71.5±0.7. Method B: MMLU 80.4±0.4, GSM8K 78.3±0.5, HumanEval 84.1±0.4, BBH 74.2±0.6. Ours: MMLU 83.7±0.3, GSM8K 81.9±0.4, HumanEval 87.3±0.3, BBH 78.0±0.5. Target venue is NeurIPS.",
+      "expected_output": "A self-contained Python script using §I-1 grouped vertical bar template. rcParams sets pdf.fonttype=42. Ours in attention-purple #9673A6, baselines in muted colors. Y-limit zoomed in. Saves both .pdf and .png. Caption discloses '±1 SD over N seeds' and the y-axis zoom.",
+      "files": []
+    },
+    {
+      "id": 4,
+      "prompt": "Polish this abstract for ICML. Word limit 250: 'In this paper, we propose a novel method for object detection. Our method uses transformers and we believe it is state-of-the-art. We test on COCO and get good results. The contributions are significant for the community.'",
+      "expected_output": "Output following polish-abstract.md format: Part 1 polished abstract in 5 parts (background → gap → method → results → impact); Part 2 word count; Part 3 sentence-to-part map; Part 4 modification log noting removed hype words ('novel', 'state-of-the-art', 'significant') and quantified results.",
+      "files": []
+    },
+    {
+      "id": 5,
+      "prompt": "Generate 8 candidate titles for this paper: 'We introduce DRIVE-CF, a counterfactual training method for autonomous driving safety. By imagining counterfactual crash scenarios during training, we reduce real-world collision rate by 12%.'",
+      "expected_output": "Output following polish-title.md format: Part 1 table of 8 candidates spanning ≥5 type categories (descriptive, result-led, question, named-method, two-part, field-positioning), each scored on Specificity/Memorability/Honesty/Searchability (1-5 each); Part 2 top-2 picks with rationale; Part 3 any deliberately skipped types.",
+      "files": []
+    },
+    {
+      "id": 6,
+      "prompt": "Draft a cover letter for our paper 'DRIVE-CF: Counterfactual Training for Safer Autonomous Driving' targeting Nature Communications. The work shows 12% fewer collisions on a 50-hour driving benchmark.",
+      "expected_output": "A 250-400 word cover letter following draft-cover-letter.md structure: 4 short paragraphs covering opening / problem-and-gap / quantified contributions / venue-fit / standard declarations. Tone confident not boastful, no hedging, active voice.",
+      "files": []
+    },
+    {
+      "id": 7,
+      "prompt": "We got these reviewer comments: 'R1: Section 4 lacks an ablation on the K hyperparameter. R2: The related work missed the relevant 2024 paper by Smith et al. R3: Why didn't you compare against Method-X?' Draft point-by-point responses, knowing we did add a K-ablation in revision (now Table 6) and we cite Smith et al. but missed the citation in Sec 2 (now added). Method-X uses different inputs so isn't directly comparable.",
+      "expected_output": "Output following respond-to-reviewers.md three-part structure (quote / response / changes) for each comment. R1 = concession (added Table 6, cite line numbers). R2 = concession (added citation in Sec 2). R3 = polite disagreement (different input modality, explain why not comparable, possibly add a note in the manuscript).",
+      "files": []
+    },
+    {
+      "id": 8,
+      "prompt": "Recommend the best chart type for this experimental setup: we have 5 different model architectures, each evaluated across 3 metrics (accuracy, latency, parameter count). We want to emphasize that our method achieves the best accuracy-latency trade-off.",
+      "expected_output": "Output following recommend-chart.md format. Primary recommendation: §I-3 Pareto front (latency vs accuracy with parameter count as bubble size or annotation), since the user explicitly wants to emphasize trade-off. Secondary: §I-1 grouped bar if they want side-by-side comparison.",
+      "files": []
+    }
+  ]
+}
