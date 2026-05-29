@@ -12,11 +12,64 @@ academic-writing-toolkit/
 ├── prompts/             # one .md per task (Role/Task/Constraints/Output)
 ├── references/          # loaded on demand: long-form rules + templates
 │   ├── drawio-reference.md     (rules for architecture diagrams)
-│   ├── drawio-templates.md     (8 canonical architecture templates)
+│   ├── drawio-templates.md     (15 templates)
 │   ├── plotting-reference.md   (rules for Python plots)
 │   └── plotting-templates.md   (19 chart templates)
 ├── examples/            # verified end-to-end outputs
 └── evals/evals.json     # representative test prompts
+```
+
+## Commit Rules
+
+### Format
+
+```
+<type>: <short description>
+
+<optional body — why, not what>
+
+Author: Tianyu Yao
+```
+
+**Types:** `feat` (new feature/template/prompt), `fix` (bug fix), `docs`
+(documentation only), `refactor` (cleanup, renames, reorganization),
+`style` (formatting, whitespace), `chore` (gitignore, CI).
+
+### Staging discipline
+
+Stage files individually — **never use `git add -A` or `git add .`**:
+
+```bash
+git add path/to/changed-file.md
+git add path/to/another-file.md
+git commit -m "..."
+```
+
+This keeps diffs auditable and prevents accidentally committing temp files,
+editor artifacts, or unrelated changes.
+
+### Batch size
+
+Commit in small, topic-focused batches. Don't bundle "added 6 templates +
+renamed 3 files + updated README + fixed typos" into one commit — split
+into one commit per logical change.
+
+```bash
+# Good: one topic per commit
+git add references/drawio-reference.md
+git commit -m "docs: add orthogonal routing convention to drawio-reference"
+
+# Bad: unrelated changes squashed together
+git add references/ prompts/ README.md
+git commit -m "various updates"
+```
+
+### Before committing
+
+```bash
+git pull --rebase          # avoid push conflicts
+git status                 # review what changed
+git diff --stat            # confirm scope
 ```
 
 ## Adding a new prompt
