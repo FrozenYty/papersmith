@@ -1,14 +1,21 @@
 ---
 name: academic-writing-toolkit
 description: >
-  Academic research writing, diagramming, and plotting toolkit. Use whenever
-  the user is working on a paper, thesis, or scholarly document — translation
-  (zh↔en), polishing, abstract/title drafting, cover letters, rebuttals,
-  peer-review simulation, experiment analysis, and figure/table captions.
-  Also use for academic figures: model architecture diagrams (draw.io XML)
-  and publication-ready Python plots (matplotlib, Type-42 fonts). Trigger on
-  requests like "draw a diagram of X", "polish this abstract", "plot this
-  experiment", or "write a rebuttal".
+  Academic paper writing, polishing, translation (zh↔en), diagramming, and
+  plotting assistant. Use when the user is writing, polishing, translating,
+  or reviewing academic documents — papers, theses, abstracts, cover letters,
+  rebuttals, experiment analysis. Use for drawing model architecture diagrams
+  (draw.io) and creating publication-quality charts and plots (matplotlib).
+  学术论文写作、润色、中英翻译、画图、绘图助手。当用户提到写论文、改论文、
+  润色、翻译、画架构图、画模型图、画图表、写摘要、起标题、回复审稿意见、
+  投稿信、实验分析、模拟审稿时自动触发。
+when_to_use: >
+  User mentions writing, polishing, translating, or reviewing academic papers,
+  theses, abstracts. Drawing architecture diagrams, model figures, flowcharts,
+  or charts/plots for papers. Drafting cover letters, rebuttals, or responses
+  to reviewers. Experiment analysis, figure captions, table captions.
+  Chinese triggers: 论文 学术 润色 翻译 画图 画架构图 画图表 摘要 标题
+  审稿 rebuttal cover-letter 投稿 实验分析.
 author: Tianyu Yao
 ---
 
