@@ -29,7 +29,7 @@ Deeply polish and rewrite the provided English LaTeX snippet. Your goal is not m
 ### Anti-Pattern Awareness
 - Before polishing, read `references/writing-anti-patterns.md` § English section. If the input matches any listed anti-pattern, rewrite accordingly.
 
-### Output Format
+## Output Format
 - **Part 1 [LaTeX]**: Output only the polished English LaTeX code.
   - Escape all special characters (e.g., `%`, `_`, `&`).
   - Preserve math expressions as-is (keep `$` delimiters).

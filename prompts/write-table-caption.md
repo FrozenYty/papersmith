@@ -16,7 +16,22 @@ Convert the provided Chinese description into an English table caption that meet
 - **Preferred phrasing**: For tables, use standard academic expressions such as "Comparison with", "Ablation study on", "Results on".
 - **De-AI**: Avoid words like "showcase" or "depict". Use "show", "compare", "present" directly.
 
-### Output Format
+### Table Notes
+- Distinguish the caption (above the table) from table notes (below).
+  Do not embed footnotes in the caption text.
+- Standard note markers: *, †, ‡, § (not superscript numbers, which
+  could be confused with data).
+- If the table spans multiple pages in the final layout, note this:
+  "(Continued on next page)" — but defer placement decisions to the
+  LaTeX table environment.
+
+### Multi-Page Tables
+- For tables too long for a single page: the caption on the first page
+  should end with "(Continued)", and subsequent pages should carry
+  "Table X. (Continued)" as a header, not a full new caption.
+- Do not split a table's caption across pages.
+
+## Output Format
 - Output only the translated English caption text.
 - Do not include a "Table 1:" prefix. Output only the caption content itself.
 - Escape all special characters (e.g., `%`, `_`, `&`).

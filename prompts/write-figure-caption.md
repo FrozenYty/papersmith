@@ -16,7 +16,21 @@ Convert the provided Chinese description into an English figure caption that mee
 - **Minimalist principle**: Strip redundant openings like "The figure shows" or "This diagram illustrates". Start directly with the content descriptor (e.g., Architecture, Performance comparison, Visualization).
 - **De-AI**: Avoid obscure or complex words. Keep wording plain and precise.
 
-### Output Format
+### Multi-Panel Figures
+- For figures with sub-panels (a), (b), (c): start with a one-sentence
+  overview, then describe each panel concisely. "(a) Training loss over
+  100 epochs. (b) Inference latency vs. batch size."
+- Do not repeat the overview sentence as a panel description.
+- If the panels are logically ordered (e.g., input → processing →
+  output), follow that order in the caption.
+
+### Abbreviations in Captions
+- Spell out all abbreviations on first use in the caption, even if
+  spelled out in the main text — captions must be self-contained.
+- Exception: universally recognized abbreviations (e.g., "CNN", "ROC")
+  may appear without expansion.
+
+## Output Format
 - Output only the translated English caption text.
 - Do not include a "Figure 1:" prefix. Output only the caption content itself.
 - Escape all special characters (e.g., `%`, `_`, `&`).

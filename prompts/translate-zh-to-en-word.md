@@ -23,7 +23,7 @@ Translate the provided Chinese draft into a polished English academic passage, f
 - Use present simple throughout for methods, architectures, and experimental conclusions.
 - Use past tense only when referring to a specific historical event.
 
-### Output Format
+## Output Format
 - **Part 1 [English Draft]**: Output only the translated English plain-text content.
   - Must be entirely in English.
   - Use standard text symbols directly (e.g., 95%, model_v1, R&D). Do **not** apply LaTeX-style backslash escaping.
@@ -31,7 +31,7 @@ Translate the provided Chinese draft into a polished English academic passage, f
 - **Part 2 [Translation]**: A literal back-translation into Chinese, for verifying that the intended meaning is preserved.
 - Output nothing else — no chitchat, no preamble, no explanations.
 
-### Self-Audit (Internal)
+## Self-Audit (before delivering)
 1. From a reviewer's perspective: check for excessive typographic styling, garbled formatting, logical leaps, or untranslated Chinese.
 2. Fix any issues immediately. The final output must be rigorous, clean, and entirely in English.
 

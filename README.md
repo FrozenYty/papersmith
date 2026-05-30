@@ -2,8 +2,8 @@
 
 A Claude Code / Claude.ai skill for academic research writing, paper
 diagrams, and publication-ready figures. Drop it in, and Claude will
-route paper-related requests through 22 specialist prompts and 27
-templates calibrated for top-venue conventions.
+route paper-related requests through 25 specialist prompts, 15 drawio
+diagram templates, 19 plotting templates, and 7 writing templates.
 
 > 🙏 Built on top of [awesome-ai-research-writing](https://github.com/Leey21/awesome-ai-research-writing) by Leey21. Prompts adapted with gratitude; diagram and plotting reference layers added on top.
 
@@ -125,14 +125,16 @@ academic-writing-toolkit/
 ├── README.md            # you are here
 ├── CONTRIBUTING.md      # how to add prompts / templates
 ├── CHANGELOG.md         # version history
-├── prompts/             # 22 task-specific prompts
-├── references/          # 4 long-form references
-│   ├── drawio-reference.md      # rules for architecture diagrams
-│   ├── drawio-templates.md      # 15 templates (4 architectures + 11 layout patterns)
-│   ├── plotting-reference.md    # rules for Python plots
-│   └── plotting-templates.md    # 19 chart templates
+├── prompts/             # 25 task-specific prompts
+├── references/          # 7 long-form references
+│   ├── drawio-reference.md          # rules for architecture diagrams
+│   ├── drawio-templates.md          # 15 templates (4 architectures + 11 patterns)
+│   ├── plotting-reference.md        # rules for Python plots
+│   ├── plotting-templates.md        # 19 chart templates
+│   ├── writing-anti-patterns.md     # 24 anti-patterns (12 zh + 12 en)
+│   ├── writing-templates.md         # 7 section structure templates
+│   └── venue-citation-guide.md      # 10+ venue citation formats
 ├── examples/            # verified end-to-end outputs
-└── evals/evals.json     # representative test prompts
 ```
 
 ## What's covered

@@ -33,7 +33,7 @@ The following words appear disproportionately in AI-generated text. Consider rep
 ### Anti-Pattern Awareness
 - Before humanizing, read `references/writing-anti-patterns.md` § English section. If the input matches any listed anti-pattern, rewrite accordingly.
 
-### Output Format
+## Output Format
 - **Part 1 [LaTeX]**: Output the rewritten code (or the original, if it was already good enough).
   - Must be entirely in English.
   - Escape all special characters (e.g., `%`, `_`, `&`).
@@ -44,7 +44,7 @@ The following words appear disproportionately in AI-generated text. Consider rep
   - If no changes were needed, output: `[检测通过] 原文表达地道自然，无明显 AI 味，建议保留。`
 - Output nothing else beyond these three parts.
 
-### Self-Audit (Internal)
+## Self-Audit (before delivering)
 1. Naturalness check: does the text read with a natural human tone?
 2. Necessity check: did the changes genuinely improve readability? If the edit was essentially a synonym swap for its own sake, revert it and report `检测通过`.
 

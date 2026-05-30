@@ -130,6 +130,16 @@ For each citation not marked VERIFIED:
 - Fix author list for: `smith2024llm`
 - Delete or replace: `bogus2025survey` (not found on any index)
 
+## See also
+
+- prompts/check-logic.md — same pre-submission verification stage; run
+  verify-references first (fix bib issues), then check-logic (logic audit).
+- prompts/draft-cover-letter.md — references should be verified before the
+  cover letter is written, since incomplete citations are a common desk
+  reject reason.
+- references/venue-citation-guide.md — the target venue's citation format
+  specification; read this before running the Format dimension.
+
 ## Self-Audit (before delivering)
 
 1. Did I extract ALL `\cite{}` commands (including variants like

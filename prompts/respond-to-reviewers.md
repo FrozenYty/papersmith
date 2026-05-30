@@ -56,21 +56,6 @@ numbers when concrete.]
   bullet listing the major revisions made for that reviewer.
 - Use Markdown for the draft. The author can convert to LaTeX/Word later.
 
-### Self-audit (internal)
-1. For each comment, is the response type unambiguous (concession /
-   clarification / disagreement)?
-2. Does each "Changes" line cite a specific section / line / table?
-3. Are there any reviewer sub-points without a response? Re-scan.
-4. Is the tone consistent — neither apologetic nor combative?
-
-## Input
-- Reviewer comments (raw text from the review system)
-- Optional: a list of changes the authors have already made, so responses
-  align with the actual revision
-
-{{REVIEWER_COMMENTS}}
-{{OPTIONAL_CHANGES_MADE}}
-
 ## Output Format
 Reply in the same language as the manuscript (English by default;
 Chinese if the manuscript is Chinese). Apply the Chinese typography rules
@@ -94,6 +79,21 @@ from SKILL.md if outputting Chinese.
 ## Reviewer 2
 ...
 ```
+
+## Self-Audit (before delivering)
+1. For each comment, is the response type unambiguous (concession /
+   clarification / disagreement)?
+2. Does each "Changes" line cite a specific section / line / table?
+3. Are there any reviewer sub-points without a response? Re-scan.
+4. Is the tone consistent — neither apologetic nor combative?
+
+## Input
+- Reviewer comments (raw text from the review system)
+- Optional: a list of changes the authors have already made, so responses
+  align with the actual revision
+
+{{REVIEWER_COMMENTS}}
+{{OPTIONAL_CHANGES_MADE}}
 
 ## See also
 - prompts/simulate-peer-review.md — 正式回复前先模拟评审，预判 reviewer 可能提出的问题。使用前，将 simulate-peer-review 的 Part 1 [The Review Report] 输出作为本 prompt 的 {{REVIEWER_COMMENTS}} 输入。

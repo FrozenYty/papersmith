@@ -18,7 +18,7 @@ Run a final consistency and logic check on the provided English LaTeX snippet.
 - **Terminology consistency**: Does a core concept change names without explanation?
 - **Severe language errors**: Are there any Chinglish constructions or grammatical errors that render a sentence unintelligible?
 
-### Output Format
+## Output Format
 - If none of the above “must-fix” issues exist, output only: `[检测通过，无实质性问题]`
 - If issues exist, list them concisely in Chinese. No lengthy exposition.
 

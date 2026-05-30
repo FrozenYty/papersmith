@@ -21,7 +21,7 @@ Slightly shorten the provided English LaTeX snippet.
 - Avoid em-dashes (—).
 - Reject itemized lists. Maintain flowing paragraphs.
 
-### Output Format
+## Output Format
 - **Part 1 [LaTeX]**: Output only the shortened English LaTeX code.
   - Must be entirely in English.
   - Escape all special characters (e.g., `%`, `_`, `&`).
@@ -30,7 +30,7 @@ Slightly shorten the provided English LaTeX snippet.
 - **Part 3 [Modification Log]**: Briefly describe what was changed and why (e.g., removed filler word "XXX", merged clause "YYY").
 - Output nothing else beyond these three parts.
 
-### Self-Audit (Internal)
+## Self-Audit (before delivering)
 1. Completeness check: did you accidentally delete an experimental parameter or qualifier? (If so, restore it.)
 2. Length check: did you over-shorten? (The goal is modest trimming — do not collapse a paragraph into a single sentence.)
 

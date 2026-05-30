@@ -22,12 +22,13 @@ academic-writing-toolkit/
 │   ├── drawio-templates.md          (15 templates: §1-§4 arch, §5-§15 layouts/classic)
 │   ├── plotting-reference.md        (rules for Python plots, rcParams, palettes)
 │   ├── plotting-templates.md        (19 chart templates: §I-§VI)
-│   └── writing-anti-patterns.md     (12 Chinese writing anti-patterns)
+│   ├── writing-anti-patterns.md     (24 patterns: 12 zh + 12 en)
+│   ├── writing-templates.md         (7 section structure templates)
+│   └── venue-citation-guide.md      (10+ venue citation formats)
 ├── examples/            # verified end-to-end outputs
 │   ├── transformer.drawio       (generated from drawio-templates §1)
 │   ├── diffusion.drawio         (generated from drawio-templates §2)
 │   └── sota-comparison.py       (generated from plotting-templates §I-1)
-├── evals/evals.json     # representative test prompts (15 cases)
 ├── CHANGELOG.md
 ├── CONTRIBUTING.md      # you are here
 └── README.md
@@ -38,7 +39,7 @@ academic-writing-toolkit/
 | What | Pattern | Example |
 |------|---------|---------|
 | Prompt file | `<verb>-<target>-<optional-modifier>.md` | `translate-zh-to-en-latex.md` |
-| Reference file | `<topic>-reference.md` or `<topic>-templates.md` | `drawio-reference.md` |
+| Reference file | `<topic>-reference.md`, `<topic>-templates.md`, `<topic>-anti-patterns.md`, or `<topic>-guide.md` | `drawio-reference.md`, `writing-anti-patterns.md`, `venue-citation-guide.md` |
 | Example drawio | `<descriptive-name>.drawio` | `transformer.drawio` |
 | Example Python | `<descriptive-name>.py` | `sota-comparison.py` |
 
@@ -133,10 +134,10 @@ You are <a specific persona with credibility for this task>.
 - specific rule
 - specific rule
 
-### Output Format
+## Output Format
 <Structure of the output. Use Part 1 / Part 2 / Part 3 if multi-part.>
 
-### Self-Audit (Internal)
+## Self-Audit (before delivering)
 1. <Check 1>
 2. <Check 2>
 

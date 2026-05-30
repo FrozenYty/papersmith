@@ -38,7 +38,7 @@ Do not deviate from the prompt template unless the user explicitly asks.
 | Polish Chinese text with minimal intervention | Chinese paragraph (near-final) | `prompts/polish-zh.md` |
 | Polish abstract into the 5-part structure | Current abstract + optional venue limit | `prompts/polish-abstract.md` |
 | Generate 5-10 candidate titles + scoring | Abstract or summary | `prompts/polish-title.md` |
-| Writing templates (Introduction, Related Work, Methodology, Experiments, Conclusion) | — (loaded on demand) | `references/writing-templates.md` |
+| Writing templates (7 sections: Introduction, Related Work, Methodology, Experiments, Conclusion, Abstract, General Principles) | — (loaded on demand) | `references/writing-templates.md` |
 
 ### Length Adjustment
 

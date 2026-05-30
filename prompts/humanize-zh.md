@@ -28,14 +28,14 @@ Rewrite the provided Chinese text to remove AI-generated and translationese patt
 - **When in doubt, leave it**: If the input text is already natural, rigorous, and free of obvious AI markers, preserve the original. Do not change things just for the sake of changing them.
 - **Positive feedback**: For high-quality input, give clear affirmation in Part 2.
 
-### Output Format
+## Output Format
 - **Part 1 [Body Text]**: Output the rewritten plain text (or the original, if already good enough). Paragraphs should be clearly separated. No formatting symbols whatsoever.
 - **Part 2 [Modification Log]**:
   - If changes were made: briefly list which typical “empty rhetorical flourishes” or “translationese” patterns were removed or rewritten.
   - If no changes were needed, output: `[检测通过] 原文表达严谨自然，无明显 AI 痕迹，建议保留。`
 - Output nothing else beyond these two parts.
 
-### Self-Audit (Internal)
+## Self-Audit (before delivering)
 1. Naturalness check: does this read like something a rigorous scholar at a Chinese university would write? Does it convey academic intent precisely rather than merely piling on ornate language?
 2. Cleanliness check: are all Markdown symbols removed, making it ready for direct paste into Word?
 3. Necessity check: did the changes genuinely improve academic coherence? If the edit was essentially a synonym swap for its own sake, revert it and report “检测通过”.

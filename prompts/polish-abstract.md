@@ -53,21 +53,6 @@ Preserve the technical content; sharpen the rhetoric.
 - Don't include citations. Abstract has no `\cite{}`.
 - Don't introduce new terminology that isn't in the paper.
 
-### Self-audit (internal)
-1. Can a non-specialist reader, after reading just the abstract, state the
-   problem, the method's key idea, and the headline result?
-2. Are there any sentences that don't map to one of the 5 parts? Cut them.
-3. Are the result claims quantified?
-4. Does paragraph length match the word budget?
-
-## Input
-- The current abstract (any state — draft, polished, over-budget, etc.)
-- Optional: target venue + word limit, key results to emphasize
-
-{{ABSTRACT}}
-{{OPTIONAL_VENUE_AND_LIMIT}}
-{{OPTIONAL_KEY_RESULTS}}
-
 ## Output Format
 
 **Part 1 [Polished abstract]**: Single paragraph, no headers. Ready to
@@ -92,6 +77,21 @@ Output nothing else.
 
 If the abstract is in Chinese, output Part 1 in Chinese with full-width
 punctuation per SKILL.md. Other parts may stay in Chinese or English.
+
+## Self-Audit (before delivering)
+1. Can a non-specialist reader, after reading just the abstract, state the
+   problem, the method's key idea, and the headline result?
+2. Are there any sentences that don't map to one of the 5 parts? Cut them.
+3. Are the result claims quantified?
+4. Does paragraph length match the word budget?
+
+## Input
+- The current abstract (any state — draft, polished, over-budget, etc.)
+- Optional: target venue + word limit, key results to emphasize
+
+{{ABSTRACT}}
+{{OPTIONAL_VENUE_AND_LIMIT}}
+{{OPTIONAL_KEY_RESULTS}}
 
 ## See also
 - prompts/polish-title.md — 标题是摘要的浓缩，两者在修辞和关键词上应一致。将本 prompt 的 Part 1 [Polished abstract] 输出作为 polish-title 的 {{ABSTRACT_OR_SUMMARY}} 输入。

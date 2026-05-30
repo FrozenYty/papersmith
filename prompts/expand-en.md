@@ -22,7 +22,7 @@ Slightly expand the provided English LaTeX snippet.
 - Avoid em-dashes (—).
 - Reject itemized lists. Maintain flowing paragraphs.
 
-### Output Format
+## Output Format
 - **Part 1 [LaTeX]**: Output only the expanded English LaTeX code.
   - Must be entirely in English.
   - Escape all special characters (e.g., `%`, `_`, `&`).
@@ -31,7 +31,7 @@ Slightly expand the provided English LaTeX snippet.
 - **Part 3 [Modification Log]**: Briefly describe what was changed and why (e.g., surfaced implicit conclusion "XXX", added connector "YYY").
 - Output nothing else beyond these three parts.
 
-### Self-Audit (Internal)
+## Self-Audit (before delivering)
 1. Content value check: are all additions reasonable inferences grounded in the original text? (Hallucinating or fabricating data is strictly forbidden.)
 2. Style check: is the expanded text still concise? (Avoid bloated, empty prose.)
 

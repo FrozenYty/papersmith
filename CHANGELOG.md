@@ -123,7 +123,8 @@ which the prompt templates are adapted from.
   error bars, IEEE single-column sizing, Type-42 font embedding verified
 
 **Evals scaffolding:** `evals/evals.json` with 8 representative test
-prompts covering diagrams, plots, polishing, and writing tasks.
+prompts (removed in v0.2.x — not meaningful for an atomic task-based
+skill where correctness is judged by humans, not automated checks).
 
 ### Design rules baked into the toolkit
 

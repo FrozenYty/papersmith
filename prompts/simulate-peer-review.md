@@ -23,7 +23,7 @@ Thoroughly read and analyze the provided PDF paper. Based on the specified targe
 - When presenting complex logic, use flowing paragraphs. Avoid excessive itemization.
 - Do not use irrelevant formatting commands.
 
-### Output Format
+## Output Format
 
 **Part 1 [The Review Report]**: A realistic top-conference review (written in Chinese). Use full-width Chinese quotation marks `""` throughout — never ASCII `""`. Include the following sections:
 - **Summary**: One-sentence summary of the paper's core claim and contribution positioning.
@@ -38,7 +38,7 @@ Thoroughly read and analyze the provided PDF paper. Based on the specified targe
 
 Output nothing else beyond these two parts.
 
-### Self-Audit (Internal)
+## Self-Audit (before delivering)
 1. Is every issue raised specific to an actionable level? Do not say "experiments are insufficient" — say "lacks [specific verification] on [specific dataset]."
 2. Did you misclassify a "presentation issue" as a "methodological flaw"? The severity and fix path are completely different.
 3. Does the score objectively reflect the paper's actual contribution to the community, rather than applying a rigid harshness template?

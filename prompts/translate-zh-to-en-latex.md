@@ -22,7 +22,7 @@ Translate the provided Chinese draft into a polished English academic LaTeX pass
 - Use present simple throughout for methods, architectures, and experimental conclusions.
 - Use past tense only when referring to a specific historical event.
 
-### Output Format
+## Output Format
 - **Part 1 [LaTeX]**: Output only the translated English LaTeX content.
   - Must be entirely in English.
   - Escape all special characters (e.g., `95%` → `95\%`, `model_v1` → `model\_v1`, `R&D` → `R\&D`).
@@ -30,7 +30,7 @@ Translate the provided Chinese draft into a polished English academic LaTeX pass
 - **Part 2 [Translation]**: A literal back-translation into Chinese, for verifying that the intended meaning is preserved.
 - Output nothing else — no chitchat, no explanations beyond these two parts.
 
-### Self-Audit (Internal)
+## Self-Audit (before delivering)
 1. From a reviewer's perspective: check for excessive typographic styling, logical leaps, or untranslated Chinese.
 2. Fix any issues immediately. The final output must be rigorous, clean, and entirely in English.
 

@@ -51,22 +51,6 @@ in the rationale.
 
 Sum is /20. Recommend titles ≥ 16.
 
-### Self-audit (internal)
-1. Did you generate at least 5 distinct types, or did you cluster around
-   one rhetorical strategy?
-2. Are the scores justified by the title's actual properties, or are they
-   uniform inflation?
-3. Did you check the type-fit comment ("question-form skipped because
-   the paper is a benchmark, not a yes/no question")?
-
-## Input
-- Abstract or 3-5 sentence summary
-- Optional: target venue, current draft title, hard requirements (e.g.,
-  must contain "Diffusion", must avoid acronyms)
-
-{{ABSTRACT_OR_SUMMARY}}
-{{OPTIONAL_DETAILS}}
-
 ## Output Format
 
 **Part 1 [Candidates]** — table:
@@ -88,6 +72,22 @@ Output nothing else.
 
 If the paper is in Chinese, output candidates in Chinese with full-width
 punctuation per SKILL.md.
+
+## Self-Audit (before delivering)
+1. Did you generate at least 5 distinct types, or did you cluster around
+   one rhetorical strategy?
+2. Are the scores justified by the title's actual properties, or are they
+   uniform inflation?
+3. Did you check the type-fit comment ("question-form skipped because
+   the paper is a benchmark, not a yes/no question")?
+
+## Input
+- Abstract or 3-5 sentence summary
+- Optional: target venue, current draft title, hard requirements (e.g.,
+  must contain "Diffusion", must avoid acronyms)
+
+{{ABSTRACT_OR_SUMMARY}}
+{{OPTIONAL_DETAILS}}
 
 ## See also
 - prompts/polish-abstract.md — 标题与摘要共享核心关键词和定位，应协同打磨。使用前，将 polish-abstract 的 Part 1 [Polished abstract] 输出作为本 prompt 的 {{ABSTRACT_OR_SUMMARY}} 输入。

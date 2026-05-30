@@ -27,12 +27,12 @@
 
         <!-- x_0 (data) — green -->
         <mxCell id="f_x0" value="x_0  (data)" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#C8E6C9;strokeColor=#4CAF50;strokeWidth=2;fontSize=14;fontFamily=Times New Roman;fontStyle=2;fontColor=#333333;align=center;verticalAlign=middle" vertex="1" parent="1">
-          <mxGeometry x="80" y="90" width="100" height="80" as="geometry"/>
+          <mxGeometry x="80" y="80" width="100" height="80" as="geometry"/>
         </mxCell>
 
         <!-- x_1 — white -->
         <mxCell id="f_x1" value="x_1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#666666;strokeWidth=1.5;fontSize=14;fontFamily=Times New Roman;fontStyle=2;fontColor=#333333;align=center;verticalAlign=middle" vertex="1" parent="1">
-          <mxGeometry x="240" y="90" width="100" height="80" as="geometry"/>
+          <mxGeometry x="240" y="80" width="100" height="80" as="geometry"/>
         </mxCell>
 
         <!-- … dots 1 (between x_1 and x_{t-1}) -->
@@ -42,12 +42,12 @@
 
         <!-- x_{t-1} — white (wider) -->
         <mxCell id="f_xtm1" value="x_{t-1}" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#666666;strokeWidth=1.5;fontSize=14;fontFamily=Times New Roman;fontStyle=2;fontColor=#333333;align=center;verticalAlign=middle" vertex="1" parent="1">
-          <mxGeometry x="480" y="90" width="120" height="80" as="geometry"/>
+          <mxGeometry x="480" y="80" width="120" height="80" as="geometry"/>
         </mxCell>
 
         <!-- x_t — white (wider) -->
         <mxCell id="f_xt" value="x_t" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#666666;strokeWidth=1.5;fontSize=14;fontFamily=Times New Roman;fontStyle=2;fontColor=#333333;align=center;verticalAlign=middle" vertex="1" parent="1">
-          <mxGeometry x="640" y="90" width="120" height="80" as="geometry"/>
+          <mxGeometry x="640" y="80" width="120" height="80" as="geometry"/>
         </mxCell>
 
         <!-- … dots 2 (between x_t and x_T) -->
@@ -57,12 +57,12 @@
 
         <!-- x_T (noise) — red -->
         <mxCell id="f_xT" value="x_T  (noise)" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#FFCDD2;strokeColor=#F44336;strokeWidth=2;fontSize=14;fontFamily=Times New Roman;fontStyle=2;fontColor=#333333;align=center;verticalAlign=middle" vertex="1" parent="1">
-          <mxGeometry x="900" y="90" width="110" height="80" as="geometry"/>
+          <mxGeometry x="900" y="80" width="110" height="80" as="geometry"/>
         </mxCell>
 
         <!-- ===== Reverse Process Title (orange, bold) ===== -->
         <mxCell id="t_rev" value="Reverse Process: p&lt;sub&gt;θ&lt;/sub&gt;(x&lt;sub&gt;t−1&lt;/sub&gt; | x&lt;sub&gt;t&lt;/sub&gt;)" style="text;html=1;strokeColor=none;fontSize=16;fontFamily=Times New Roman;fontStyle=1;fontColor=#E65100;align=center;verticalAlign=middle" vertex="1" parent="1">
-          <mxGeometry x="280" y="240" width="540" height="28" as="geometry"/>
+          <mxGeometry x="280" y="225" width="540" height="28" as="geometry"/>
         </mxCell>
 
         <!-- ===== Reverse Formula Annotation (orange, italic) ===== -->

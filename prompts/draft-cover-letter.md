@@ -48,7 +48,15 @@ venue. No filler.
 - Salutation: "Dear Editors," or the named editor if known.
 - Sign-off: "Sincerely, [corresponding author]" with affiliation.
 
-### Self-audit (internal)
+## Output Format
+Output the cover letter directly as plain prose. No headers. No commentary
+before or after.
+
+If the manuscript is in Chinese-language submission (e.g., Chinese journal),
+write the letter in Chinese using full-width punctuation per SKILL.md rules.
+Otherwise default to English.
+
+## Self-Audit (before delivering)
 1. Does paragraph 2 name a SPECIFIC gap, or just a general background?
 2. Are contributions QUANTIFIED where possible?
 3. Does paragraph 4 cite the venue's scope concretely, or could the same
@@ -67,14 +75,6 @@ venue. No filler.
 {{TYPE}}
 {{SUMMARY}}
 {{OPTIONAL_DETAILS}}
-
-## Output Format
-Output the cover letter directly as plain prose. No headers. No commentary
-before or after.
-
-If the manuscript is in Chinese-language submission (e.g., Chinese journal),
-write the letter in Chinese using full-width punctuation per SKILL.md rules.
-Otherwise default to English.
 
 ## See also
 - prompts/polish-abstract.md — Cover letter 的核心依据是摘要，两者应口径一致。使用前，将 polish-abstract 的 Part 1 [Polished abstract] 输出作为本 prompt 摘要信息源，填充 {{SUMMARY}}。

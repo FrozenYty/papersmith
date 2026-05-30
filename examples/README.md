@@ -55,11 +55,11 @@ is self-contained — `python sota-comparison.py` produces both `.pdf`
 
 **Caption draft** (paste into your LaTeX `\caption{...}`):
 
-> Performance comparison on four standard benchmarks. Bars show mean
-> accuracy over 5 random seeds; error bars indicate ±1 standard deviation.
-> Our method (purple) consistently outperforms both baselines across
-> MMLU, GSM8K, HumanEval, and BBH. The y-axis starts at 60% to make
-> differences visible.
+> Performance comparison on four standard classification metrics. Bars
+> show mean scores over 5 random seeds; error bars indicate ±1 standard
+> deviation. Our method (purple) consistently outperforms both baselines
+> across all metrics. The y-axis starts at 60% to make differences
+> visible.
 
 **To adapt:** replace `methods`, `metrics`, `values`, `errs` arrays at
 the top of the script. Adjust `ax.set_ylim(60, 95)` to your data range.

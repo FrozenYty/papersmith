@@ -18,7 +18,7 @@ Translate the provided English LaTeX snippet into fluent, readable Chinese plain
 - **Preserve sentence structure**: Keep the Chinese word order as close to the original English as possible, so the reader can easily map back to the source.
 - Do not add or remove words for the sake of fluency. If the original has grammatical errors or awkward phrasing, reflect them faithfully — do not auto-correct.
 
-### Output Format
+## Output Format
 - Output only the translated plain Chinese paragraph.
 - Use full-width Chinese quotation marks `""` — never ASCII `""`.
 - Do not include any LaTeX code (including math syntax symbols).

@@ -23,7 +23,7 @@ Carefully read the provided experimental data. Extract key patterns, trends, and
   - Immediately follow with specific numerical analysis and logical reasoning within the same paragraph.
 - Do not use list environments. Maintain pure prose paragraphs.
 
-### Output Format
+## Output Format
 - **Part 1 [LaTeX]**: Output only the LaTeX code for the analysis.
   - Escape all special characters (e.g., `%`, `_`, `&`).
   - Preserve math expressions as-is (keep `$` delimiters).
