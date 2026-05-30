@@ -1,6 +1,6 @@
 ---
 name: academic-writing-toolkit
-version: 0.3.1
+version: 0.3.2
 description: >
   学术论文写作助手。用户需要写论文、改论文、润色文字、中英互译、画模型
   架构图、画数据图表（柱状图/折线图/loss曲线等）、写摘要标题、回复审稿

@@ -176,7 +176,7 @@ and [`references/plotting-reference.md`](references/plotting-reference.md).
 
 ## Versioning
 
-Semver. See [`CHANGELOG.md`](CHANGELOG.md). Current: **v0.3.1**.
+Semver. See [`CHANGELOG.md`](CHANGELOG.md). Current: **v0.3.2**.
 
 ## Contributing
 

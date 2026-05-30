@@ -4,6 +4,18 @@ All notable changes to the Academic Writing Toolkit are recorded here. The
 format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and
 versioning follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.3.2] — 2026-05-30
+
+### Fixed
+
+- **Chinese auto-triggering weak**: description was English-first with
+  Chinese keyword dumps at the end, causing misses on real user phrasing
+  (e.g., "审稿人说我实验不够怎么回复" failed to trigger). Rewrote
+  description to lead with natural Chinese sentences, moved English to
+  supporting position, and replaced when_to_use keyword dumps with
+  structured bilingual signals. Added casual Chinese terms users actually
+  say: 改改, 示意图, 结构图, 折线图, loss曲线, 校对, 回复审稿, 投会议.
+
 ## [0.3.1] — 2026-05-30
 
 ### Fixed
