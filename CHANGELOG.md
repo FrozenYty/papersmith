@@ -45,6 +45,13 @@ versioning follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
   Work (taxonomy), Methodology (top-down), Experiments (three-part),
   Conclusion (three-part), and Abstract (five-part), with concrete
   examples and a general principles section.
+- **Citation verification system**: `prompts/verify-references.md` —
+  5-part audit covering completeness (cite→bib mapping + required field
+  check), venue-specific format validation, and optional WebSearch-driven
+  existence verification (VERIFIED / MISMATCH / NOT_FOUND). Companion
+  `references/venue-citation-guide.md` documents citation formats for
+  10+ top venues (NeurIPS, ICML, CVPR, ACL, IEEE, ACM, Nature, Science,
+  Chinese journals). Total prompts: 25.
 - **SKILL.md frontmatter**: added `author: Tianyu Yao`.
 - **Orthogonal edge routing** as the default edge style in all new
   templates. Drawio's built-in `edgeStyle=orthogonalEdgeStyle` with

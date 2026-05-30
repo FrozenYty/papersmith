@@ -102,7 +102,7 @@ Claude routes to `prompts/respond-to-reviewers.md`, produces a
 point-by-point reply with the three response types (concession /
 clarification / disagreement) clearly signaled.
 
-See [`SKILL.md`](SKILL.md) for the full prompt index — 24 prompts in 6
+See [`SKILL.md`](SKILL.md) for the full prompt index — 25 prompts in 6
 categories.
 
 ## Examples

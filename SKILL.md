@@ -79,6 +79,8 @@ Do not deviate from the prompt template unless the user explicitly asks.
 | Draft a point-by-point response to reviewers | Reviewer comments + optional list of changes | `prompts/respond-to-reviewers.md` |
 | Draft a 250-400 word cover letter for submission | Title + venue + manuscript summary | `prompts/draft-cover-letter.md` |
 | Write broader impact / ethical considerations statement | Title + abstract + method description + optional venue | `prompts/write-broader-impact.md` |
+| Verify reference list completeness, format, and existence | LaTeX snippet + optional target venue | `prompts/verify-references.md` |
+| Citation format guide (10+ venues, required fields, style files) | — (loaded on demand) | `references/venue-citation-guide.md` |
 
 ## Chinese Typography Rules (CRITICAL)
 
