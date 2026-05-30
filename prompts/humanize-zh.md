@@ -12,6 +12,7 @@ Rewrite the provided Chinese text to remove AI-generated and translationese patt
 - Any emotionally charged expression that carries zero substantive information, or ornate vocabulary that masks a logic gap (e.g., “毋庸置疑”, “耦合内聚”, “不可磨灭的贡献”, “范式转移”, “颠覆性”, “深刻”, “切中要害”, “本质”), must be replaced with specific, objective academic description.
 - Example: “为了解决这一痛点” → “针对上述问题”; “展现了令人惊叹的能力” → “表现出显著的性能提升”.
 - Preserve core technical terminology with precision. Never casually swap domain-specific terms just to “de-AI” the text.
+- **Anti-pattern reference**: Before rewriting, read `references/writing-anti-patterns.md`. It catalogs 12 common Chinese academic writing mistakes with concrete Bad → Rewritten examples. If the input matches any listed anti-pattern, apply the corresponding rewrite strategy.
 
 ### Sentence & Structural Naturalization (Remove Translationese & Mechanical Feel)
 - **Break long attributive chains**: Avoid English-style nested attributive structures like “一个...的...的...”. Split them into shorter clauses or restructure in idiomatic Chinese.

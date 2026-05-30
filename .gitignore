@@ -33,3 +33,7 @@ dist/
 *.png.local
 *.pdf.local
 scratch/
+.claude/memory/user_profile.md
+.claude/memory/feedback.md
+
+evals/results/

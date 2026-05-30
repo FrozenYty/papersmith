@@ -14,6 +14,19 @@ author: Tianyu Yao
 
 # Academic Writing Toolkit
 
+## Session Startup
+
+At the start of each session, if the user is working on a paper, thesis,
+or scholarly document:
+
+1. Read `.claude/memory/user_profile.md` if it exists — apply language,
+   research domain, and style preferences to all subsequent output.
+2. Read `.claude/memory/feedback.md` if it exists — avoid repeating any
+   corrections recorded in past sessions.
+3. If neither file exists, offer to create `user_profile.md` from the
+   template at the end of the first session. Don't ask mid-task; wait
+   until the work is done.
+
 Route the user's request to the correct prompt template below. Read the
 matched file in full, then follow its instructions to accomplish the task.
 Do not deviate from the prompt template unless the user explicitly asks.

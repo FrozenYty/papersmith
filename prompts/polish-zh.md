@@ -23,7 +23,8 @@ Review and polish the provided Chinese paper paragraph. The core mission is to f
 
 ### Format Adaptation (Word-friendly)
 - Clean text: the output must be plain text. Strictly no Markdown bold or italic.
-- Punctuation: strictly use Chinese full-width marks (， 。 ； ： “ ”). Quote marks must be full-width (U+201C / U+201D), never ASCII.
+- Punctuation: strictly use Chinese full-width marks (， 。 ； ： “ “). Quote marks must be full-width (U+201C / U+201D), never ASCII.
+- **Anti-pattern reference**: Read `references/writing-anti-patterns.md` before polishing. It documents 12 common mistakes (empty adjectives, inflated cliches, machine-translation artifacts, etc.) with concrete rewrites. Use it as a checklist — if the input triggers any anti-pattern, rewrite accordingly.
 
 ### Output Format (Conditional)
 - **Part 1 [Refined Text]**:
