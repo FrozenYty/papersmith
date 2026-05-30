@@ -2,8 +2,8 @@
 
 A Claude Code / Claude.ai skill for academic research writing, paper
 diagrams, and publication-ready figures. Drop it in, and Claude will
-route paper-related requests through 25 specialist prompts, 15 drawio
-diagram templates, 19 plotting templates, and 7 writing templates.
+route paper-related requests through 27 specialist prompts, 15 drawio
+diagram templates, 19 plotting templates, and 8 reference guides.
 
 > 🙏 Built on top of [awesome-ai-research-writing](https://github.com/Leey21/awesome-ai-research-writing) by Leey21. Prompts adapted with gratitude; diagram and plotting reference layers added on top.
 
@@ -102,7 +102,7 @@ Claude routes to `prompts/respond-to-reviewers.md`, produces a
 point-by-point reply with the three response types (concession /
 clarification / disagreement) clearly signaled.
 
-See [`SKILL.md`](SKILL.md) for the full prompt index — 25 prompts in 6
+See [`SKILL.md`](SKILL.md) for the full prompt index — 27 prompts in 6
 categories.
 
 ## Examples
@@ -125,8 +125,8 @@ academic-writing-toolkit/
 ├── README.md            # you are here
 ├── CONTRIBUTING.md      # how to add prompts / templates
 ├── CHANGELOG.md         # version history
-├── prompts/             # 25 task-specific prompts
-├── references/          # 7 long-form references
+├── prompts/             # 27 task-specific prompts
+├── references/          # 8 long-form references
 │   ├── drawio-reference.md          # rules for architecture diagrams
 │   ├── drawio-templates.md          # 15 templates (4 architectures + 11 patterns)
 │   ├── plotting-reference.md        # rules for Python plots
@@ -134,6 +134,7 @@ academic-writing-toolkit/
 │   ├── writing-anti-patterns.md     # 24 anti-patterns (12 zh + 12 en)
 │   ├── writing-templates.md         # 7 section structure templates
 │   └── venue-citation-guide.md      # 10+ venue citation formats
+│   └── cjk-fonts-guide.md           # CJK font setup for matplotlib figures
 ├── examples/            # verified end-to-end outputs
 ```
 
@@ -175,7 +176,7 @@ and [`references/plotting-reference.md`](references/plotting-reference.md).
 
 ## Versioning
 
-Semver. See [`CHANGELOG.md`](CHANGELOG.md). Current: **v0.2.0**.
+Semver. See [`CHANGELOG.md`](CHANGELOG.md). Current: **v0.3.0**.
 
 ## Contributing
 

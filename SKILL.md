@@ -1,5 +1,6 @@
 ---
 name: academic-writing-toolkit
+version: 0.3.0
 description: >
   Academic paper writing, polishing, translation (zh↔en), diagramming, and
   plotting assistant. Use when the user is writing, polishing, translating,
@@ -14,8 +15,11 @@ when_to_use: >
   theses, abstracts. Drawing architecture diagrams, model figures, flowcharts,
   or charts/plots for papers. Drafting cover letters, rebuttals, or responses
   to reviewers. Experiment analysis, figure captions, table captions.
+  LaTeX, .tex files. Submission workflows: camera-ready, revision, rebuttal
+  period, accepted/rejected. Conference names: NeurIPS, ICML, ICLR, CVPR,
+  ICCV, ECCV, ACL, EMNLP, NAACL, AAAI, IJCAI — any mention of these.
   Chinese triggers: 论文 学术 润色 翻译 画图 画架构图 画图表 摘要 标题
-  审稿 rebuttal cover-letter 投稿 实验分析.
+  审稿 rebuttal cover-letter 投稿 实验分析 LaTeX 降重 改写.
 author: Tianyu Yao
 ---
 
@@ -62,6 +66,7 @@ Do not deviate from the prompt template unless the user explicitly asks.
 | Remove AI-generated writing patterns from English LaTeX | English LaTeX snippet | `prompts/humanize-en.md` |
 | Remove machine-translation tone from Chinese text | Chinese paragraph | `prompts/humanize-zh.md` |
 | Chinese and English academic writing anti-patterns (24 patterns, Bad→Rewritten) | — (loaded on demand) | `references/writing-anti-patterns.md` |
+| Rewrite text to avoid plagiarism similarity while preserving meaning | Original text with similarity concerns | `prompts/rewrite-avoid-plagiarism.md` |
 
 ### Figures & Charts
 
@@ -76,6 +81,8 @@ Do not deviate from the prompt template unless the user explicitly asks.
 | Python plotting templates (19 chart types) | — (loaded on demand) | `references/plotting-templates.md` |
 | Write a figure caption in English | Chinese description of the figure | `prompts/write-figure-caption.md` |
 | Write a table caption in English | Chinese description of the table | `prompts/write-table-caption.md` |
+| Generate a publication-ready LaTeX table from data | CSV/table data + caption description | `prompts/generate-latex-table.md` |
+| CJK font configuration guide for matplotlib figures | — (loaded on demand) | `references/cjk-fonts-guide.md` |
 
 ### Analysis & Review
 

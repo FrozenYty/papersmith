@@ -4,6 +4,33 @@ All notable changes to the Academic Writing Toolkit are recorded here. The
 format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and
 versioning follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.3.0] — 2026-05-30
+
+### Added
+
+- **LaTeX table generation prompt**: `prompts/generate-latex-table.md` —
+  converts CSV/tabular data into publication-ready `\begin{table}` blocks
+  with booktabs, auto-alignment, best-result bolding, and special-character
+  escaping. Total prompts: 27.
+- **Plagiarism-safe rewriting prompt**: `prompts/rewrite-avoid-plagiarism.md` —
+  structural paraphrase that avoids synonym-only swaps and thesaurus
+  overload, with an explicit ethical-use boundary.
+- **CJK font configuration guide**: `references/cjk-fonts-guide.md` —
+  OS-specific font selection (Windows/macOS/Linux/Overleaf), troubleshooting
+  for tofu/tofu, bold/italic workarounds, and mixed Chinese+math handling.
+  Total references: 8.
+
+### Changed
+
+- **SKILL.md description**: added full-width Chinese trigger phrases, a
+  `when_to_use` field with bilingual keywords, conference-name triggers
+  (NeurIPS, ICML, ICLR, CVPR, ACL, etc.), and venue/lifecycle keywords
+  (LaTeX, camera-ready, revision, accepted/rejected) to greatly improve
+  automatic skill triggering for Chinese-speaking users.
+- **SKILL.md frontmatter**: added `version` field.
+- **README.md**: updated prompt count (25 → 27), reference count (7 → 8),
+  and added `cjk-fonts-guide.md` to the repository structure.
+
 ## [0.2.0] — 2026-05-29
 
 ### Added
