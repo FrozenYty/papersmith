@@ -1,0 +1,14 @@
+Eval Report — Case 06 — 2026-05-30 11:44:58
+============================================================
+
+Case 06
+==================================================
+Prompt    (200 chars): Draft a cover letter for our paper 'DRIVE-CF: Counterfactual Training for Safer Autonomous Driving' targeting Nature Communications. The work shows 12
+
+  [PASS] prompt non-empty (200 chars)
+  [INFO] expected_output (243 chars)
+  [PASS] prompts/draft-cover-letter.md
+  [INFO] 1 prompt file(s) referenced: draft-cover-letter.md
+  [INFO] no detail strings extracted to verify
+
+  STATUS → PASS  (2 checks passed)

@@ -1,0 +1,16 @@
+Eval Report — Case 02 — 2026-05-30 11:44:58
+============================================================
+
+Case 02
+==================================================
+Prompt    (165 chars): I'm writing a DDPM paper and need a figure showing the forward (data → noise) and reverse (noise → data) processes as a Markov chain. Make it for IEEE
+
+  [PASS] prompt non-empty (165 chars)
+  [INFO] expected_output (220 chars)
+  [WARN] no prompt .md files detected in expected_output
+  [WARN] '§2'  ← found in prompts\draw-diagram.md, references\drawio-templates.md (not named in expected_output)
+
+  STATUS → WARN  (checks passed: 1)
+  Warnings (2):
+    - NO_PROMPT_FILES_REFERENCED
+    - DETAIL_FOUND_ELSEWHERE: §2 → prompts\draw-diagram.md, references\drawio-templates.md

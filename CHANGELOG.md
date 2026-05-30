@@ -30,8 +30,21 @@ versioning follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 - **Writing anti-patterns reference**: `references/writing-anti-patterns.md`
   — 12 common Chinese academic writing mistakes with Bad → Why → Rewritten
   examples and self-audit checklist.
+- **English writing anti-patterns**: expanded `references/writing-anti-patterns.md`
+  with 12 English academic writing anti-patterns covering AI-generated
+  vocabulary, hollow intensifiers, copula avoidance, forced parallelism,
+  padding openers, possessive overuse, passive voice overuse, overclaiming,
+  vague comparisons, bookkeeping-style results, template openers, and
+  em-dash overuse. Total: 24 patterns (12 Chinese + 12 English).
 - **Cross-prompt See also links**: all 24 prompts now include a `## See
-  also` section linking to 1-3 semantically related prompts.
+  also` section linking to 1-3 semantically related prompts, with I/O
+  compatibility annotations for 16 sequential prompt chains (e.g.,
+  "Part 1 [LaTeX] output → {{ENGLISH_LATEX}} input").
+- **Writing templates reference**: `references/writing-templates.md` —
+  canonical section structures for Introduction (CARS model), Related
+  Work (taxonomy), Methodology (top-down), Experiments (three-part),
+  Conclusion (three-part), and Abstract (five-part), with concrete
+  examples and a general principles section.
 - **SKILL.md frontmatter**: added `author: Tianyu Yao`.
 - **Orthogonal edge routing** as the default edge style in all new
   templates. Drawio's built-in `edgeStyle=orthogonalEdgeStyle` with

@@ -137,5 +137,5 @@ Output nothing else.
 10. Does the script output both `.pdf` and `.png` files?
 
 ## See also
-- prompts/recommend-chart.md — 在生成图表前根据数据特征确定图表类型
+- prompts/recommend-chart.md — 在生成图表前根据数据特征确定图表类型。使用前，将 recommend-chart 的 Recommended Chart 输出作为本 prompt 的 {{CHART_TYPE}} 输入。
 - prompts/draw-diagram.md — 概念图（drawio）与数据图（matplotlib）的互补边界

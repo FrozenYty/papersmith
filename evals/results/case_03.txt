@@ -1,0 +1,20 @@
+Eval Report — Case 03 — 2026-05-30 11:44:58
+============================================================
+
+Case 03
+==================================================
+Prompt    (277 chars): Plot this benchmark comparison: Method A: MMLU 78.2±0.5, GSM8K 75.1±0.6, HumanEval 82.0±0.4, BBH 71.5±0.7. Method B: MMLU 80.4±0.4, GSM8K 78.3±0.5, Hu
+
+  [PASS] prompt non-empty (277 chars)
+  [INFO] expected_output (269 chars)
+  [WARN] no prompt .md files detected in expected_output
+  [WARN] '§I-1'  ← found in references\plotting-templates.md (not named in expected_output)
+  [WARN] 'pdf.fonttype=42'  ← not found in any file
+  [WARN] '±1 SD over N seeds'  ← not found in any file
+
+  STATUS → WARN  (checks passed: 1)
+  Warnings (4):
+    - NO_PROMPT_FILES_REFERENCED
+    - DETAIL_FOUND_ELSEWHERE: §I-1 → references\plotting-templates.md
+    - DETAIL_NOT_FOUND: pdf.fonttype=42
+    - DETAIL_NOT_FOUND: ±1 SD over N seeds

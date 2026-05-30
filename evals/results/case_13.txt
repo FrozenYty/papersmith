@@ -1,0 +1,14 @@
+Eval Report — Case 13 — 2026-05-30 11:44:58
+============================================================
+
+Case 13
+==================================================
+Prompt    (631 chars): I am preparing a NeurIPS submission and need a broader impact statement. Paper title: 'MegaVoice: Zero-Shot Voice Cloning at Scale.' Method summary: W
+
+  [PASS] prompt non-empty (631 chars)
+  [INFO] expected_output (678 chars)
+  [PASS] prompts/write-broader-impact.md
+  [INFO] 1 prompt file(s) referenced: write-broader-impact.md
+  [INFO] no detail strings extracted to verify
+
+  STATUS → PASS  (2 checks passed)

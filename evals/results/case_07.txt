@@ -1,0 +1,16 @@
+Eval Report — Case 07 — 2026-05-30 11:44:58
+============================================================
+
+Case 07
+==================================================
+Prompt    (425 chars): We got these reviewer comments: 'R1: Section 4 lacks an ablation on the K hyperparameter. R2: The related work missed the relevant 2024 paper by Smith
+
+  [PASS] prompt non-empty (425 chars)
+  [INFO] expected_output (323 chars)
+  [PASS] prompts/respond-to-reviewers.md
+  [INFO] 1 prompt file(s) referenced: respond-to-reviewers.md
+  [WARN] 'three-part structure'  ← not found in any file
+
+  STATUS → WARN  (checks passed: 2)
+  Warnings (1):
+    - DETAIL_NOT_FOUND: three-part structure

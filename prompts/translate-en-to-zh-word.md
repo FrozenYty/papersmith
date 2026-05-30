@@ -27,8 +27,8 @@ Translate the provided English text (which may contain LaTeX formatting) into fl
 - Avoid em-dashes (—). Use commas or sentence breaks instead.
 
 ### Anti-AI Flavor
-- Write naturally. Do not use mechanical connector stacking (e.g., "首先，其次，再次，最后" chained in sequence).
-- Avoid inflated academic cliches in Chinese (e.g., "值得注意的是" "毋庸置疑" "众所周知" "具有重要意义").
+- Write naturally. Do not use mechanical connector stacking (e.g., “首先，其次，再次，最后” chained in sequence).
+- Avoid inflated academic cliches in Chinese (e.g., “值得注意的是” “毋庸置疑” “众所周知” “具有重要意义”).
 - Prefer plain, precise language over ornate expressions. The goal is a natural Chinese passage that reads like a human translation, not a machine output.
 
 ## Output Format

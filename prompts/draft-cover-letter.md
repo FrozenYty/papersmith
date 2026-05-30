@@ -77,5 +77,5 @@ write the letter in Chinese using full-width punctuation per SKILL.md rules.
 Otherwise default to English.
 
 ## See also
-- prompts/polish-abstract.md — Cover letter 的核心依据是摘要，两者应口径一致
+- prompts/polish-abstract.md — Cover letter 的核心依据是摘要，两者应口径一致。使用前，将 polish-abstract 的 Part 1 [Polished abstract] 输出作为本 prompt 摘要信息源，填充 {{SUMMARY}}。
 - prompts/respond-to-reviewers.md — 投稿后下一阶段的 rebuttal 写作

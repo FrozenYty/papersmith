@@ -1,0 +1,20 @@
+Eval Report — Case 15 — 2026-05-30 11:44:58
+============================================================
+
+Case 15
+==================================================
+Prompt    (878 chars): Simulate a peer review for my paper submission. Paper: 'TokenFusion: Efficient Multi-Modal Fusion via Token-Level Gating.' Target conference: NeurIPS 
+
+  [PASS] prompt non-empty (878 chars)
+  [INFO] expected_output (1055 chars)
+  [PASS] prompts/simulate-peer-review.md
+  [INFO] 1 prompt file(s) referenced: simulate-peer-review.md
+  [WARN] 'Part 2 [Strategic Advice]'  ← found in prompts\simulate-peer-review.md (not named in expected_output)
+  [WARN] 'Part 1 [Review Report]'  ← not found in any file
+  [WARN] 'two-part format'  ← not found in any file
+
+  STATUS → WARN  (checks passed: 2)
+  Warnings (3):
+    - DETAIL_FOUND_ELSEWHERE: Part 2 [Strategic Advice] → prompts\simulate-peer-review.md
+    - DETAIL_NOT_FOUND: Part 1 [Review Report]
+    - DETAIL_NOT_FOUND: two-part format

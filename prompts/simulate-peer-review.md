@@ -47,5 +47,5 @@ Output nothing else beyond these two parts.
 Paper PDF + target venue: {{TARGET_CONFERENCE}}
 
 ## See also
-- prompts/respond-to-reviewers.md — 模拟评审发现问题后，用此生成正式的 rebuttal 回复
+- prompts/respond-to-reviewers.md — 模拟评审发现问题后，用此生成正式的 rebuttal 回复。将本 prompt 的 Part 1 [The Review Report] 输出作为 respond-to-reviewers 的 {{REVIEWER_COMMENTS}} 输入。
 - prompts/check-logic.md — 模拟评审中发现的逻辑问题可用逻辑检查补充验证

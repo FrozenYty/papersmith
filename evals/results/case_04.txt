@@ -1,0 +1,24 @@
+Eval Report — Case 04 — 2026-05-30 11:44:58
+============================================================
+
+Case 04
+==================================================
+Prompt    (270 chars): Polish this abstract for ICML. Word limit 250: 'In this paper, we propose a novel method for object detection. Our method uses transformers and we bel
+
+  [PASS] prompt non-empty (270 chars)
+  [INFO] expected_output (294 chars)
+  [PASS] prompts/polish-abstract.md
+  [INFO] 1 prompt file(s) referenced: polish-abstract.md
+  [WARN] 'novel'  ← found in prompts\polish-title.md, prompts\polish-abstract.md, prompts\draw-diagram.md, prompts\draft-cover-letter.md, prompts\write-broader-impact.md (not named in expected_output)
+  [WARN] 'significant'  ← found in references\plotting-reference.md, prompts\polish-abstract.md, prompts\analyze-experiments.md (not named in expected_output)
+  [WARN] 'state-of-the-art'  ← found in prompts\polish-title.md, prompts\polish-abstract.md, prompts\write-broader-impact.md (not named in expected_output)
+  [WARN] 'modification log'  ← not found in any file
+  [WARN] 'sentence-to-part map'  ← not found in any file
+
+  STATUS → WARN  (checks passed: 2)
+  Warnings (5):
+    - DETAIL_FOUND_ELSEWHERE: novel → prompts\polish-title.md, prompts\polish-abstract.md, prompts\draw-diagram.md, prompts\draft-cover-letter.md, prompts\write-broader-impact.md
+    - DETAIL_FOUND_ELSEWHERE: significant → references\plotting-reference.md, prompts\polish-abstract.md, prompts\analyze-experiments.md
+    - DETAIL_FOUND_ELSEWHERE: state-of-the-art → prompts\polish-title.md, prompts\polish-abstract.md, prompts\write-broader-impact.md
+    - DETAIL_NOT_FOUND: modification log
+    - DETAIL_NOT_FOUND: sentence-to-part map

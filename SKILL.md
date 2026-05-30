@@ -38,6 +38,7 @@ Do not deviate from the prompt template unless the user explicitly asks.
 | Polish Chinese text with minimal intervention | Chinese paragraph (near-final) | `prompts/polish-zh.md` |
 | Polish abstract into the 5-part structure | Current abstract + optional venue limit | `prompts/polish-abstract.md` |
 | Generate 5-10 candidate titles + scoring | Abstract or summary | `prompts/polish-title.md` |
+| Writing templates (Introduction, Related Work, Methodology, Experiments, Conclusion) | — (loaded on demand) | `references/writing-templates.md` |
 
 ### Length Adjustment
 
@@ -53,7 +54,7 @@ Do not deviate from the prompt template unless the user explicitly asks.
 | Final consistency and logic check before submission | English LaTeX (near-final) | `prompts/check-logic.md` |
 | Remove AI-generated writing patterns from English LaTeX | English LaTeX snippet | `prompts/humanize-en.md` |
 | Remove machine-translation tone from Chinese text | Chinese paragraph | `prompts/humanize-zh.md` |
-| Chinese academic writing anti-patterns (12 patterns, Bad→Rewritten) | — (loaded on demand) | `references/writing-anti-patterns.md` |
+| Chinese and English academic writing anti-patterns (24 patterns, Bad→Rewritten) | — (loaded on demand) | `references/writing-anti-patterns.md` |
 
 ### Figures & Charts
 

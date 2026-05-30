@@ -1,0 +1,18 @@
+Eval Report — Case 14 — 2026-05-30 11:44:58
+============================================================
+
+Case 14
+==================================================
+Prompt    (902 chars): I need to submit this English abstract in Chinese for a domestic journal. Translate it into plain Chinese text suitable for a Word document (no LaTeX,
+
+  [PASS] prompt non-empty (902 chars)
+  [INFO] expected_output (606 chars)
+  [PASS] prompts/translate-en-to-zh-word.md
+  [INFO] 1 prompt file(s) referenced: translate-en-to-zh-word.md
+  [WARN] 'chain-of-thought prompting'  ← not found in any file
+  [WARN] '思维链提示'  ← not found in any file
+
+  STATUS → WARN  (checks passed: 2)
+  Warnings (2):
+    - DETAIL_NOT_FOUND: chain-of-thought prompting
+    - DETAIL_NOT_FOUND: 思维链提示
