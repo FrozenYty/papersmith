@@ -291,3 +291,6 @@ plt.style.use(["science", "ieee"])  # or "nature", "high-vis"
 This sets fonts, sizes, ticks, and colors close to the IEEE / Nature
 conventions in one line. Still set `pdf.fonttype = 42` explicitly afterward
 because some SciencePlots styles miss it.
+
+## See also
+- references/cjk-fonts-guide.md — 中文字体配置、OS 适配、tofu 排查。中文图表必备。

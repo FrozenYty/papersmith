@@ -96,3 +96,4 @@ punctuation per SKILL.md. Other parts may stay in Chinese or English.
 ## See also
 - prompts/polish-title.md — 标题是摘要的浓缩，两者在修辞和关键词上应一致。将本 prompt 的 Part 1 [Polished abstract] 输出作为 polish-title 的 {{ABSTRACT_OR_SUMMARY}} 输入。
 - prompts/draft-cover-letter.md — Cover letter 的核心卖点直接来自摘要。将本 prompt 的 Part 1 [Polished abstract] 输出作为 draft-cover-letter 的摘要信息源，填充其 {{SUMMARY}}。
+- references/writing-templates.md — 摘要写作的 5 段结构模板及论文各章节写作规范

@@ -43,3 +43,4 @@ Carefully read the provided experimental data. Extract key patterns, trends, and
 ## See also
 - prompts/plot-figure.md — 实验数据可视化的下一环节，将分析结论转化为图表
 - prompts/recommend-chart.md — 在生成图表前确定最优图表类型
+- prompts/generate-latex-table.md — 如需将实验数据生成为 LaTeX 表格（替代或补充图表），用此 prompt

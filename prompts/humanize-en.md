@@ -54,3 +54,4 @@ The following words appear disproportionately in AI-generated text. Consider rep
 ## See also
 - prompts/polish-en.md — 去 AI 味之前应先完成基础润色。使用前，将 polish-en 的 Part 1 [LaTeX] 输出作为本 prompt 的 {{ENGLISH_LATEX}} 输入。
 - prompts/check-logic.md — 去 AI 味之后应检查逻辑一致性。将本 prompt 的 Part 1 [LaTeX] 输出作为 check-logic 的 {{ENGLISH_LATEX}} 输入。
+- prompts/rewrite-avoid-plagiarism.md — 如需降低文本相似度（查重），用此做结构性改写。与去 AI 味互补：humanize 管语气，rewrite-avoid-plagiarism 管相似度。

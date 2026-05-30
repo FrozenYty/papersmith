@@ -48,3 +48,4 @@ Convert the provided Chinese description into an English table caption that meet
 
 ## See also
 - prompts/write-figure-caption.md — 图片题注，格式规范相同但措辞习惯不同
+- prompts/generate-latex-table.md — 将原始数据生成为 LaTeX 表格，配合题注使用

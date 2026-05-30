@@ -4,6 +4,22 @@ All notable changes to the Academic Writing Toolkit are recorded here. The
 format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and
 versioning follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.3.1] — 2026-05-30
+
+### Fixed
+
+- **See also cross-linking**: 7 orphaned files had no inbound links from
+  other prompts, making them undiscoverable in workflow chains. Added 10
+  inbound See also links:
+  - `analyze-experiments.md` ← `recommend-chart.md`
+  - `verify-references.md` ← `draft-cover-letter.md`, `simulate-peer-review.md`
+  - `write-broader-impact.md` ← `draft-cover-letter.md`
+  - `writing-templates.md` ← `polish-abstract.md`, `rewrite-zh-draft.md`
+  - `generate-latex-table.md` ← `analyze-experiments.md`, `write-table-caption.md`
+  - `rewrite-avoid-plagiarism.md` ← `humanize-en.md`, `humanize-zh.md`
+  - `cjk-fonts-guide.md` ← `plotting-reference.md`
+  All 35 prompt + reference files now have at least one inbound See also link.
+
 ## [0.3.0] — 2026-05-30
 
 ### Added

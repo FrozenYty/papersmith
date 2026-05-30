@@ -1,6 +1,6 @@
 ---
 name: academic-writing-toolkit
-version: 0.3.0
+version: 0.3.1
 description: >
   Academic paper writing, polishing, translation (zh↔en), diagramming, and
   plotting assistant. Use when the user is writing, polishing, translating,
