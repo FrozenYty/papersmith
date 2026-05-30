@@ -2,24 +2,25 @@
 name: academic-writing-toolkit
 version: 0.3.1
 description: >
-  Academic paper writing, polishing, translation (zh↔en), diagramming, and
-  plotting assistant. Use when the user is writing, polishing, translating,
-  or reviewing academic documents — papers, theses, abstracts, cover letters,
-  rebuttals, experiment analysis. Use for drawing model architecture diagrams
-  (draw.io) and creating publication-quality charts and plots (matplotlib).
-  学术论文写作、润色、中英翻译、画图、绘图助手。当用户提到写论文、改论文、
-  润色、翻译、画架构图、画模型图、画图表、写摘要、起标题、回复审稿意见、
-  投稿信、实验分析、模拟审稿时自动触发。
+  学术论文写作助手。用户需要写论文、改论文、润色文字、中英互译、画模型
+  架构图、画数据图表（柱状图/折线图/loss曲线等）、写摘要标题、回复审稿
+  意见、写投稿信、分析实验结果、模拟同行评审时自动使用。覆盖初稿翻译到
+  最终校对、从画示意图到生成发表级图表的完整学术写作流程。
+  Academic paper writing, polishing, translation (zh↔en), diagramming
+  (draw.io), and plotting (matplotlib) assistant. Use for papers, theses,
+  abstracts, cover letters, rebuttals, peer review, experiment analysis,
+  and any academic figure or table.
 when_to_use: >
-  User mentions writing, polishing, translating, or reviewing academic papers,
-  theses, abstracts. Drawing architecture diagrams, model figures, flowcharts,
-  or charts/plots for papers. Drafting cover letters, rebuttals, or responses
-  to reviewers. Experiment analysis, figure captions, table captions.
-  LaTeX, .tex files. Submission workflows: camera-ready, revision, rebuttal
-  period, accepted/rejected. Conference names: NeurIPS, ICML, ICLR, CVPR,
-  ICCV, ECCV, ACL, EMNLP, NAACL, AAAI, IJCAI — any mention of these.
-  Chinese triggers: 论文 学术 润色 翻译 画图 画架构图 画图表 摘要 标题
-  审稿 rebuttal cover-letter 投稿 实验分析 LaTeX 降重 改写.
+  User is working on academic papers or theses: writing, polishing (润色,
+  改改, 修改), translating between Chinese and English for publication,
+  drawing model architecture diagrams (架构图, 示意图, 结构图) or data
+  charts (柱状图, 折线图, loss曲线), drafting abstracts/titles/cover-letters,
+  responding to reviewers (回复审稿, rebuttal), analyzing experiment results
+  (实验分析, 实验结果), formatting LaTeX tables, writing captions. Venue
+  signals: NeurIPS, ICML, ICLR, CVPR, ICCV, ECCV, ACL, EMNLP, NAACL, AAAI,
+  IJCAI, ACM, IEEE. Lifecycle signals: LaTeX, .tex, 投稿, 投会议, camera-ready,
+  revision, accepted, rejected. Context clues: 论文, 学术, 摘要, 标题, 审稿,
+  降重, 改写, 校对, 投稿信, cover-letter, rebuttal.
 author: Tianyu Yao
 ---
 
