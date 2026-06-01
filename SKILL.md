@@ -2,22 +2,22 @@
 name: academic-writing-toolkit
 version: 0.3.2
 description: >
-  Academic paper writing, polishing, translation (zh↔en), diagramming, and
-  plotting assistant. Use when the user is writing, editing, translating, or
-  reviewing academic documents — papers, theses, abstracts, cover letters,
-  rebuttals, experiment analysis. Also use for drawing model architecture
-  diagrams (draw.io) and creating publication-quality charts and plots
-  (matplotlib).
+  This skill should be used when the user asks to "polish my paper",
+  "translate this abstract", "draw a model architecture diagram",
+  "plot experiment results", "write a rebuttal to reviewers",
+  "draft a cover letter", or "analyze experiment data". Covers
+  academic paper writing, polishing, translation (zh↔en), diagramming
+  (draw.io), and publication-quality plotting (matplotlib) for papers,
+  theses, abstracts, cover letters, and rebuttals.
 when_to_use: >
   User is working on academic papers, theses, or scholarly documents:
-  writing, polishing, editing, translating between Chinese and English,
-  drawing model architecture or pipeline diagrams, creating charts and plots
+  writing, polishing, translating between Chinese and English, drawing
+  model architecture or pipeline diagrams, creating charts and plots
   from experiment data, drafting abstracts, titles, cover letters, or
-  rebuttals, responding to reviewers, analyzing experiment results, writing
-  figure/table captions, generating LaTeX tables. Venue signals: NeurIPS,
-  ICML, ICLR, CVPR, ICCV, ECCV, ACL, EMNLP, NAACL, AAAI, IJCAI, ACM, IEEE.
-  Lifecycle signals: LaTeX, .tex, camera-ready, revision, accepted, rejected,
-  submission, peer review, reviewers.
+  rebuttals, responding to reviewers, analyzing experiment results.
+  Venue signals: NeurIPS, ICML, ICLR, CVPR, ICCV, ECCV, ACL, EMNLP,
+  NAACL, AAAI, IJCAI, ACM, IEEE. Lifecycle signals: LaTeX, .tex,
+  camera-ready, revision, accepted, rejected, submission, peer review.
 author: Tianyu Yao
 ---
 
