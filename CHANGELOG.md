@@ -16,6 +16,14 @@ versioning follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
   structured bilingual signals. Added casual Chinese terms users actually
   say: 改改, 示意图, 结构图, 折线图, loss曲线, 校对, 回复审稿, 投会议.
 
+### Changed
+
+- **Removed Chinese from description & when_to_use**: A/B test (6 Chinese
+  queries) confirmed the LLM's cross-lingual semantic matching handles
+  Chinese triggering identically with pure English frontmatter. Removed
+  all Chinese text (~400 chars) from SKILL.md frontmatter. Description
+  and when_to_use are now English-only, consistent with other skills.
+
 ## [0.3.1] — 2026-05-30
 
 ### Fixed
