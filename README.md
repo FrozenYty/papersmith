@@ -105,18 +105,6 @@ clarification / disagreement) clearly signaled.
 See [`SKILL.md`](SKILL.md) for the full prompt index — 27 prompts in 6
 categories.
 
-## Examples
-
-Three end-to-end verified outputs are in [`examples/`](examples/):
-
-| File | Generated using | What it shows |
-|---|---|---|
-| `transformer.drawio` | drawio-templates §1 | Transformer encoder-decoder with K,V cross-attention as straight horizontal arrow |
-| `diffusion.drawio` | drawio-templates §5 | DDPM forward (q) + reverse (p_θ) Markov chain |
-| `sota-comparison.{py,pdf,png}` | plotting-templates §I-1 | Grouped bar with ±1 SD error bars, Type-42 font verified |
-
-See [`examples/README.md`](examples/README.md) for adaptation tips.
-
 ## Repository structure
 
 ```
@@ -135,7 +123,6 @@ academic-writing-toolkit/
 │   ├── writing-templates.md         # 7 section structure templates
 │   └── venue-citation-guide.md      # 10+ venue citation formats
 │   └── cjk-fonts-guide.md           # CJK font setup for matplotlib figures
-├── examples/            # verified end-to-end outputs
 ```
 
 ## What's covered
@@ -204,7 +191,7 @@ discussion, with the intent to defer to the upstream author's wishes.
 
 **Original components in this repository** (drawio templates, Python
 plotting templates, drawio/plotting reference rules, SKILL.md routing
-structure, examples, contributing guide) are likewise shared as-is, no
+structure, and contributing guide) are likewise shared as-is, no
 specific license attached.
 
 If you'd like to use, redistribute, or relicense any part of this work,

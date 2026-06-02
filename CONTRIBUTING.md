@@ -25,10 +25,6 @@ academic-writing-toolkit/
 │   ├── writing-anti-patterns.md     (24 patterns: 12 zh + 12 en)
 │   ├── writing-templates.md         (7 section structure templates)
 │   └── venue-citation-guide.md      (10+ venue citation formats)
-├── examples/            # verified end-to-end outputs
-│   ├── transformer.drawio       (generated from drawio-templates §1)
-│   ├── diffusion.drawio         (generated from drawio-templates §2)
-│   └── sota-comparison.py       (generated from plotting-templates §I-1)
 ├── CHANGELOG.md
 ├── CONTRIBUTING.md      # you are here
 └── README.md
@@ -81,9 +77,7 @@ editor artifacts, or unrelated changes.
 | `SKILL.md`, `README.md` | Editor temp files (`*~`, `*.swp`) |
 | `CHANGELOG.md`, `CONTRIBUTING.md` | `.vscode/`, `.idea/` (unless `settings.json`) |
 | `evals/evals.json` | `Claude_Code_Files/` |
-| `examples/*.drawio` | `*.egg-info/`, `dist/` |
-| `examples/*.py` | `*.lock` (unless `pip freeze` is the intent) |
-| `examples/*.pdf`, `examples/*.png` (generated outputs, keep in sync) | |
+| `.gitignore` | `*.egg-info/`, `dist/` |
 
 ### Batch size
 

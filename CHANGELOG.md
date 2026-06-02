@@ -23,6 +23,10 @@ versioning follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
   Chinese triggering identically with pure English frontmatter. Removed
   all Chinese text (~400 chars) from SKILL.md frontmatter. Description
   and when_to_use are now English-only, consistent with other skills.
+- **Removed examples/ directory**: static drawio/py/pdf/png examples are
+  not loaded by Claude Code at runtime. They drift stale as templates
+  evolve, bloat git history with binaries, and serve no automated
+  verification purpose. README and CONTRIBUTING references cleaned up.
 
 ## [0.3.1] — 2026-05-30
 
