@@ -22,7 +22,8 @@ academic-writing-toolkit/
 │   ├── plotting-templates.md        (19 chart templates: §I-§VI)
 │   ├── writing-anti-patterns.md     (24 patterns: 12 zh + 12 en)
 │   ├── writing-templates.md         (7 section structure templates)
-│   └── venue-citation-guide.md      (10+ venue citation formats)
+│   ├── venue-citation-guide.md      (10+ venue citation formats)
+│   └── cjk-fonts-guide.md           (CJK font setup for matplotlib)
 ├── CHANGELOG.md
 ├── CONTRIBUTING.md      # you are here
 └── README.md
