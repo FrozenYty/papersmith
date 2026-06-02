@@ -1,6 +1,6 @@
 ---
 name: academic-writing-toolkit
-version: 0.3.2
+version: 0.3.5
 description: >
   This skill should be used when the user asks to "polish my paper",
   "translate this abstract", "draw a model architecture diagram",

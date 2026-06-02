@@ -4,29 +4,43 @@ All notable changes to the Academic Writing Toolkit are recorded here. The
 format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and
 versioning follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.3.5] — 2026-06-02
+
+### Removed
+
+- **Removed examples/ directory**: static drawio/py/pdf/png examples are
+  not loaded by Claude Code at runtime. They drift stale as templates
+  evolve, bloat git history with binaries, and serve no verification
+  purpose. README, CONTRIBUTING, and CHANGELOG references cleaned up.
+
+## [0.3.4] — 2026-05-30
+
+### Changed
+
+- **Adopted official third-person description format**: per Context7 skill
+  development docs, description now uses "This skill should be used when..."
+  with quoted user trigger phrases ("polish my paper", "draw a model
+  architecture diagram", etc.).
+
+## [0.3.3] — 2026-05-30
+
+### Changed
+
+- **Removed Chinese from description and when_to_use**: A/B test (6 Chinese
+  queries) confirmed LLM cross-lingual semantic matching handles Chinese
+  triggers identically with pure English frontmatter. Removed all Chinese
+  text (~400 chars). Description and when_to_use are now English-only.
+
 ## [0.3.2] — 2026-05-30
 
 ### Fixed
 
 - **Chinese auto-triggering weak**: description was English-first with
-  Chinese keyword dumps at the end, causing misses on real user phrasing
-  (e.g., "审稿人说我实验不够怎么回复" failed to trigger). Rewrote
-  description to lead with natural Chinese sentences, moved English to
-  supporting position, and replaced when_to_use keyword dumps with
-  structured bilingual signals. Added casual Chinese terms users actually
-  say: 改改, 示意图, 结构图, 折线图, loss曲线, 校对, 回复审稿, 投会议.
-
-### Changed
-
-- **Removed Chinese from description & when_to_use**: A/B test (6 Chinese
-  queries) confirmed the LLM's cross-lingual semantic matching handles
-  Chinese triggering identically with pure English frontmatter. Removed
-  all Chinese text (~400 chars) from SKILL.md frontmatter. Description
-  and when_to_use are now English-only, consistent with other skills.
-- **Removed examples/ directory**: static drawio/py/pdf/png examples are
-  not loaded by Claude Code at runtime. They drift stale as templates
-  evolve, bloat git history with binaries, and serve no automated
-  verification purpose. README and CONTRIBUTING references cleaned up.
+  keyword dumps at the end. A common scenario ("reviewer said my experiments
+  are insufficient, how to respond") failed to trigger. Rewrote description
+  to lead with natural Chinese sentences, moved English to supporting
+  position, and replaced when_to_use keyword dumps with structured
+  bilingual signals covering casual terms users actually say.
 
 ## [0.3.1] — 2026-05-30
 
