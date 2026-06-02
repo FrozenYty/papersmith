@@ -47,6 +47,6 @@ Deeply polish and rewrite the provided English LaTeX snippet. Your goal is not m
 4. Is the output in the required Part 1/Part 2/Part 3 format?
 
 ## See also
-- prompts/humanize-en.md — 润色后进一步去除 AI 生成痕迹。将本 prompt 的 Part 1 [LaTeX] 输出作为 humanize-en 的 {{ENGLISH_LATEX}} 输入。
-- prompts/shorten-en.md — 如果需要缩减篇幅，压缩与润色可交替进行。将本 prompt 的 Part 1 [LaTeX] 输出作为 shorten-en 的 {{ENGLISH_LATEX}} 输入。
-- prompts/check-logic.md — 润色后最终检查逻辑一致性。将本 prompt 的 Part 1 [LaTeX] 输出作为 check-logic 的 {{ENGLISH_LATEX}} 输入。
+- prompts/refine/humanize-en.md — 润色后进一步去除 AI 生成痕迹。将本 prompt 的 Part 1 [LaTeX] 输出作为 humanize-en 的 {{ENGLISH_LATEX}} 输入。
+- prompts/refine/shorten-en.md — 如果需要缩减篇幅，压缩与润色可交替进行。将本 prompt 的 Part 1 [LaTeX] 输出作为 shorten-en 的 {{ENGLISH_LATEX}} 输入。
+- prompts/refine/check-logic.md — 润色后最终检查逻辑一致性。将本 prompt 的 Part 1 [LaTeX] 输出作为 check-logic 的 {{ENGLISH_LATEX}} 输入。

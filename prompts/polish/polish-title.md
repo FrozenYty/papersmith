@@ -90,4 +90,4 @@ punctuation per SKILL.md.
 {{OPTIONAL_DETAILS}}
 
 ## See also
-- prompts/polish-abstract.md — 标题与摘要共享核心关键词和定位，应协同打磨。使用前，将 polish-abstract 的 Part 1 [Polished abstract] 输出作为本 prompt 的 {{ABSTRACT_OR_SUMMARY}} 输入。
+- prompts/polish/polish-abstract.md — 标题与摘要共享核心关键词和定位，应协同打磨。使用前，将 polish-abstract 的 Part 1 [Polished abstract] 输出作为本 prompt 的 {{ABSTRACT_OR_SUMMARY}} 输入。

@@ -51,4 +51,4 @@ Translate the provided English text (which may contain LaTeX formatting) into fl
 5. Does the back-translation confirm that no meaning was added, dropped, or distorted?
 
 ## See also
-- prompts/translate-en-to-zh-latex.md — LaTeX 场景的英译中，更轻量、不涉及去 AI 味
+- prompts/translate/translate-en-to-zh-latex.md — LaTeX 场景的英译中，更轻量、不涉及去 AI 味

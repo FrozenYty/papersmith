@@ -43,5 +43,5 @@ Review and polish the provided Chinese paper paragraph. The core mission is to f
 {{CHINESE_PARAGRAPH}}
 
 ## See also
-- prompts/humanize-zh.md — 润色后进一步消除 AI 味道和翻译腔。将本 prompt 的 Part 1 [Refined Text] 输出作为 humanize-zh 的 {{CHINESE_TEXT}} 输入。
-- prompts/rewrite-zh-draft.md — 如果原文是碎片化草稿，需要先做逻辑重组而非逐句润色
+- prompts/refine/humanize-zh.md — 润色后进一步消除 AI 味道和翻译腔。将本 prompt 的 Part 1 [Refined Text] 输出作为 humanize-zh 的 {{CHINESE_TEXT}} 输入。
+- prompts/polish/rewrite-zh-draft.md — 如果原文是碎片化草稿，需要先做逻辑重组而非逐句润色

@@ -77,7 +77,7 @@ Otherwise default to English.
 {{OPTIONAL_DETAILS}}
 
 ## See also
-- prompts/polish-abstract.md — Cover letter 的核心依据是摘要，两者应口径一致。使用前，将 polish-abstract 的 Part 1 [Polished abstract] 输出作为本 prompt 摘要信息源，填充 {{SUMMARY}}。
-- prompts/respond-to-reviewers.md — 投稿后下一阶段的 rebuttal 写作
-- prompts/verify-references.md — 投稿前检查参考文献完整性和格式合规
-- prompts/write-broader-impact.md — 投稿信和研究伦理声明同属投稿前的把关环节
+- prompts/polish/polish-abstract.md — Cover letter 的核心依据是摘要，两者应口径一致。使用前，将 polish-abstract 的 Part 1 [Polished abstract] 输出作为本 prompt 摘要信息源，填充 {{SUMMARY}}。
+- prompts/review/respond-to-reviewers.md — 投稿后下一阶段的 rebuttal 写作
+- prompts/review/verify-references.md — 投稿前检查参考文献完整性和格式合规
+- prompts/review/write-broader-impact.md — 投稿信和研究伦理声明同属投稿前的把关环节

@@ -41,6 +41,6 @@ Carefully read the provided experimental data. Extract key patterns, trends, and
 4. Does the output include both Part 1 (English LaTeX) and Part 2 (Chinese back-translation)?
 
 ## See also
-- prompts/plot-figure.md — 实验数据可视化的下一环节，将分析结论转化为图表
-- prompts/recommend-chart.md — 在生成图表前确定最优图表类型
-- prompts/generate-latex-table.md — 如需将实验数据生成为 LaTeX 表格（替代或补充图表），用此 prompt
+- prompts/figure/plot-figure.md — 实验数据可视化的下一环节，将分析结论转化为图表
+- prompts/figure/recommend-chart.md — 在生成图表前确定最优图表类型
+- prompts/figure/generate-latex-table.md — 如需将实验数据生成为 LaTeX 表格（替代或补充图表），用此 prompt

@@ -10,13 +10,11 @@ unrelated files.
 academic-writing-toolkit/
 ├── SKILL.md             # routing index — register new prompts here
 ├── prompts/             # one .md per task (Role/Task/Constraints/Output/Self-Audit)
-│   ├── translate-*.md   # translation prompts (zh↔en, LaTeX or Word)
-│   ├── polish-*.md      # polishing prompts (en, zh, abstract, title)
-│   ├── humanize-*.md    # de-AI / de-translationese prompts
-│   ├── write-*.md       # generation prompts (captions, broader impact)
-│   ├── draw-diagram.md  # draw.io diagram generation
-│   ├── plot-figure.md   # Python plotting code generation
-│   └── ...
+│   ├── translate/       # 4 translation prompts (zh↔en, LaTeX/Word)
+│   ├── polish/          # 5 polishing prompts (rewrite, polish, abstract, title)
+│   ├── refine/          # 6 quality & style prompts (humanize, check, length, plagiarism)
+│   ├── figure/          # 6 figure & chart prompts (diagram, plot, caption, table)
+│   └── review/          # 6 analysis & review prompts (experiment, peer review, rebuttal, submission)
 ├── references/          # loaded on demand: long-form rules + templates
 │   ├── drawio-reference.md     (rules for architecture diagrams)
 │   ├── drawio-templates.md          (15 templates: §1-§4 arch, §5-§15 layouts/classic)
@@ -36,8 +34,6 @@ academic-writing-toolkit/
 |------|---------|---------|
 | Prompt file | `<verb>-<target>-<optional-modifier>.md` | `translate-zh-to-en-latex.md` |
 | Reference file | `<topic>-reference.md`, `<topic>-templates.md`, `<topic>-anti-patterns.md`, or `<topic>-guide.md` | `drawio-reference.md`, `writing-anti-patterns.md`, `venue-citation-guide.md` |
-| Example drawio | `<descriptive-name>.drawio` | `transformer.drawio` |
-| Example Python | `<descriptive-name>.py` | `sota-comparison.py` |
 
 ## Commit Rules
 
@@ -72,7 +68,7 @@ editor artifacts, or unrelated changes.
 
 | Commit These | Never Commit These |
 |-------------|-------------------|
-| `prompts/*.md` | `.pyc`, `__pycache__/` |
+| `prompts/**/*.md` | `.pyc`, `__pycache__/` |
 | `references/*.md` | `.DS_Store`, `Thumbs.db` |
 | `SKILL.md`, `README.md` | Editor temp files (`*~`, `*.swp`) |
 | `CHANGELOG.md`, `CONTRIBUTING.md` | `.vscode/`, `.idea/` (unless `settings.json`) |
@@ -107,8 +103,9 @@ git diff --stat            # confirm scope
 
 The toolkit's prompts share a four-section structure. Match it.
 
-**File:** `prompts/<kebab-case-name>.md`. The name should describe the
-*action*, not the input. Examples that work: `polish-abstract`,
+**File:** `prompts/<subdir>/<kebab-case-name>.md`. Choose the subdirectory
+by category: `translate/`, `polish/`, `refine/`, `figure/`, or `review/`.
+The filename should describe the *action*, not the input. Examples that work: `polish-abstract`,
 `respond-to-reviewers`, `recommend-chart`. Examples that don't:
 `for-conferences`, `chinese-output`.
 
@@ -157,7 +154,7 @@ and add a row:
 ```markdown
 | User Intent | Expected Input | Prompt File |
 |---|---|---|
-| <one-line description of when to trigger> | <input description> | `prompts/<your-file>.md` |
+| <one-line description of when to trigger> | <input description> | `prompts/<subdir>/<your-file>.md` |
 ```
 
 Categories so far: Translation, Rewriting & Polishing, Length Adjustment,
@@ -202,7 +199,7 @@ SKILL.md "Canonical templates" row to include the new architecture name.
 
 Templates live in `references/plotting-templates.md` as
 `### §<group>-<num> <name>` sections. The numbering aligns with
-`prompts/recommend-chart.md`. If you're adding a chart type that isn't
+`prompts/figure/recommend-chart.md`. If you're adding a chart type that isn't
 in recommend-chart yet, add it there first.
 
 **Each template needs:**
@@ -223,7 +220,7 @@ in recommend-chart yet, add it there first.
 - Save as both `.pdf` (vector) and `.png` (600 dpi minimum).
 
 **Register in plotting-templates.md index** at the top, and verify the
-numbering matches `prompts/recommend-chart.md`.
+numbering matches `prompts/figure/recommend-chart.md`.
 
 ## Adding a new reference file
 

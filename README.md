@@ -91,14 +91,14 @@ self-contained Python script that produces both `.pdf` (vector) and
 **Polishing an abstract:**
 > Polish this abstract for ICML, 250 words max: <abstract text>
 
-Claude routes to `prompts/polish-abstract.md`, restructures into the
+Claude routes to `prompts/polish/polish-abstract.md`, restructures into the
 canonical 5-part form (background → gap → method → results → impact),
 trims to budget, and returns the rewrite + a sentence-to-part map.
 
 **Drafting a rebuttal:**
 > Reviewers said: [comments]. Help me draft a response.
 
-Claude routes to `prompts/respond-to-reviewers.md`, produces a
+Claude routes to `prompts/review/respond-to-reviewers.md`, produces a
 point-by-point reply with the three response types (concession /
 clarification / disagreement) clearly signaled.
 
@@ -113,7 +113,12 @@ academic-writing-toolkit/
 ├── README.md            # you are here
 ├── CONTRIBUTING.md      # how to add prompts / templates
 ├── CHANGELOG.md         # version history
-├── prompts/             # 27 task-specific prompts
+├── prompts/             # 27 task-specific prompts (5 subdirs)
+│   ├── translate/       # 4 translation prompts (zh↔en, LaTeX/Word)
+│   ├── polish/          # 5 polishing prompts (rewrite, polish, abstract, title)
+│   ├── refine/          # 6 quality & style prompts (humanize, logic, length, plagiarism)
+│   ├── figure/          # 6 figure & chart prompts (diagram, plot, caption, table)
+│   └── review/          # 6 analysis & review prompts (experiment, peer review, rebuttal, submission)
 ├── references/          # 8 long-form references
 │   ├── drawio-reference.md          # rules for architecture diagrams
 │   ├── drawio-templates.md          # 15 templates (4 architectures + 11 patterns)
@@ -163,7 +168,7 @@ and [`references/plotting-reference.md`](references/plotting-reference.md).
 
 ## Versioning
 
-Semver. See [`CHANGELOG.md`](CHANGELOG.md). Current: **v0.3.5**.
+Semver. See [`CHANGELOG.md`](CHANGELOG.md). Current: **v0.3.6**.
 
 ## Contributing
 
