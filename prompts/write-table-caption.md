@@ -47,5 +47,5 @@ Convert the provided Chinese description into an English table caption that meet
 4. Are all special characters correctly escaped?
 
 ## See also
-- prompts/figure/write-figure-caption.md — 图片题注，格式规范相同但措辞习惯不同
-- prompts/figure/generate-latex-table.md — 将原始数据生成为 LaTeX 表格，配合题注使用
+- prompts/write-figure-caption.md — 图片题注，格式规范相同但措辞习惯不同
+- prompts/generate-latex-table.md — 将原始数据生成为 LaTeX 表格，配合题注使用

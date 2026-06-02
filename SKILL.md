@@ -33,65 +33,65 @@ Do not deviate from the prompt template unless the user explicitly asks.
 
 | User Intent | Expected Input | Prompt File |
 |---|---|---|
-| Translate Chinese draft to English LaTeX | Chinese text + LaTeX needed | `prompts/translate/translate-zh-to-en-latex.md` |
-| Translate English LaTeX to plain Chinese | English LaTeX snippet | `prompts/translate/translate-en-to-zh-latex.md` |
-| Translate English to Chinese for Word | English text (for Word) | `prompts/translate/translate-en-to-zh-word.md` |
-| Translate Chinese draft to English for Word | Chinese text (for Word) | `prompts/translate/translate-zh-to-en-word.md` |
+| Translate Chinese draft to English LaTeX | Chinese text + LaTeX needed | `prompts/translate-zh-to-en-latex.md` |
+| Translate English LaTeX to plain Chinese | English LaTeX snippet | `prompts/translate-en-to-zh-latex.md` |
+| Translate English to Chinese for Word | English text (for Word) | `prompts/translate-en-to-zh-word.md` |
+| Translate Chinese draft to English for Word | Chinese text (for Word) | `prompts/translate-zh-to-en-word.md` |
 
 ### Rewriting & Polishing
 
 | User Intent | Expected Input | Prompt File |
 |---|---|---|
-| Rewrite fragmented Chinese draft into formal academic prose | Chinese draft (scattered points, colloquial) | `prompts/polish/rewrite-zh-draft.md` |
-| Polish English LaTeX for clarity and rigor | English LaTeX snippet | `prompts/polish/polish-en.md` |
-| Polish Chinese text with minimal intervention | Chinese paragraph (near-final) | `prompts/polish/polish-zh.md` |
-| Polish abstract into the 5-part structure | Current abstract + optional venue limit | `prompts/polish/polish-abstract.md` |
-| Generate 5-10 candidate titles + scoring | Abstract or summary | `prompts/polish/polish-title.md` |
+| Rewrite fragmented Chinese draft into formal academic prose | Chinese draft (scattered points, colloquial) | `prompts/rewrite-zh-draft.md` |
+| Polish English LaTeX for clarity and rigor | English LaTeX snippet | `prompts/polish-en.md` |
+| Polish Chinese text with minimal intervention | Chinese paragraph (near-final) | `prompts/polish-zh.md` |
+| Polish abstract into the 5-part structure | Current abstract + optional venue limit | `prompts/polish-abstract.md` |
+| Generate 5-10 candidate titles + scoring | Abstract or summary | `prompts/polish-title.md` |
 | Writing templates (7 sections: Introduction, Related Work, Methodology, Experiments, Conclusion, Abstract, General Principles) | — (loaded on demand) | `references/writing-templates.md` |
 
 ### Length Adjustment
 
 | User Intent | Expected Input | Prompt File |
 |---|---|---|
-| Slightly shorten English LaTeX (~5-15 words) | English LaTeX snippet | `prompts/refine/shorten-en.md` |
-| Slightly expand English LaTeX (~5-15 words) | English LaTeX snippet | `prompts/refine/expand-en.md` |
+| Slightly shorten English LaTeX (~5-15 words) | English LaTeX snippet | `prompts/shorten-en.md` |
+| Slightly expand English LaTeX (~5-15 words) | English LaTeX snippet | `prompts/expand-en.md` |
 
 ### Quality & Style
 
 | User Intent | Expected Input | Prompt File |
 |---|---|---|
-| Final consistency and logic check before submission | English LaTeX (near-final) | `prompts/refine/check-logic.md` |
-| Remove AI-generated writing patterns from English LaTeX | English LaTeX snippet | `prompts/refine/humanize-en.md` |
-| Remove machine-translation tone from Chinese text | Chinese paragraph | `prompts/refine/humanize-zh.md` |
+| Final consistency and logic check before submission | English LaTeX (near-final) | `prompts/check-logic.md` |
+| Remove AI-generated writing patterns from English LaTeX | English LaTeX snippet | `prompts/humanize-en.md` |
+| Remove machine-translation tone from Chinese text | Chinese paragraph | `prompts/humanize-zh.md` |
 | Chinese and English academic writing anti-patterns (24 patterns, Bad→Rewritten) | — (loaded on demand) | `references/writing-anti-patterns.md` |
-| Rewrite text to avoid plagiarism similarity while preserving meaning | Original text with similarity concerns | `prompts/refine/rewrite-avoid-plagiarism.md` |
+| Rewrite text to avoid plagiarism similarity while preserving meaning | Original text with similarity concerns | `prompts/rewrite-to-avoid-plagiarism.md` |
 
 ### Figures & Charts
 
 | User Intent | Expected Input | Prompt File |
 |---|---|---|
-| Generate a paper diagram (architecture, pipeline, training stages, GNN, diffusion, RAG, etc.) | Methodology description + target conference | `prompts/figure/draw-diagram.md` |
+| Generate a paper diagram (architecture, pipeline, training stages, GNN, diffusion, RAG, etc.) | Methodology description + target conference | `prompts/draw-diagram.md` |
 | Draw.io XML syntax reference | — (loaded on demand) | `references/drawio-reference.md` |
 | Canonical templates (15 total: 4 architecture + 11 layout/classic types) | — (loaded on demand) | `references/drawio-templates.md` |
-| Recommend the best chart type for given data | Experiment data (table/CSV) + conclusion to emphasize | `prompts/figure/recommend-chart.md` |
-| Generate Python plotting code (publication-ready) | Chart type + data + optional target venue | `prompts/figure/plot-figure.md` |
+| Recommend the best chart type for given data | Experiment data (table/CSV) + conclusion to emphasize | `prompts/recommend-chart.md` |
+| Generate Python plotting code (publication-ready) | Chart type + data + optional target venue | `prompts/plot-figure.md` |
 | Python plotting style reference (rcParams, palettes, conventions) | — (loaded on demand) | `references/plotting-reference.md` |
 | Python plotting templates (19 chart types) | — (loaded on demand) | `references/plotting-templates.md` |
-| Write a figure caption in English | Chinese description of the figure | `prompts/figure/write-figure-caption.md` |
-| Write a table caption in English | Chinese description of the table | `prompts/figure/write-table-caption.md` |
-| Generate a publication-ready LaTeX table from data | CSV/table data + caption description | `prompts/figure/generate-latex-table.md` |
+| Write a figure caption in English | Chinese description of the figure | `prompts/write-figure-caption.md` |
+| Write a table caption in English | Chinese description of the table | `prompts/write-table-caption.md` |
+| Generate a publication-ready LaTeX table from data | CSV/table data + caption description | `prompts/generate-latex-table.md` |
 | CJK font configuration guide for matplotlib figures | — (loaded on demand) | `references/cjk-fonts-guide.md` |
 
 ### Analysis & Review
 
 | User Intent | Expected Input | Prompt File |
 |---|---|---|
-| Analyze experiment results and write LaTeX analysis | Experiment data table + key findings | `prompts/review/analyze-experiments.md` |
-| Simulate a peer review for a paper draft | Paper PDF + target conference name | `prompts/review/simulate-peer-review.md` |
-| Draft a point-by-point response to reviewers | Reviewer comments + optional list of changes | `prompts/review/respond-to-reviewers.md` |
-| Draft a 250-400 word cover letter for submission | Title + venue + manuscript summary | `prompts/review/draft-cover-letter.md` |
-| Write broader impact / ethical considerations statement | Title + abstract + method description + optional venue | `prompts/review/write-broader-impact.md` |
-| Verify reference list completeness, format, and existence | LaTeX snippet + optional target venue | `prompts/review/verify-references.md` |
+| Analyze experiment results and write LaTeX analysis | Experiment data table + key findings | `prompts/analyze-experiments.md` |
+| Simulate a peer review for a paper draft | Paper PDF + target conference name | `prompts/simulate-peer-review.md` |
+| Draft a point-by-point response to reviewers | Reviewer comments + optional list of changes | `prompts/respond-to-reviewers.md` |
+| Draft a 250-400 word cover letter for submission | Title + venue + manuscript summary | `prompts/draft-cover-letter.md` |
+| Write broader impact / ethical considerations statement | Title + abstract + method description + optional venue | `prompts/write-broader-impact.md` |
+| Verify reference list completeness, format, and existence | LaTeX snippet + optional target venue | `prompts/verify-references.md` |
 | Citation format guide (10+ venues, required fields, style files) | — (loaded on demand) | `references/venue-citation-guide.md` |
 
 ## Chinese Typography Rules (CRITICAL)
@@ -174,14 +174,14 @@ architecture in matplotlib (waste).
 **Decision rules — evaluate in order:**
 
 1. **Is it a conceptual structure with discrete components connected by
-   arrows?** → Read `prompts/figure/draw-diagram.md`. This covers: model
+   arrows?** → Read `prompts/draw-diagram.md`. This covers: model
    architectures, training/inference pipelines, RAG pipelines, GNN
    message-passing, diffusion chains, flowcharts, system overviews,
    comparison diagrams. No numerical axes needed. Goto § Diagram Workflow
    below.
 
 2. **Does it have numerical axes (X/Y bar, line, scatter, curve)?** →
-   Read `prompts/figure/plot-figure.md` (after running `prompts/figure/recommend-chart.md`
+   Read `prompts/plot-figure.md` (after running `prompts/recommend-chart.md`
    if the chart type hasn't been chosen yet). This covers: bar charts,
    line curves, scatter plots, ROC/PR, heatmaps, violin/box, Pareto, etc.
    Goto § Plotting Workflow below.
@@ -242,13 +242,13 @@ Arrive here from § Figure Routing when the user wants data visualization
 to "Python plot."
 
 1. **Pick the chart type** — if the user hasn't specified, route through
-   `prompts/figure/recommend-chart.md` first. The recommend prompt outputs one or
+   `prompts/recommend-chart.md` first. The recommend prompt outputs one or
    two chart types matched to the data.
 2. **Read references** — `references/plotting-reference.md` for rcParams,
    palettes, sizing, statistical conventions. Then
    `references/plotting-templates.md` for the matching template (19 chart
    types, indexed by recommend-chart's numbering).
-3. **Generate code** — follow `prompts/figure/plot-figure.md`. Output one
+3. **Generate code** — follow `prompts/plot-figure.md`. Output one
    self-contained `.py` file that produces both `.pdf` (vector) and `.png`
    (600 dpi minimum, venue-adaptive) versions of the figure.
 4. **Self-check** — output the 10-item checklist from

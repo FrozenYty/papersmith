@@ -43,6 +43,6 @@ Rewrite the provided text to eliminate any similarity that could trigger plagiar
 4. Is the sentence structure distribution different from the original (different mix of short/long/compound sentences)?
 
 ## See also
-- prompts/refine/humanize-en.md — remove AI-generated writing patterns (complementary: this handles similarity, humanize handles tone)
-- prompts/polish/polish-en.md — general language polishing after the paraphrase is complete
-- prompts/polish/polish-zh.md — Chinese version of polishing
+- prompts/humanize-en.md — remove AI-generated writing patterns (complementary: this handles similarity, humanize handles tone)
+- prompts/polish-en.md — general language polishing after the paraphrase is complete
+- prompts/polish-zh.md — Chinese version of polishing

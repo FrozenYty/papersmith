@@ -46,4 +46,4 @@ Convert the provided Chinese description into an English figure caption that mee
 4. Are all special characters correctly escaped?
 
 ## See also
-- prompts/figure/write-table-caption.md — 表格题注，格式规范相同但措辞习惯不同
+- prompts/write-table-caption.md — 表格题注，格式规范相同但措辞习惯不同

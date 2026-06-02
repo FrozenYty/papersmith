@@ -96,5 +96,5 @@ from SKILL.md if outputting Chinese.
 {{OPTIONAL_CHANGES_MADE}}
 
 ## See also
-- prompts/review/simulate-peer-review.md — 正式回复前先模拟评审，预判 reviewer 可能提出的问题。使用前，将 simulate-peer-review 的 Part 1 [The Review Report] 输出作为本 prompt 的 {{REVIEWER_COMMENTS}} 输入。
-- prompts/review/draft-cover-letter.md — 投稿前阶段，Cover letter 中的卖点为 rebuttal 提供素材
+- prompts/simulate-peer-review.md — 正式回复前先模拟评审，预判 reviewer 可能提出的问题。使用前，将 simulate-peer-review 的 Part 1 [The Review Report] 输出作为本 prompt 的 {{REVIEWER_COMMENTS}} 输入。
+- prompts/draft-cover-letter.md — 投稿前阶段，Cover letter 中的卖点为 rebuttal 提供素材

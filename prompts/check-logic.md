@@ -32,5 +32,5 @@ Run a final consistency and logic check on the provided English LaTeX snippet.
 4. If the text passes, did I output only `[检测通过，无实质性问题]` without embellishment?
 
 ## See also
-- prompts/polish/polish-en.md — 逻辑检查前的语言润色，提升文本基础质量。使用前，将 polish-en 的 Part 1 [LaTeX] 输出作为本 prompt 的 {{ENGLISH_LATEX}} 输入。
-- prompts/refine/humanize-en.md — 逻辑通过后消除 AI 痕迹，使行文更自然
+- prompts/polish-en.md — 逻辑检查前的语言润色，提升文本基础质量。使用前，将 polish-en 的 Part 1 [LaTeX] 输出作为本 prompt 的 {{ENGLISH_LATEX}} 输入。
+- prompts/humanize-en.md — 逻辑通过后消除 AI 痕迹，使行文更自然

@@ -8,10 +8,11 @@ versioning follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ### Changed
 
-- **Refactored prompts/ into 5 subdirectories**: `translate/` (4), `polish/`
-  (5), `refine/` (6), `figure/` (6), `review/` (6). All 27 prompt file
-  paths, 35+ See also cross-links, SKILL.md index, README, and CONTRIBUTING
-  updated. References/ kept flat (8 files, naming prefixes sufficient).
+- **Reverted prompts/ subdirectories back to flat structure**: subdirectory
+  experiment surfaced boundary problems — several prompts resist clean
+  categorization (e.g., analyze-experiments straddles review and figures).
+  SKILL.md index already provides logical grouping; flat is simpler for
+  maintenance. All paths reverted, README and CONTRIBUTING updated.
 
 ## [0.3.5] — 2026-06-02
 
@@ -63,7 +64,7 @@ versioning follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
   - `write-broader-impact.md` ← `draft-cover-letter.md`
   - `writing-templates.md` ← `polish-abstract.md`, `rewrite-zh-draft.md`
   - `generate-latex-table.md` ← `analyze-experiments.md`, `write-table-caption.md`
-  - `rewrite-avoid-plagiarism.md` ← `humanize-en.md`, `humanize-zh.md`
+  - `rewrite-to-avoid-plagiarism.md` ← `humanize-en.md`, `humanize-zh.md`
   - `cjk-fonts-guide.md` ← `plotting-reference.md`
   All 35 prompt + reference files now have at least one inbound See also link.
 
@@ -71,11 +72,11 @@ versioning follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ### Added
 
-- **LaTeX table generation prompt**: `prompts/figure/generate-latex-table.md` —
+- **LaTeX table generation prompt**: `prompts/generate-latex-table.md` —
   converts CSV/tabular data into publication-ready `\begin{table}` blocks
   with booktabs, auto-alignment, best-result bolding, and special-character
   escaping. Total prompts: 27.
-- **Plagiarism-safe rewriting prompt**: `prompts/refine/rewrite-avoid-plagiarism.md` —
+- **Plagiarism-safe rewriting prompt**: `prompts/rewrite-to-avoid-plagiarism.md` —
   structural paraphrase that avoids synonym-only swaps and thesaurus
   overload, with an explicit ethical-use boundary.
 - **CJK font configuration guide**: `references/cjk-fonts-guide.md` —
@@ -135,7 +136,7 @@ versioning follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
   Work (taxonomy), Methodology (top-down), Experiments (three-part),
   Conclusion (three-part), and Abstract (five-part), with concrete
   examples and a general principles section.
-- **Citation verification system**: `prompts/review/verify-references.md` —
+- **Citation verification system**: `prompts/verify-references.md` —
   5-part audit covering completeness (cite→bib mapping + required field
   check), venue-specific format validation, and optional WebSearch-driven
   existence verification (VERIFIED / MISMATCH / NOT_FOUND). Companion

@@ -183,4 +183,4 @@ Mode B also needs this plus the paper abstract — prompt the user for
 5. For Mode B: did I verify the diagram matches the abstract's described contribution?
 
 ## See also
-- prompts/figure/plot-figure.md — 概念图（drawio）与数据图（matplotlib）的互补边界
+- prompts/plot-figure.md — 概念图（drawio）与数据图（matplotlib）的互补边界

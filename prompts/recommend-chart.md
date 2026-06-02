@@ -70,5 +70,5 @@ Follow this exact structure:
 4. Did I mention the relevant template index (§I-§VI) from `plotting-templates.md`?
 
 ## See also
-- prompts/figure/plot-figure.md — 图表类型确定后，用此生成完整的 Python 绘图代码。将本 prompt 的 Recommended Chart 输出作为 plot-figure 的 {{CHART_TYPE}} 输入。
-- prompts/review/analyze-experiments.md — 图表确定后，建议先用此分析实验数据，再绘图。将分析结论作为 plot-figure 的数据叙事依据。
+- prompts/plot-figure.md — 图表类型确定后，用此生成完整的 Python 绘图代码。将本 prompt 的 Recommended Chart 输出作为 plot-figure 的 {{CHART_TYPE}} 输入。
+- prompts/analyze-experiments.md — 图表确定后，建议先用此分析实验数据，再绘图。将分析结论作为 plot-figure 的数据叙事依据。

@@ -132,9 +132,9 @@ For each citation not marked VERIFIED:
 
 ## See also
 
-- prompts/refine/check-logic.md — same pre-submission verification stage; run
+- prompts/check-logic.md — same pre-submission verification stage; run
   verify-references first (fix bib issues), then check-logic (logic audit).
-- prompts/review/draft-cover-letter.md — references should be verified before the
+- prompts/draft-cover-letter.md — references should be verified before the
   cover letter is written, since incomplete citations are a common desk
   reject reason.
 - references/venue-citation-guide.md — the target venue's citation format

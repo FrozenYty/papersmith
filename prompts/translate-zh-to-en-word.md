@@ -39,5 +39,5 @@ Translate the provided Chinese draft into a polished English academic passage, f
 {{CHINESE_DRAFT}}
 
 ## See also
-- prompts/translate/translate-zh-to-en-latex.md — LaTeX 场景的中译英，需额外处理特殊字符转义
-- prompts/polish/polish-en.md — 翻译后可进一步深度润色。将本 prompt 的 Part 1 [English Draft] 输出作为 polish-en 的 {{ENGLISH_LATEX}} 输入。
+- prompts/translate-zh-to-en-latex.md — LaTeX 场景的中译英，需额外处理特殊字符转义
+- prompts/polish-en.md — 翻译后可进一步深度润色。将本 prompt 的 Part 1 [English Draft] 输出作为 polish-en 的 {{ENGLISH_LATEX}} 输入。

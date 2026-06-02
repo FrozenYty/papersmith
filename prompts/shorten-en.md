@@ -38,5 +38,5 @@ Slightly shorten the provided English LaTeX snippet.
 {{ENGLISH_LATEX}}
 
 ## See also
-- prompts/refine/expand-en.md — 反向操作，扩充文本深度
-- prompts/polish/polish-en.md — 压缩后可能需要做整体润色统一风格。将本 prompt 的 Part 1 [LaTeX] 输出作为 polish-en 的 {{ENGLISH_LATEX}} 输入。
+- prompts/expand-en.md — 反向操作，扩充文本深度
+- prompts/polish-en.md — 压缩后可能需要做整体润色统一风格。将本 prompt 的 Part 1 [LaTeX] 输出作为 polish-en 的 {{ENGLISH_LATEX}} 输入。
