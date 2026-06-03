@@ -7,7 +7,7 @@ unrelated files.
 ## Quick map of where things live
 
 ```
-academic-writing-toolkit/
+papersmith/
 ├── SKILL.md             # routing index — register new prompts here
 ├── prompts/             # one .md per task (Role/Task/Constraints/Output/Self-Audit)
 ├── references/          # loaded on demand: long-form rules + templates

@@ -1,4 +1,4 @@
-# Academic Writing Toolkit
+# Papersmith
 
 A Claude Code / Claude.ai skill for academic research writing, paper
 diagrams, and publication-ready figures. Drop it in, and Claude will
@@ -37,7 +37,7 @@ override when the situation warrants.
 ### Claude Code (CLI)
 
 ```bash
-git clone <this-repo-url> ~/.claude/skills/academic-writing-toolkit
+git clone <this-repo-url> ~/.claude/skills/papersmith
 ```
 
 Claude Code auto-discovers skills under `~/.claude/skills/`. Restart
@@ -47,7 +47,7 @@ your session if it's already running. Verify:
 > /skills
 ```
 
-The skill should appear as `academic-writing-toolkit`. Any paper-related
+The skill should appear as `papersmith`. Any paper-related
 request should now trigger it.
 
 ### Claude.ai
@@ -55,8 +55,8 @@ request should now trigger it.
 Package as a `.skill` file (zip with the right structure):
 
 ```bash
-cd academic-writing-toolkit
-zip -r academic-writing-toolkit.skill SKILL.md prompts/ references/
+cd papersmith
+zip -r papersmith.skill SKILL.md prompts/ references/
 ```
 
 Upload via Settings → Capabilities → Skills.
@@ -108,7 +108,7 @@ categories.
 ## Repository structure
 
 ```
-academic-writing-toolkit/
+papersmith/
 ├── SKILL.md             # entry point — Claude reads this first
 ├── README.md            # you are here
 ├── CONTRIBUTING.md      # how to add prompts / templates

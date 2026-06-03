@@ -1,5 +1,5 @@
 ---
-name: academic-writing-toolkit
+name: papersmith
 version: 0.3.6
 description: >
   This skill should be used when the user asks to "polish my paper",
@@ -21,7 +21,7 @@ when_to_use: >
 author: Tianyu Yao
 ---
 
-# Academic Writing Toolkit
+# Papersmith
 
 Route the user's request to the correct prompt template below. Read the
 matched file in full, then follow its instructions to accomplish the task.
