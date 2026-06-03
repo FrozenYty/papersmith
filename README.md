@@ -37,35 +37,52 @@ override when the situation warrants.
 ### Claude Code (CLI)
 
 ```bash
-git clone <this-repo-url> ~/.claude/skills/papersmith
+git clone https://github.com/FrozenYty/papersmith.git ~/.claude/skills/papersmith
 ```
 
-Claude Code auto-discovers skills under `~/.claude/skills/`. Restart
-your session if it's already running. Verify:
+Claude Code auto-discovers skills under `~/.claude/skills/`. On Windows
+(Git Bash / WSL), `~` works the same way; for Command Prompt or
+PowerShell, clone to `%USERPROFILE%\.claude\skills\papersmith` instead.
+
+Restart your session if Claude Code is already running, then verify:
 
 ```
 > /skills
 ```
 
-The skill should appear as `papersmith`. Any paper-related
-request should now trigger it.
+You should see `papersmith` in the list. Any paper-related request will
+now trigger it.
 
-### Claude.ai
+**To update:** `cd ~/.claude/skills/papersmith && git pull`
 
-Package as a `.skill` file (zip with the right structure):
+### Claude.ai (web / desktop app)
+
+Clone the repo first, then package it:
 
 ```bash
+git clone https://github.com/FrozenYty/papersmith.git
 cd papersmith
 zip -r papersmith.skill SKILL.md prompts/ references/
 ```
 
-Upload via Settings → Capabilities → Skills.
+The `.skill` file expects `SKILL.md` at the zip root. Verify the layout:
+
+```bash
+unzip -l papersmith.skill | head -5
+# Expected:
+#   SKILL.md
+#   prompts/...
+#   references/...
+```
+
+Upload via **Settings → Capabilities → Skills** in Claude.ai.
 
 ### Manual / one-off use
 
 Even without installing as a skill, you can drop the relevant prompt
 content into a Claude conversation directly. Each prompt is a
-self-contained Markdown file in `prompts/`.
+self-contained Markdown file — browse them in
+[`prompts/`](https://github.com/FrozenYty/papersmith/tree/main/prompts).
 
 ## Quick start
 
